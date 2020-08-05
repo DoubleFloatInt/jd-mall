@@ -1,6 +1,7 @@
 <template>
 	<div class="first">
 		我们组最牛逼!!!
+		hello
 	</div>
 </template>
 
