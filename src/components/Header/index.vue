@@ -5,27 +5,27 @@
 				<img class="lf" src="../../assets/images/star.jpg">
 				<a class="lf" href="#">收藏京东</a>    <!-- lf左浮动 -->
 				<ul class="rt">        <!-- rt右浮动 -->
-					<li class="login-register-area">
-						李广帅，你好！欢迎来到京东
-						<router-link to="/login" tag="a">你好，请登录</router-link>
-						<router-link to="/register" tag="a">[免费注册]</router-link>
-					</li>
-					<li>
-						<b></b><!--边框-->
-						<a href="#">我的订单</a>
-					</li>
-					<li class="vip">
-						<b></b>
-						<a href="#">会员俱乐部</a>
-					</li>
-					<li class="qiye">
-						<b></b>
-						<a href="#">企业频道</a>
-					</li>
-					<li class="app_jd">
-						<b></b>
-						<a href="#">手机京东</a>
-					</li>
+          <li>
+            李广帅，你好！欢迎来到京东
+            <router-link tag="a" to="/login">你好，请登录</router-link>
+            <router-link tag="a" to="/register">[免费注册]</router-link>
+          </li>
+          <li>
+            <b></b><!--边框-->
+            <a href="#">我的订单</a>
+          </li>
+          <li class="vip">
+            <b></b>
+            <a href="#">会员俱乐部</a>
+          </li>
+          <li class="qiye">
+            <b></b>
+            <a href="#">企业频道</a>
+          </li>
+          <li class="app_jd">
+            <b></b>
+            <a href="#">手机京东</a>
+          </li>
 					<li class="service">
 						<b></b>
 						<a href="#">客户服务</a>
@@ -127,9 +127,6 @@
 				</li>
 				<li>
 					<a href="#">电子商品</a>
-				</li>
-				<li>
-					<router-link to="/miaosha" tag="a">秒杀</router-link>
 				</li>
 			</ul>
 		</nav>

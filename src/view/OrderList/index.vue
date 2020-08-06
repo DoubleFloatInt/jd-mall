@@ -1,13 +1,13 @@
 <template>
-	<div>
-		用户订单
-	</div>
+  <div>
+    用户订单
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "OrderList"
-    }
+export default {
+  name: "OrderList"
+}
 </script>
 
 <style scoped>
