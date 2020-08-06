@@ -7,8 +7,8 @@
 				<ul class="rt">        <!-- rt右浮动 -->
 					<li>
 						李广帅，你好！欢迎来到京东
-						<a href="#">[登录]</a>
-						<a href="#">[免费注册]</a>
+						<router-link to="/login" tag="a">你好，请登录</router-link>
+						<router-link to="/register" tag="a">[免费注册]</router-link>
 					</li>
 					<li>
 						<b></b><!--边框-->
