@@ -6,7 +6,7 @@
 				<a class="lf" href="#">收藏京东</a>    <!-- lf左浮动 -->
 				<ul class="rt">        <!-- rt右浮动 -->
 					<li class="login-register-area">
-						李广帅，你好！欢迎来到京东
+						玛卡巴卡，你好！欢迎来到京东
 						<router-link to="/login" tag="a">你好，请登录</router-link>
 						<router-link to="/register" tag="a">[免费注册]</router-link>
 					</li>
@@ -58,9 +58,9 @@
 		<!--2.logo和搜索框-->
 		<div id="top_main">
 			<!-- 2.1logo图片 -->
-			<a class="lf" href="#">
+			<router-link class="lf" tag="a" to="/">
 				<img alt="JD" src="../../assets/images/logo-201305.png"/>
-			</a>
+			</router-link>
 			<!-- 2.2搜索框和热门搜索 -->
 			<div id="search_box">
 				<!-- 2.2.1搜索框和按钮 -->
