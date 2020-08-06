@@ -105,19 +105,6 @@ div.sub_cate_content li.title {
     margin: 10px 0 0 10px;
 }
 
-#slider li {
-
-    width: 20px;
-    height: 20px;
-    float: left;
-    border-radius: 50%;
-    background-color: #3e3e3e;
-    text-align: center;
-    line-height: 20px;
-    color: #fff;
-    margin-right: 10px;
-    cursor: pointer;
-}
 
 #slider {
     position: relative;

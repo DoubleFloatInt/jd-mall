@@ -26,7 +26,21 @@
 			<!-- 中：banner广告 -->
 			<div id="slider_box">
 				<!-- 滑动广告 -->
-				<div id="slider">
+				<el-carousel indicator-position="none" id="slider" height="244px">
+					<el-carousel-item>
+						<img alt="" src="../../assets/images/index/banner_01.jpg">
+					</el-carousel-item>
+					<el-carousel-item>
+						<img alt="" src="../../assets/images/index/banner_02.jpg">
+					</el-carousel-item>
+					<el-carousel-item>
+						<img alt="" src="../../assets/images/index/banner_01.jpg">
+					</el-carousel-item>
+					<el-carousel-item>
+						<img alt="" src="../../assets/images/index/banner_02.jpg">
+					</el-carousel-item>
+				</el-carousel>
+				<!--<div id="slider">
 					<img alt="" src="../../assets/images/index/banner_02.jpg">
 					<ul>
 						<li>1</li>
@@ -35,7 +49,7 @@
 						<li>4</li>
 						<li>5</li>
 					</ul>
-				</div>
+				</div>-->
 				<!-- 三幅小广告 -->
 				<div id="ad">
 					<a class="lf" href="#"></a><!-- 左箭头 -->
