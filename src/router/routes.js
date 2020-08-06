@@ -1,6 +1,7 @@
 import Layout from '../Layout/index';
 import Index from '../view/Index/index';
 import Login from '../view/Login/index';
+import SecondKill from '../view/SecondKill/index';
 
 export default [
     {
@@ -11,6 +12,11 @@ export default [
                 path: '/',
                 component: Index,
                 meta: '首页'
+            },
+            {
+                path: '/miaosha',
+                component: SecondKill,
+                meta: '秒杀'
             }
         ]
     },

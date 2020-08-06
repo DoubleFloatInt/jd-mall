@@ -1,13 +1,15 @@
 <template>
-	<div></div>
+	<div class="">
+		用户注册
+	</div>
 </template>
 
 <script>
     export default {
-        name: "Login"
+        name: "index"
     }
 </script>
 
 <style scoped>
-	@import "../../assets/style/base.css";
+
 </style>

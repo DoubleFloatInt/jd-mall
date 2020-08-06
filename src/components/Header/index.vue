@@ -5,7 +5,7 @@
 				<img class="lf" src="../../assets/images/star.jpg">
 				<a class="lf" href="#">收藏京东</a>    <!-- lf左浮动 -->
 				<ul class="rt">        <!-- rt右浮动 -->
-					<li>
+					<li class="login-register-area">
 						李广帅，你好！欢迎来到京东
 						<router-link to="/login" tag="a">你好，请登录</router-link>
 						<router-link to="/register" tag="a">[免费注册]</router-link>
@@ -127,6 +127,9 @@
 				</li>
 				<li>
 					<a href="#">电子商品</a>
+				</li>
+				<li>
+					<router-link to="/miaosha" tag="a">秒杀</router-link>
 				</li>
 			</ul>
 		</nav>

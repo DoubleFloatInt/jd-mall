@@ -1,13 +1,15 @@
 <template>
-	<div></div>
+	<div>
+		充值中心
+	</div>
 </template>
 
 <script>
     export default {
-        name: "Login"
+        name: "ChongZhi"
     }
 </script>
 
 <style scoped>
-	@import "../../assets/style/base.css";
+
 </style>

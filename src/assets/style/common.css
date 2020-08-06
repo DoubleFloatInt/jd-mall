@@ -28,6 +28,14 @@
     margin-right: 5px;
 }
 
+.login-register-area a {
+    padding: 0 5px;
+}
+
+.login-register-area a:hover {
+    color: #e1251b;
+}
+
 li.vip a {
     padding-left: 29px;
     background: url(../../assets/images/vip.jpg) no-repeat left center;

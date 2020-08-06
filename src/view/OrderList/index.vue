@@ -1,13 +1,15 @@
 <template>
-	<div></div>
+	<div>
+		用户订单
+	</div>
 </template>
 
 <script>
     export default {
-        name: "Login"
+        name: "OrderList"
     }
 </script>
 
 <style scoped>
-	@import "../../assets/style/base.css";
+
 </style>
