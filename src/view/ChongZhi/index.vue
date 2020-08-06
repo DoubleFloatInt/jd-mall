@@ -1,13 +1,13 @@
 <template>
-	<div>
-		充值中心
-	</div>
+  <div>
+    充值中心
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "ChongZhi"
-    }
+export default {
+  name: "ChongZhi"
+}
 </script>
 
 <style scoped>
