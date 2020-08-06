@@ -1,13 +1,17 @@
-import HelloWorld from "../components/HelloWorld";
-import DemoTest from "../components/DemoTest";
+import Layout from '../Layout/index';
+import Index from '../view/Index/index';
 
 export default [
     {
         path: '/',
-        component: HelloWorld
-    },
-    {
-        path: '/hello',
-        component: DemoTest
+        component: Layout,
+        children: [
+            {
+                path: '/',
+                component: Index,
+                meta: '首页'
+            }
+        ]
     }
+
 ]
