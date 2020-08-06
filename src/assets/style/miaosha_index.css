@@ -1,0 +1,745 @@
+/**页面的公共样式**/
+body {
+    /**外边距，内边距，字体：大小 字体 颜色**/
+    margin: 0px;
+    padding: 0px;
+    font: 12px "microsoft yahei", Arial;
+    color: #666;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+clear {
+    clear: both;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+/**测试，给结构内容添加边框**/
+{
+    border: 1px solid black
+;
+}
+/**整体布局**/
+#top_box, #top_main, #nav, #photo, #photo_two, #miao, #picture, #picture_bottom, #footer, #foot_box {
+    /**宽度，水平居中对齐**/
+    width: 1211px;
+    margin: 0px auto;
+}
+
+/*************************1.页面顶部*************************/
+#top {
+    height: 40px;
+    line-height: 30px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #eee;
+}
+
+#top_box > img {
+    margin-top: 8px;
+    margin-right: 6px;
+}
+
+#top_box > ul > li {
+    float: left;
+    margin-right: 5px;
+}
+
+#top_box b {
+    border-left: 1px solid #ddd;
+    margin-right: 5px;
+}
+
+/*会员俱乐部*/
+li.vip a {
+    padding-left: 29px;
+    background: url(Images/vip.jpg) no-repeat left center;
+}
+
+/*企业*/
+li.qiye a {
+    padding-left: 29px;
+    background: url(Images/dakehu.jpg) no-repeat left center;
+}
+
+/*手机京东*/
+li.shouji a {
+    display: inline-block;
+    padding-left: 29px;
+    height: 28px;
+    background: url(Images/iconlist_2.png) no-repeat -128px -360px;
+    line-height: 29px;
+}
+
+li.shouji a:hover {
+    background-position: -128px -399px;
+}
+
+/* 客户服务 */
+li.service > a {
+    /* 左右内边距, 背景图片,左右上边框 */
+    padding: 0px 15px;
+    background: url(Images/jt_down.jpg) no-repeat 95% center;
+    border: 1px solid transparent;
+    border-bottom: 0px;
+    /* 显示方式:高度 行高 */
+    display: inline-block;
+    height: 20px;
+    line-height: 26px;
+}
+
+li.service > a:hover {
+    /* 边框颜色  背景颜色  背景图片 */
+    border-color: #ddd;
+    background: #fff;
+    background-image: url(Image/jt_up.jpg) no-repeat 95% center;
+}
+
+/**客户服务弹窗*/
+li.service ul {
+    width: 78px;
+    border: 1px solid #ddd;
+    border-top: 0px;
+    background-color: #fff;
+    text-align: center;
+    /*绝对定位*/
+    position: absolute;
+    top: 28px;
+    left: 5px;
+    /*不显示*/
+    display: none;
+}
+
+/*相对定位*/
+li.service {
+    position: relative;
+}
+
+li.service:hover ul {
+    display: block;
+}
+
+
+/*********************(***2  logo和搜索框--*************************/
+#top_main {
+    overflow: hidden;
+    padding: 10px 0px;
+}
+
+#search_box {
+    /* 宽度 左右外边距 浮动*/
+    width: 500px;
+    margin: 0px 80px 0px 40px;
+    float: left;
+}
+
+#search_box div.search {
+    /* 宽度 高度 边距 颜色*/
+    width: 500px;
+    height: 30px;
+    padding: 3px;
+    background-color: #E4393C;
+}
+
+#search_box div.search input {
+    /* 宽度 高度 边距 颜色*/
+    width: 410px;
+    height: 30px;
+    padding: 0px;
+    padding-left: 10px;
+    color: #666;
+}
+
+#search_box div.search button {
+    /*去边框 背景 高宽 文字*/
+    border: 0px;
+    background-color: #E4393C;
+    height: 28px;
+    width: 75px;
+    /* WENZI */
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#search_box div.hot_words {
+    margin-top: 3px;
+    height: 16px;
+    overflow: hidden;
+
+}
+
+div.hot_words span, div, hot_words a {
+    color: #999;
+}
+
+div.hot_words a {
+    margin-right: 7px;
+}
+
+/* 我的京东 */
+#myJD {
+    /* 浮动left  高度 行高 边框 背景*/
+    float: left;
+    height: 27px;
+    line-height: 27px;
+    border: 1px solid #efefef;
+
+    background: #f7f7f7 url(Images/iconlist_2.png) no-repeat -116px -25px;
+    padding-left: 30px;
+    width: 72px;
+    /* 上外边距 */
+    margin-top: 4px;
+}
+
+#myJD b {
+
+    border: 5px solid transparent;
+    border-top-color: #CCC;
+    /* 相对定位 */
+    position: relative;
+    top: 11px;
+    left: 60px;
+}
+
+#myJD:hover {
+    background: #fff url(Images/iconlost_2.png) no-repeat -116px -55px;
+    cursor: pointer;
+}
+
+/* gouwuche */
+#shopcar {
+    /* 浮动left  高度 行高 边框 背景*/
+    float: right;
+    height: 27px;
+    line-height: 27px;
+    border: 1px solid #efefef;
+
+    background: #f7f7f7 url(Images/iconlist_2.png) no-repeat -116px -84px;
+    margin-right: 30px;
+    padding-left: 30px;
+    padding-right: 20px;
+    width: 90px;
+    /* 上外边距 */
+    margin-top: 4px;
+}
+
+#shopcar b {
+
+    border: 5px solid transparent;
+    border-top-color: #CCC;
+    /* 相对定位 */
+    position: relative;
+    top: 11px;
+    left: 90px;
+}
+
+#shopcar:hover {
+    background: #fff url(Images/iconlost_2.png) no-repeat -116px -55px;
+    cursor: pointer;
+}
+
+
+/********************************* 3秒杀顶部**************************** */
+
+#nav {
+    height: 40px;
+    /* background-color:#E64346; */
+    border-bottom: 2px solid red;
+}
+
+#nav a {
+    float: left;
+    padding-left: 10px;
+    margin-right: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: 8px;
+}
+
+#nav ul li {
+    float: left;
+}
+
+#nav ul li a {
+    /* 左浮动 宽度 高度 水平居中 文字：大小 颜色 加粗 去下划线*/
+    float: left;
+    width: 104px;
+    height: 40px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    text-decoration: none;
+    margin-left: 0px;
+}
+
+.first > a {
+    background-color: #BD2A2C;
+}
+
+#nav ul li.first a {
+    color: #fff;
+}
+
+#nav ul li a:hover {
+    background-color: #BD2A2C;
+}
+
+#photo {
+
+    height: 88px;
+}
+
+#photo_two {
+
+    height: 298px;
+    width: 1211px;
+}
+
+/* *******时间 ********/
+#miao ul li {
+    float: left;
+}
+
+#miao ul li.miaoing {
+    background-color: #BD2A2C;
+}
+
+#miao a {
+    float: left;
+    height: 65px;
+    width: 300px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+    margin-left: 2px;
+}
+
+#miao a span {
+    color: black;
+}
+
+#miao li.miaoing span {
+    color: #fff;
+}
+
+#miao a span.miaoz {
+
+    font-size: 20px;
+}
+
+#miao ul li a:hover {
+    background-color: #BD2A2C;
+}
+
+
+/* *******图片 ********/
+
+#picture ul li {
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 380px;
+    position: relative;
+    background: #fff;
+
+}
+
+.pa {
+    width: 230px;
+    height: 260px;
+    padding: 20px 30px 0;
+    background: #fff;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.picturebg {
+    background: no-repeat 50% 50%;
+}
+
+#picture ul li a img {
+    width: auto;
+    height: 200px;
+}
+
+.picture_title {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 20px;
+    height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.picture_t2 {
+    font-size: 14px;
+    height: 21px;
+    margin-top: 10px;
+    line-height: 21px;
+    color: #e01222;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.picture_bottom {
+    overflow: hidden;
+    text-align: left;
+    height: 99px;
+    display: block;
+    border-top: 1px solid #f6f6f6;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 290px;
+}
+
+.ptxt {
+    padding: 30px 0 0 30px;
+    display: block;
+    position: relative;
+    line-height: 1;
+    padding-left: 20px;
+}
+
+.ptxt2 {
+    position: relative;
+    display: block;
+    line-height: 1.1;
+}
+
+.txti {
+    font-size: 24px;
+    color: #e01222;
+    font-family: arial;
+    margin-right: 2px;
+    line-height: 1;
+    display: inline-block;
+    min-width: 50px;
+}
+
+.txtd {
+    position: absolute;
+    top: 10px;
+    padding-left: 5px;
+    padding: 0px 8px;
+    height: 16px;
+    line-height: 16px;
+    background-color: #e6e6e6;
+    font-size: 10px;
+    border-radius: 2px;
+}
+
+.ytxt_j {
+    width: 88px;
+    height: 8px;
+    background: #e6e6e6;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin-left: 5px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+/* ****** */
+.ytxt_jft1 {
+    background: #df0021;
+    width: 34%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.qgou {
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 80px;
+    text-align: center;
+    position: absolute;
+    background: #df0021;
+}
+
+.ytxt_jft2 {
+    background: #df0021;
+    width: 18%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft3 {
+    background: #df0021;
+    width: 22%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jf4 {
+    background: #df0021;
+    width: 97%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft5 {
+    background: #df0021;
+    width: 22%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft6 {
+    background: #df0021;
+    width: 90%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft7 {
+    background: #df0021;
+    width: 40%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft8 {
+    background: #df0021;
+    width: 24%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft9 {
+    background: #df0021;
+    width: 30%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft10 {
+    background: #df0021;
+    width: 40%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft11 {
+    background: #df0021;
+    width: 24%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft12 {
+    background: #df0021;
+    width: 60%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft13 {
+    background: #df0021;
+    width: 15%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft14 {
+    background: #df0021;
+    width: 18%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft15 {
+    background: #df0021;
+    width: 30%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.ytxt_jft16 {
+    background: #df0021;
+    width: 82%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+/* **** */
+
+#picture_bottom {
+    width: 1211px;
+    height: 162px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pbo {
+    width: 590px;
+    height: 162px;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    display: block;
+
+}
+
+.pbo img {
+    background: none;
+}
+
+
+/***************6.页面底部  购物指南************************/
+#foot_box {
+    margin: 10px auto;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+#foot_box p {
+    width: 40px;
+    height: 40px;
+    float: left;
+    background: url(Images/iconlist_2.png) no-repeat;
+    margin: 0px 10px 0px 50px;
+}
+
+#foot_box p.one {
+    background-position: 0px -56px;
+}
+
+#foot_box p.two {
+    background-position: -50px -56px;
+}
+
+#foot_box p.three {
+    background-position: 0px -102px;
+}
+
+#foot_box p.four {
+    background-position: -50px -102px;
+}
+
+#foot_box p.five {
+    background-position: 0px -150px;
+}
+
+#foot_box ul {
+    float: left;
+    width: 142px;
+}
+
+#foot_box li {
+    line-height: 22px;
+}
+
+#foot_box li b {
+    line-height: 30px;
+}
+
+
+/***********   最底部备案 **************/
+#footer {
+    margin-top: 40px;
+    overflow: hidden;
+    height: 120px;
+}
+
+#footer div h3 {
+    text-align: center;
+}
+
+#footer div p {
+    text-align: center;
+}
