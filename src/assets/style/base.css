@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px "microsoft yahei", Arial;
+    color: #666;
+    background-color: #fff;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    height: 0;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
