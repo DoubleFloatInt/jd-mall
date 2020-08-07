@@ -1,39 +1,14 @@
 /**??????????**/
-body {
-    /**???????????壺??С ???? ???**/
-    margin: 0px;
-    padding: 0px;
-    font: 12px "microsoft yahei", Arial;
-    color: #666;
-}
-
-ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-
 a {
     color: #666;
     text-decoration: none;
-}
-
-.lf {
-    float: left;
-}
-
-.rt {
-    float: right;
 }
 
 clear {
     clear: both;
 }
 
-input {
-    border: none;
-    outline: none;
-}
+
 
 /**???岼??**/
 #top_box, #top_main, #nav, #photo, #photo_two, #miao, #picture, #picture_bottom, #footer, #foot_box {
@@ -655,70 +630,4 @@ div.hot_words a {
 
 .pbo img {
     background: none;
-}
-
-
-/***************6.?????  ???????************************/
-#foot_box {
-    margin: 10px auto;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-    overflow: hidden;
-}
-
-#foot_box p {
-    width: 40px;
-    height: 40px;
-    float: left;
-    background: url(../images/iconlist_2.png) no-repeat;
-    margin: 0px 10px 0px 50px;
-}
-
-#foot_box p.one {
-    background-position: 0px -56px;
-}
-
-#foot_box p.two {
-    background-position: -50px -56px;
-}
-
-#foot_box p.three {
-    background-position: 0px -102px;
-}
-
-#foot_box p.four {
-    background-position: -50px -102px;
-}
-
-#foot_box p.five {
-    background-position: 0px -150px;
-}
-
-#foot_box ul {
-    float: left;
-    width: 142px;
-}
-
-#foot_box li {
-    line-height: 22px;
-}
-
-#foot_box li b {
-    line-height: 30px;
-}
-
-
-/***********   ???????? **************/
-#footer {
-    margin-top: 40px;
-    overflow: hidden;
-    height: 120px;
-}
-
-#footer div h3 {
-    text-align: center;
-}
-
-#footer div p {
-    text-align: center;
 }

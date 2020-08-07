@@ -15,6 +15,73 @@ ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
     list-style: none;
 }
 
+body {
+    /**???????????壺??С ???? ???**/
+    margin: 0px;
+    padding: 0px;
+    font: 12px "microsoft yahei", Arial;
+    color: #666;
+}
+
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+clear {
+    clear: both;
+}
+
+/* 全局 */
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #fff;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.w {
+    width: 990px;
+    margin: 0 auto;
+}
+
+.m, .mb, .mc, .mt, .sm, .smb, .smc, .smt {
+    overflow: hidden;
+    zoom: 1;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a img {
+    border: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.form .label, .form button, .form input, .form label, .form select, .form textarea {
+    float: left;
+    font-size: 12px;
+}
+
 a {
     color: #666;
     text-decoration: none;
@@ -40,7 +107,6 @@ a {
 }
 
 input {
-    border: none;
     outline: none;
 }
 

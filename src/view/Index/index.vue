@@ -637,5 +637,5 @@
 </script>
 
 <style scoped>
-
+	@import "../../assets/style/index.css";
 </style>
