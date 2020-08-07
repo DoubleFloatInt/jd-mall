@@ -3,6 +3,7 @@ import Index from '../view/Index/index';
 import Login from '../view/Login/index';
 import SecondKill from '../view/SecondKill/index';
 import Register from '../view/Register/index';
+import ProductDetail from '../view/ProductDetail/index';
 
 export default [
     {
@@ -18,6 +19,11 @@ export default [
                 path: '/miaosha',
                 component: SecondKill,
                 meta: '秒杀'
+            },
+            {
+                path: '/productDetail',
+                component: ProductDetail,
+                meta: '商品详情'
             }
         ]
     },

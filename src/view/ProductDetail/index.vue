@@ -203,5 +203,5 @@
 </script>
 
 <style scoped>
-
+	@import "../../assets/style/goodsInfo.css";
 </style>

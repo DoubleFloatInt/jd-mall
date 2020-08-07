@@ -56,13 +56,19 @@
 					<a class="rt" href="#"></a><!-- 右箭头 -->
 					<ul class="lf">
 						<li>
-							<img alt="" src="../../assets/images/index/ad_01.jpg">
+							<router-link to="/productDetail" tag="a" target="_blank">
+								<img alt="" src="../../assets/images/index/ad_01.jpg">
+							</router-link>
 						</li>
 						<li class="mid">
-							<img alt="" src="../../assets/images/index/ad_02.jpg">
+							<router-link to="/productDetail" tag="a" target="_blank">
+								<img alt="" src="../../assets/images/index/ad_02.jpg">
+							</router-link>
 						</li>
 						<li>
-							<img alt="" src="../../assets/images/index/ad_03.jpg">
+							<router-link to="/productDetail" tag="a" target="_blank">
+								<img alt="" src="../../assets/images/index/ad_03.jpg">
+							</router-link>
 						</li>
 					</ul>
 				</div>

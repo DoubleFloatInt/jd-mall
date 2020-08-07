@@ -16,13 +16,15 @@ ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
 }
 
 body {
-    /**???????????壺??С ???? ???**/
     margin: 0px;
     padding: 0px;
     font: 12px "microsoft yahei", Arial;
     color: #666;
 }
 
+input {
+    outline: none;
+}
 
 a {
     color: #666;
