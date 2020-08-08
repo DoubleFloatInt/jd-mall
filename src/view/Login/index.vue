@@ -3,9 +3,9 @@
 		<!-- 第一层 logo  欢迎登录   问卷 -->
 		<div class="w">
 			<div id="logo">
-				<a href="#">
-					<img alt="京东" height="60" src="../../assets/images/images_login/logo-201305-b.png" width="170">
-				</a>
+				<router-link to="/" tag="a">
+          <img alt="京东" height="60" src="../../assets/images/images_login/logo-201305-b.png" width="170">
+        </router-link>
 				<b>欢迎登录</b>
 			</div>
 			<a class="q-link" href="#">

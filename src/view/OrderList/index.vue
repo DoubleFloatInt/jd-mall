@@ -3,11 +3,15 @@
     <div class="top-main">
       <div class="container clearfix">
         <div class="logo">
-          <img alt="Logo" src="../../assets/images/logo_2017.png">
+          <router-link to="/" tag="a">
+            <img alt="Logo" src="../../assets/images/logo_2017.png">
+          </router-link>
         </div>
         <div class="index-link">
           <p class="title">我的京东</p>
-          <a class="link" href="index.html">返回京东首页</a>
+          <router-link class="link" to="/" tag="a">
+            返回京东首页
+          </router-link>
         </div>
         <nav class="nav">
           <ul class="clearfix">
