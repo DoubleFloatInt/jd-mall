@@ -7,6 +7,7 @@ import ProductDetail from '../view/ProductDetail/index';
 import TeJia from '../view/TeJia/index';
 import ShanGou from '../view/ShanGou/index';
 import HaoWu from '../view/HaoHuo/index';
+import OrderList from '../view/OrderList/index';
 
 export default [
     {
@@ -42,6 +43,11 @@ export default [
                 path: '/haowu',
                 component: HaoWu,
                 meta: '发现好物'
+            },
+            {
+                path: '/orderList',
+                component: OrderList,
+                meta: '我的订单'
             }
         ]
     },

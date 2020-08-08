@@ -1,0 +1,337 @@
+.top-main {
+    width: 100%;
+    height: 80px;
+
+    background-color: #e2231a;
+}
+
+.logo {
+    float: left;
+}
+
+.index-link {
+    float: left;
+    padding: 0 20px;
+}
+
+.index-link .title {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.index-link .link {
+    display: block;
+    height: 18px;
+    margin-top: 10px;
+    padding: 0 4px;
+    font-size: 12px;
+    color: #ffffff;
+
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+.index-link .link:hover {
+    color: #e1251b;
+    background-color: #fff;
+}
+
+.nav {
+    float: left;
+    margin-top: 10px;
+}
+
+.nav .nav-item {
+    float: left;
+}
+
+.nav .nav-item a {
+    display: block;
+    padding: 22px 30px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.search-box {
+    float: right;
+    margin: 24px 20px;
+}
+
+.search-box input {
+    float: left;
+    display: block;
+    width: 120px;
+    height: 32px;
+    padding: 0 10px;
+    border: none;
+}
+
+.search-box button {
+    float: left;
+    display: block;
+    width: 56px;
+    height: 32px;
+    border: none;
+    font-size: 14px;
+}
+
+.shop-car {
+    float: right;
+    margin-top: 24px;
+    width: 141px;
+    height: 32px;
+    background-color: #fff;
+}
+
+.shop-car a {
+    display: block;
+    text-align: center;
+    line-height: 32px;
+}
+
+.main {
+    background-color: #f5f5f5;
+}
+
+.side-nav {
+    float: left;
+    width: 120px;
+}
+
+.side-nav dl {
+    padding: 20px;
+}
+
+.side-nav dl dt {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.side-nav dl dd {
+    padding: 2px 0;
+}
+
+.side-nav dl dd.current {
+    color: #e1251b;
+}
+
+.order-box {
+    float: left;
+    width: 1070px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.order-box .box-header {
+    width: 100%;
+    height: 48px;
+    padding: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.order-box .box-header p {
+    line-height: 28px;
+}
+
+.box-content {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.box-content .operation {
+    width: 100%;
+}
+
+.box-content .operation .order-type-link {
+    float: left;
+}
+
+.box-content .operation .order-type-link .link {
+    float: left;
+}
+
+.box-content .operation .order-type-link .link a {
+    margin: 0 10px;
+    line-height: 25px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.box-content .operation .order-type-link .link a:hover {
+    border-bottom: 2px solid #e1251b;
+}
+
+.operation .search-box {
+    float: right;
+    margin: 0;
+}
+
+.operation .search-box input {
+    width: 170px;
+    height: 25px;
+    border: 1px solid #cccccc;
+}
+
+.operation .search-box button {
+    height: 27px;
+}
+
+.order-data {
+    margin-top: 20px;
+}
+
+.order-data table {
+    border-collapse: collapse;
+}
+
+.order-data thead {
+    background-color: #f4f4f4;
+}
+
+.order-data th {
+    padding: 10px;
+    text-align: center;
+}
+
+.order-data-table .order-time,
+.order-data-table .detail {
+    float: left;
+}
+
+.order-data-table .order-time {
+    position: relative;
+}
+
+.order-data-table .order-time {
+    width: 115px;
+}
+
+.order-data-table .order-time:hover .time-list {
+    display: block;
+}
+
+.order-data-table .order-time .time-list {
+    display: none;
+    position: absolute;
+    left: 25px;
+    top: 27px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .12);
+}
+
+.order-data-table .order-time .time-list:hover {
+    display: block;
+}
+.order-data-table .status-list ul li,
+.order-data-table .order-time .time-list ul li {
+    width: 80px;
+    padding: 5px 0;
+}
+
+.order-data-table .detail {
+    width: 400px;
+    text-align: center;
+}
+
+.order-data-table .order-detail {
+    width: 589px;
+}
+
+.order-data-table .real-name {
+    width: 115px;
+}
+
+.order-data-table .money {
+    width: 110px;
+}
+
+.order-data-table .order-status {
+    position: relative;
+    width: 110px;
+}
+
+.order-data-table .order-status:hover .status-list {
+    display: block;
+}
+
+.order-data-table .order-status .status-list {
+    display: none;
+    position: absolute;
+    left: 25px;
+    top: 27px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .12);
+}
+
+.order-data-table .status .status-list:hover {
+    display: block;
+}
+
+.order-data-table .operate {
+    width: 125px;
+    text-align: center;
+}
+
+.order-data-table .sep-row {
+    height: 20px;
+    background-color: #fff;
+    border: none;
+}
+
+.order-data-table .tr-th {
+    height: 28px;
+    background-color: #f4f4f4;
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
+}
+
+.order-data-table .tr-th .deal-time {
+    padding: 0 20px;
+}
+
+.order-data-table .tr-th .order-no {
+    padding: 0 20px;
+}
+
+.order-data-table .tr-bd {
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+}
+
+.order-data-table .tr-bd td {
+    padding: 14px 0;
+    vertical-align: top;
+    border: 1px solid #e5e5e5;
+}
+
+.order-data-table .tr-bd .product-item .product-img {
+    float: left;
+    padding: 0 10px;
+}
+
+.order-data-table .tr-bd .product-item .product-img img {
+    width: 80px;
+    height: 80px;
+}
+
+.order-data-table .tr-bd .product-item .product-name {
+    float: left;
+    width: 240px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.order-data-table .tr-bd .product-item .product-quantity {
+    float: left;
+    margin-top: 30px;
+    margin-left: 40px;
+}
