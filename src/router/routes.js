@@ -9,6 +9,7 @@ import ShanGou from '../view/ShanGou/index';
 import HaoWu from '../view/HaoHuo/index';
 import OrderList from '../view/OrderList/index';
 import Search from '../view/Search/index';
+import PinLeiSecondKill from '../view/PinLeiSecondKill';
 
 export default [
     {
@@ -88,6 +89,15 @@ export default [
                     nav: false
                 },
             },
+            {
+                path: '/pinlei',
+                component: PinLeiSecondKill,
+                meta: {
+                    title: '品类团购',
+                    searchBox: true,
+                    nav: false
+                }
+            }
 
         ]
     },

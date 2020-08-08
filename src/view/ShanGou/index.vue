@@ -7,7 +7,7 @@
 					<li><router-link to="/miaosha" tag="a">京东秒杀</router-link></li>
 					<li><router-link to="/tejia" tag="a">每日特价</router-link></li>
 					<li class="three"><a href="#">大牌闪购</a></li>
-					<li><a href="#">品类秒杀</a></li>
+					<li><router-link to="/pinlei" tag="a">品类秒杀</router-link></li>
 				</ul>
 			</div>
 		</div>

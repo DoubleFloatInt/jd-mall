@@ -9,7 +9,7 @@
 						<router-link to="/tejia" tag="a">每日特价</router-link>
 					</li>
 					<li><router-link to="/shangou" tag="a">大牌闪购</router-link></li>
-					<li><a href="#">品类秒杀</a></li>
+					<li><router-link to="/pinlei" tag="a">品类秒杀</router-link></li>
 				</ul>
 			</div>
 		</div>
