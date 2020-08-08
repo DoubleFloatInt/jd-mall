@@ -8,6 +8,7 @@ import TeJia from '../view/TeJia/index';
 import ShanGou from '../view/ShanGou/index';
 import HaoWu from '../view/HaoHuo/index';
 import OrderList from '../view/OrderList/index';
+import Search from '../view/Search/index';
 
 export default [
     {
@@ -41,6 +42,15 @@ export default [
                     searchBox: true,
                     nav: true
                 },
+            },
+            {
+                path: '/search',
+                component: Search,
+                meta: {
+                    title: '搜索',
+                    searchBox: true,
+                    nav: true
+                }
             },
             {
                 path: '/miaosha',

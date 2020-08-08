@@ -10,3 +10,7 @@ export default {
   name: 'App'
 }
 </script>
+
+<style>
+@import "assets/style/base.css";
+</style>
