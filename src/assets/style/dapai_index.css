@@ -1,0 +1,153 @@
+/**整体布局**/
+#top_box, #top_main, #nav, #photo,#photo_two,#photo_three,#foot_box,#picture,#photo_four,#photo_five{
+    /**宽度，水平居中对齐**/
+    width: 1211px;
+    margin: 0px auto;
+}
+
+#nav {
+    height: 40px;
+    /* background-color:#E64346; */
+    border-bottom: 2px solid red;
+}
+
+#nav a {
+    float: left;
+    padding-left: 10px;
+    margin-right: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: 8px;
+}
+
+#nav ul li {
+    float: left;
+}
+
+#nav ul li a {
+    /* 左浮动 宽度 高度 水平居中 文字：大小 颜色 加粗 去下划线*/
+    float: left;
+    width: 104px;
+    height: 40px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    text-decoration: none;
+    margin-left: 0px;
+}
+
+.three > a {
+    background-color: #BD2A2C;
+}
+#nav ul li.three a {
+    color: #fff;
+}
+
+#nav ul li a:hover {
+    background-color: #BD2A2C;
+}
+
+
+#photo{
+
+    height: 176px;
+}
+
+#photo_two {
+
+    height: 301px;
+}
+#photo_three{
+	height:89px;
+}
+
+
+#picture{
+    overflow: hidden;
+}
+#picture ul li.pone{
+	float:left;
+	width: 580px;
+    height: 420px;
+	right:20px;
+    background-color: #e6e6e6;
+	padding-left:20px;
+	margin-left:4px;
+}
+.bgp{
+	width: 580px;
+    height: 235px;
+	background:url('../../assets/images/dtp/001-1.jpg') no-repeat 50% 50%;
+	background-size:cover;
+}
+
+.sbgp h4{
+	color: #333130;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 22px;
+    /* line-height: 1; */
+	padding-left:65px;
+}
+.sbgp span{
+	color: #333130;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1;
+	padding-left:50px;
+}
+.sbgp img{
+	margin-bottom:-20px;
+	padding:40px 100px;
+}
+.spictitle{
+	margin-left:25px;
+	margin-right: 5px;
+    color: #e01222;
+    font-size: 18px;
+	padding:50px -50px 20px 20px;
+}
+
+.spictitle2{
+	color: #999;
+    font-size: 12px;
+}
+.spic{
+	float:left;
+    bottom: 20px;
+    margin-left:20px;
+	margin-top:-25px;
+    width: 540px;
+    height: 187px;
+    background-color: #fff;
+}
+.spic_one{
+    position: relative;
+    float: left;
+    width: 33.3%;
+    height: 206px;
+}
+.spic_one img{
+	display: block;
+    margin: 20px auto 6px;
+    width: 125px;
+    height: 125px;
+}
+
+#photo_four{
+	height:89px;
+}
+
+#photo_five{
+	height:89px;
+}

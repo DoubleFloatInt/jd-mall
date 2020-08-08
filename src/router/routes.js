@@ -4,6 +4,8 @@ import Login from '../view/Login/index';
 import SecondKill from '../view/SecondKill/index';
 import Register from '../view/Register/index';
 import ProductDetail from '../view/ProductDetail/index';
+import TeJia from '../view/TeJia/index';
+import ShanGou from '../view/ShanGou/index';
 
 export default [
     {
@@ -24,6 +26,16 @@ export default [
                 path: '/productDetail',
                 component: ProductDetail,
                 meta: '商品详情'
+            },
+            {
+                path: '/tejia',
+                component: TeJia,
+                meta: '每日特价'
+            },
+            {
+                path: '/shangou',
+                component: ShanGou,
+                meta: '大牌闪购'
             }
         ]
     },

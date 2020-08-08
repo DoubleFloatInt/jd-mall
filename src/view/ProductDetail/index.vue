@@ -202,6 +202,5 @@
     }
 </script>
 
-<style scoped>
-	@import "../../assets/style/goodsInfo.css";
+<style scoped src="../../assets/style/goodsInfo.css">
 </style>

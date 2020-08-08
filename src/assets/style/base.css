@@ -22,34 +22,11 @@ body {
     color: #666;
 }
 
-input {
-    outline: none;
-}
-
-a {
-    color: #666;
-    text-decoration: none;
-}
-
-.lf {
-    float: left;
-}
-
-.rt {
-    float: right;
-}
-
 clear {
     clear: both;
 }
 
 /* 全局 */
-
-body {
-    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
-    color: #666;
-    background: #fff;
-}
 
 a:hover {
     color: red;
@@ -57,7 +34,7 @@ a:hover {
 }
 
 .w {
-    width: 990px;
+    width: 1211px;
     margin: 0 auto;
 }
 

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="w">
 		<!--4.Banner广告部份-->
 		<div id="banner">
 			<!-- 左：分类信息 -->
@@ -642,6 +642,4 @@
     }
 </script>
 
-<style scoped>
-	@import "../../assets/style/index.css";
-</style>
+<style scoped src="../../assets/style/index.css"></style>
