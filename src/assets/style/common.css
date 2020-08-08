@@ -3,6 +3,29 @@
     margin: 0 auto;
 }
 
+#top {
+    height: 30px;
+    line-height: 30px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #eee;
+}
+
+#top_box > img {
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+#top_box > ul > li {
+    float: left;
+    margin-right: 5px;
+}
+
+
+#top_box b {
+    border-left: 1px solid #ddd;
+    margin-right: 5px;
+}
+
 .login-register-area a {
     padding: 0 5px;
 }
