@@ -18,14 +18,6 @@
             Footer,
             Header,
             Nav
-        },
-        computed: {
-            showNav() {
-              console.log(this.$route.showNav)
-                const showNavPage = ["/"];
-                const path = this.$route.path;
-                return showNavPage.indexOf(path) !== -1;
-            }
         }
     }
 </script>
