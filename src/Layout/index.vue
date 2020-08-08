@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<Header></Header>
-		<Nav v-show="showNav"></Nav>
+		<Header v-if="this.$route.meta.searchBox"></Header>
+		<Nav v-show="this.$route.meta.nav"></Nav>
 		<router-view></router-view>
 		<Footer></Footer>
 	</div>
@@ -21,6 +21,7 @@
         },
         computed: {
             showNav() {
+              console.log(this.$route.showNav)
                 const showNavPage = ["/"];
                 const path = this.$route.path;
                 return showNavPage.indexOf(path) !== -1;

@@ -17,38 +17,68 @@ export default [
             {
                 path: '/',
                 component: Index,
-                meta: '首页'
-            },
-            {
-                path: '/miaosha',
-                component: SecondKill,
-                meta: '秒杀'
-            },
-            {
-                path: '/productDetail',
-                component: ProductDetail,
-                meta: '商品详情'
-            },
-            {
-                path: '/tejia',
-                component: TeJia,
-                meta: '每日特价'
-            },
-            {
-                path: '/shangou',
-                component: ShanGou,
-                meta: '大牌闪购'
-            },
-            {
-                path: '/haowu',
-                component: HaoWu,
-                meta: '发现好物'
+                meta: {
+                    title: '首页',
+                    searchBox: true,
+                    nav: true
+                },
             },
             {
                 path: '/orderList',
                 component: OrderList,
-                meta: '我的订单'
-            }
+                meta: {
+                    title: '我的订单',
+                    searchBox: false,
+                    nav: false
+                },
+
+            },
+            {
+                path: '/productDetail',
+                component: ProductDetail,
+                meta: {
+                    title: '商品详情订单',
+                    searchBox: true,
+                    nav: true
+                },
+            },
+            {
+                path: '/miaosha',
+                component: SecondKill,
+                meta: {
+                    title: '秒杀',
+                    searchBox: true,
+                    nav: false
+                },
+            },
+            {
+                path: '/tejia',
+                component: TeJia,
+                meta: {
+                    title: '每日特价',
+                    searchBox: true,
+                    nav: false
+                },
+            },
+            {
+                path: '/shangou',
+                component: ShanGou,
+                meta: {
+                    title: '大牌闪购',
+                    searchBox: true,
+                    nav: false
+                },
+            },
+            {
+                path: '/haowu',
+                component: HaoWu,
+                meta: {
+                    title: '发现好物',
+                    searchBox: false,
+                    nav: false
+                },
+            },
+
         ]
     },
     {
