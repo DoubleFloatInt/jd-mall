@@ -12,7 +12,7 @@
 					</li>
 					<li>
 						<b></b><!--边框-->
-						<a href="#">我的订单</a>
+						<router-link to="/orderList" tag="a">我的订单</router-link>
 					</li>
 					<li class="vip">
 						<b></b>
