@@ -6,6 +6,7 @@ import Register from '../view/Register/index';
 import ProductDetail from '../view/ProductDetail/index';
 import TeJia from '../view/TeJia/index';
 import ShanGou from '../view/ShanGou/index';
+import HaoWu from '../view/HaoHuo/index';
 
 export default [
     {
@@ -36,6 +37,11 @@ export default [
                 path: '/shangou',
                 component: ShanGou,
                 meta: '大牌闪购'
+            },
+            {
+                path: '/haowu',
+                component: HaoWu,
+                meta: '发现好物'
             }
         ]
     },

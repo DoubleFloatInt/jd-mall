@@ -23,6 +23,9 @@
 			<li>
 				<router-link to="/miaosha" tag="a">秒杀</router-link>
 			</li>
+			<li>
+				<router-link to="/haowu" tag="a">发现好物</router-link>
+			</li>
 		</ul>
 	</nav>
 </template>
