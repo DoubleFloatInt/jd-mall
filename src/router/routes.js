@@ -10,6 +10,7 @@ import HaoWu from '../view/HaoHuo/index';
 import OrderList from '../view/OrderList/index';
 import Search from '../view/Search/index';
 import PinLeiSecondKill from '../view/PinLeiSecondKill';
+import JDFood from '../view/jd_food/index';
 
 export default [
     {
@@ -110,5 +111,10 @@ export default [
         path: '/register',
         component: Register,
         meta: '注册'
+    },
+    {
+        path: '/food',
+        component: JDFood,
+        meta: '食品'
     }
 ]
