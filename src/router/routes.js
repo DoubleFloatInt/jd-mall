@@ -11,6 +11,7 @@ import OrderList from '../view/OrderList/index';
 import Search from '../view/Search/index';
 import PinLeiSecondKill from '../view/PinLeiSecondKill';
 import JDFood from '../view/jd_food/index';
+import Trade from '../view/Trade/index';
 
 export default [
     {
@@ -34,7 +35,6 @@ export default [
                     searchBox: false,
                     nav: false
                 },
-
             },
             {
                 path: '/productDetail',
@@ -44,6 +44,15 @@ export default [
                     searchBox: true,
                     nav: true
                 },
+            },
+            {
+                path: '/trade',
+                component: Trade,
+                meta: {
+                    title: '订单结算',
+                    searchBox: false,
+                    nav: false
+                }
             },
             {
                 path: '/search',

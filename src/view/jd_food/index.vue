@@ -1,30 +1,21 @@
 <template>
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>京东食品饮料-零食_酒水饮料_进口食品_休闲食品-京东</title></head>
-  <meta name="keywords" content="食品饮料频道,零食,酒水饮料,进口食品,休闲食品,地方特产,冲调饮料,粮油调味,生鲜,京东JD.COM" />
-  <meta name="description" content="京东JD.COM食品饮料频道,专业提供零食,酒水饮料,进口食品,休闲食品,地方特产,冲调饮料,粮油调味,生鲜等食品饮料的最新报价、促销、评论、导购、图片等相关信息!为您提供愉悦的网上购物体验! " />
-  <link href="style.css" rel="stylesheet"/>
-  <body>
+  <div>
   <!-- 页面顶部 -->
-  <header id = "top">
-    <div id = "top_box">
-      <img class = "lf" src = "Images/star.jpg">
-      <a class = "lf" href = "#">收藏京东</a><!--添加左浮动效果-->
-      <ul class = "rt"><!--添加右浮动效果 -->
+  <header id="top">
+    <div id="top_box">
+      <img class="lf" src="Images/star.jpg">
+      <a class="lf" href="#">收藏京东</a><!--添加左浮动效果-->
+      <ul class="rt"><!--添加右浮动效果 -->
         <li>
           您好！欢迎来到京东
-          <a href = "#">[登录]</a>
-          <a href = "#">[免费注册]</a>
+          <a href="#">[登录]</a>
+          <a href="#">[免费注册]</a>
         </li>
         <li>
           <b></b><!--边框 -->
           <a href="#">我的订单</a>
         </li>
-        <li class = "vip">
+        <li class="vip">
           <b></b><!--边框 -->
           <a href="#">会员俱乐部</a>
         </li>
@@ -32,29 +23,29 @@
           <b></b><!--边框 -->
           <a href="#">企业频道</a>
         </li>
-        <li class = "app_jd">
+        <li class="app_jd">
           <b></b><!--边框 -->
           <a href="#">手机京东</a>
         </li>
-        <li class = "service">
+        <li class="service">
           <b></b><!--边框 -->
           <a href="#">客户服务</a>
           <!-- 弹出菜单 -->
           <ul>
             <li>
-              <a href = "#">帮助中心</a>
+              <a href="#">帮助中心</a>
             </li>
             <li>
-              <a href = "#">售后服务</a>
+              <a href="#">售后服务</a>
             </li>
             <li>
-              <a href = "#">在线客服</a>
+              <a href="#">在线客服</a>
             </li>
             <li>
-              <a href = "#">投诉中心</a>
+              <a href="#">投诉中心</a>
             </li>
             <li>
-              <a href = "#">客服邮箱</a>
+              <a href="#">客服邮箱</a>
             </li>
           </ul>
         </li>
@@ -85,19 +76,19 @@
     <div class="fenlei lf">
       <a href="#">全部分类</a>
       <ul>
-        <li><a href="#">家用电器</a> </li>
-        <li><a href="#">手机</a> </li>
-        <li><a href="#">运营商</a> </li>
-        <li><a href="#">数码</a> </li>
-        <li><a href="#">电脑</a> </li>
-        <li><a href="#">办公</a> </li>
+        <li><a href="#">家用电器</a></li>
+        <li><a href="#">手机</a></li>
+        <li><a href="#">运营商</a></li>
+        <li><a href="#">数码</a></li>
+        <li><a href="#">电脑</a></li>
+        <li><a href="#">办公</a></li>
       </ul>
     </div>
     <!--搜索框 -->
     <div id="search_box">
       <!--2.2.1 搜索框和按钮-->
       <div class="search">
-        <input type="text" class="txtSearch"  placeholder="零食" onclick="clear()">
+        <input type="text" class="txtSearch" placeholder="零食" onclick="clear()">
         <button>搜索</button>
       </div>
       <!--2.2.2 热门搜索-->
@@ -141,7 +132,7 @@
   </div>
   <section id="aside">
     <!-- 侧边栏 -->
-    <ul >
+    <ul>
       <li>
         <a href="#">进口食品
           <i class="rt">
@@ -507,7 +498,7 @@
         <li>
           <img src="Images/goods_03.webp" alt="">
           <div>
-            <div class="sanzhi">蒙牛 特仑苏 有机纯牛奶3.8g蛋白质含量升级  250ml*24 梦幻盖礼盒装（新老包装随机发货）</div>
+            <div class="sanzhi">蒙牛 特仑苏 有机纯牛奶3.8g蛋白质含量升级 250ml*24 梦幻盖礼盒装（新老包装随机发货）</div>
             <div class="yiyijiu">￥187.20</div>
           </div>
         </li>
@@ -529,7 +520,7 @@
         <li>
           <img src="Images/goods_06.webp" alt="">
           <div>
-            <div class="sanzhi">金龙鱼  东北大米 乳玉皇妃稻香贡米 5kg</div>
+            <div class="sanzhi">金龙鱼 东北大米 乳玉皇妃稻香贡米 5kg</div>
             <div class="yiyijiu">￥99.00</div>
           </div>
         </li>
@@ -554,7 +545,7 @@
             <img src="Images/weilong.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              卫龙 辣条 网红办公室怀旧小吃 儿时豆干豆皮辣片休闲零食  经典香辣味大面筋68g/袋（凑单零食商品）
+              卫龙 辣条 网红办公室怀旧小吃 儿时豆干豆皮辣片休闲零食 经典香辣味大面筋68g/袋（凑单零食商品）
             </div>
             <!-- 金钱-->
             <div class="money">
@@ -715,7 +706,7 @@
             <img src="Images/haoliyou.jpg!cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              Orion 好丽友 营养早餐点心零食 礼盒  巧克力派 30枚 1020g/盒（新老包装随机发货）
+              Orion 好丽友 营养早餐点心零食 礼盒 巧克力派 30枚 1020g/盒（新老包装随机发货）
             </div>
             <!-- 金钱-->
             <div class="money">
@@ -810,7 +801,7 @@
             <img src="Images/loulan.cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              楼兰蜜语 精选一等五星和田红枣500g*2袋  蜜饯果干 新疆特产  和田大枣可夹核桃 精选新疆大枣 量贩装零食
+              楼兰蜜语 精选一等五星和田红枣500g*2袋 蜜饯果干 新疆特产 和田大枣可夹核桃 精选新疆大枣 量贩装零食
             </div>
             <!-- 金钱-->
             <div class="money">
@@ -821,7 +812,8 @@
             <img src="Images/mangguo.cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              三只松鼠芒果干 蜜饯果干芒果片休闲零食办公室小吃果脯水果干116g/袋                            </div>
+              三只松鼠芒果干 蜜饯果干芒果片休闲零食办公室小吃果脯水果干116g/袋
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥9.80
@@ -831,7 +823,8 @@
             <img src="Images/banli.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              良品铺子 板栗休闲零食干果炒货栗子袋装孕妇儿童零食小吃即食甘栗仁80g                            </div>
+              良品铺子 板栗休闲零食干果炒货栗子袋装孕妇儿童零食小吃即食甘栗仁80g
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥15.90
@@ -841,7 +834,8 @@
             <img src="Images/xinjiangcc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              好想你 新疆和田大红枣夹核桃果干休闲零食特产网红食品大枣夹核桃218g/袋                            </div>
+              好想你 新疆和田大红枣夹核桃果干休闲零食特产网红食品大枣夹核桃218g/袋
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥19.90
@@ -851,7 +845,8 @@
             <img src="Images/qiaqiacc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              洽洽 坚果炒货 休闲零食 五香瓜子500g/袋                            </div>
+              洽洽 坚果炒货 休闲零食 五香瓜子500g/袋
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥24.90
@@ -861,7 +856,8 @@
             <img src="Images/meiguicc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              三只松鼠玫瑰红葡萄干 蜜饯果干休闲零食新疆特产120g/袋                            </div>
+              三只松鼠玫瑰红葡萄干 蜜饯果干休闲零食新疆特产120g/袋
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥10.80
@@ -871,7 +867,8 @@
             <img src="Images/xiaweiyicc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              三只松鼠奶油味夏威夷果 坚果炒货孕妇坚果每日坚果干果零食160g/袋                            </div>
+              三只松鼠奶油味夏威夷果 坚果炒货孕妇坚果每日坚果干果零食160g/袋
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥37.90
@@ -881,7 +878,8 @@
             <img src="Images/baicaocc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              百草味 蜜饯果干休闲零食特产水果干 口袋鲜果办公室零食 冻干榴莲干25g/袋                            </div>
+              百草味 蜜饯果干休闲零食特产水果干 口袋鲜果办公室零食 冻干榴莲干25g/袋
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥10.80
@@ -891,7 +889,8 @@
             <img src="Images/baicao_2cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              百草味 水果干办公室休闲零食送女友 童年零食蜜饯果干果脯 草莓干100g/袋                            </div>
+              百草味 水果干办公室休闲零食送女友 童年零食蜜饯果干果脯 草莓干100g/袋
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥8.80
@@ -902,7 +901,8 @@
             <img src="Images/baicao_3cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              百草味 果脯蜜饯水果干零食休闲食品办公室小吃 黄桃干100g/袋                            </div>
+              百草味 果脯蜜饯水果干零食休闲食品办公室小吃 黄桃干100g/袋
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥26.90
@@ -971,7 +971,7 @@
             <img src="Images/niunai6cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              天润 TERUN 奶啤乳酸菌风味牛奶饮品 300ml*12罐    (新老包装随机发货)                            <!-- 金钱-->
+              天润 TERUN 奶啤乳酸菌风味牛奶饮品 300ml*12罐 (新老包装随机发货)                            <!-- 金钱-->
             </div>
             <div class="money">
               ￥119.90
@@ -981,7 +981,7 @@
             <img src="Images/niunai7cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              德国DMK进口牛奶 欧德堡（Oldenburger）全脂纯牛奶200ml*24盒  早餐奶 高钙奶 整箱装                            <!-- 金钱-->
+              德国DMK进口牛奶 欧德堡（Oldenburger）全脂纯牛奶200ml*24盒 早餐奶 高钙奶 整箱装                            <!-- 金钱-->
             </div>
             <div class="money">
               ￥65.00
@@ -1049,7 +1049,8 @@
             <img src="Images/sushi2cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              北大荒 东北黑蜂 椴树雪蜜 纯蜂蜜1000g 建三江 冲调水饮 （新老包装交替发货）                            </div>
+              北大荒 东北黑蜂 椴树雪蜜 纯蜂蜜1000g 建三江 冲调水饮 （新老包装交替发货）
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥126.00
@@ -1059,7 +1060,8 @@
             <img src="Images/sushi3cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              雀巢（Nestle）咖啡 速溶 1+2 原味 微研磨 冲调饮品 100条1500g（新老包装交替发货）                            </div>
+              雀巢（Nestle）咖啡 速溶 1+2 原味 微研磨 冲调饮品 100条1500g（新老包装交替发货）
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥103.00
@@ -1069,7 +1071,8 @@
             <img src="Images/sushi4cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              冠生园 蜂蜜 中华老字号 百花蜜 900g                            </div>
+              冠生园 蜂蜜 中华老字号 百花蜜 900g
+            </div>
             <div class="money">
               ￥42.80
             </div>
@@ -1078,7 +1081,8 @@
             <img src="Images/sushi5cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              麦斯威尔 特浓速溶咖啡优惠超值装90送10条（1.3KG/盒）（新老包装交替发货）                            </div>
+              麦斯威尔 特浓速溶咖啡优惠超值装90送10条（1.3KG/盒）（新老包装交替发货）
+            </div>
             <div class="money">
               ￥89.90
             </div>
@@ -1087,7 +1091,8 @@
             <img src="Images/sushi6cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              韩国进口（SAMYANG） 三养辣鸡肉味拌面 700g（140g*5包入）超辣火鸡面方便面袋面速食零食品                            </div>
+              韩国进口（SAMYANG） 三养辣鸡肉味拌面 700g（140g*5包入）超辣火鸡面方便面袋面速食零食品
+            </div>
             <div class="money">
               ￥28.90
             </div>
@@ -1096,7 +1101,8 @@
             <img src="Images/sushi7cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              吉意欧GEO醇品系列蓝山风味咖啡豆500g 精选阿拉比卡 中度烘培 纯黑咖啡                            </div>
+              吉意欧GEO醇品系列蓝山风味咖啡豆500g 精选阿拉比卡 中度烘培 纯黑咖啡
+            </div>
             <div class="money">
               ￥59.90
             </div>
@@ -1105,7 +1111,8 @@
             <img src="Images/sushi8cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              网红美食 氏族人 嗨吃家 酸辣粉 冲泡型家庭分享装 122g*6桶整箱                            </div>
+              网红美食 氏族人 嗨吃家 酸辣粉 冲泡型家庭分享装 122g*6桶整箱
+            </div>
             <div class="money">
               ￥35.80
             </div>
@@ -1114,7 +1121,8 @@
             <img src="Images/sushi9cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              桂格 麦果脆 多种莓果 代餐谷物烘焙麦片420g 加酸奶更美味 即食早餐水果麦片 不含反式脂肪酸                            </div>
+              桂格 麦果脆 多种莓果 代餐谷物烘焙麦片420g 加酸奶更美味 即食早餐水果麦片 不含反式脂肪酸
+            </div>
             <div class="money">
               ￥25.80
             </div>
@@ -1123,7 +1131,8 @@
             <img src="Images/sushi10cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              双汇王中王 火腿肠 60g*10支/600g装 香肠火腿                            </div>
+              双汇王中王 火腿肠 60g*10支/600g装 香肠火腿
+            </div>
             <div class="money">
               ￥20.90
             </div>
@@ -1133,7 +1142,8 @@
             <img src="Images/sushi11cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              山萃 中粮 冲饮谷物 即食 水果坚果 混合麦片 681g/袋                            </div>
+              山萃 中粮 冲饮谷物 即食 水果坚果 混合麦片 681g/袋
+            </div>
             <div class="money">
               ￥49.80
             </div>
@@ -1180,7 +1190,8 @@
             <img src="Images/binfen4cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              屈臣氏（Watsons）香草味苏打汽水 苏打水汽水饮料  调酒净饮推荐 330ml*24听 整箱装                           </div>
+              屈臣氏（Watsons）香草味苏打汽水 苏打水汽水饮料 调酒净饮推荐 330ml*24听 整箱装
+            </div>
             <div class="money">
               ￥86.00
             </div>
@@ -1189,7 +1200,8 @@
             <img src="Images/binfen5cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              百岁山 饮用天然矿泉水   348ml*24瓶 整箱装                          </div>
+              百岁山 饮用天然矿泉水 348ml*24瓶 整箱装
+            </div>
             <div class="money">
               ￥39.90
             </div>
@@ -1198,7 +1210,8 @@
             <img src="Images/binfen6jpg!cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              名仁 苏打水饮料 无糖无汽弱碱性水 375ml*24瓶 整箱装                        </div>
+              名仁 苏打水饮料 无糖无汽弱碱性水 375ml*24瓶 整箱装
+            </div>
             <div class="money">
               ￥61.90
             </div>
@@ -1207,7 +1220,8 @@
             <img src="Images/binfen7cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              农夫山泉 饮用水 饮用天然水380ml 1*24瓶 整箱装                          </div>
+              农夫山泉 饮用水 饮用天然水380ml 1*24瓶 整箱装
+            </div>
             <div class="money">
               ￥31.90
             </div>
@@ -1216,7 +1230,8 @@
             <img src="Images/binfen8cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              农夫山泉 东方树叶茉莉花茶500ml*15瓶 茶饮料 整箱装（新老保质期随机发货）                       </div>
+              农夫山泉 东方树叶茉莉花茶500ml*15瓶 茶饮料 整箱装（新老保质期随机发货）
+            </div>
             <div class="money">
               ￥63.90
             </div>
@@ -1225,7 +1240,8 @@
             <img src="Images/binfen9cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              维他奶 维他低糖柠檬茶饮料250ml*24盒 低糖无脂肪 柠檬果汁味红茶 低糖宅家饮料 家庭整箱装                         </div>
+              维他奶 维他低糖柠檬茶饮料250ml*24盒 低糖无脂肪 柠檬果汁味红茶 低糖宅家饮料 家庭整箱装
+            </div>
             <div class="money">
               ￥58.50
             </div>
@@ -1234,7 +1250,8 @@
             <img src="Images/binfen10cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              百岁山 饮用天然矿泉水   570ml*24瓶 整箱装                        </div>
+              百岁山 饮用天然矿泉水 570ml*24瓶 整箱装
+            </div>
             <div class="money">
               ￥49.90
             </div>
@@ -1271,7 +1288,8 @@
             <img src="Images/mimian2cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 绿豆 （可发豆芽 打豆浆 东北 五谷 杂粮 粗粮 真空装 大米伴侣）1kg                            </div>
+              十月稻田 绿豆 （可发豆芽 打豆浆 东北 五谷 杂粮 粗粮 真空装 大米伴侣）1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥19.80
@@ -1281,7 +1299,8 @@
             <img src="Images/mimian3cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 五常稻花香 东北大米5kg（绿豆伴侣）                            </div>
+              十月稻田 五常稻花香 东北大米5kg（绿豆伴侣）
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥69.00
@@ -1291,7 +1310,8 @@
             <img src="Images/mimian4cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 山西黄小米 五谷杂粮 山西特产 小米粥小米黄小米月子米粗粮真空包装家庭袋装2.5kg                            </div>
+              十月稻田 山西黄小米 五谷杂粮 山西特产 小米粥小米黄小米月子米粗粮真空包装家庭袋装2.5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥58.90
@@ -1301,7 +1321,8 @@
             <img src="Images/mimian5cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院 柴火长粒香米 东北大米5kg                            </div>
+              柴火大院 柴火长粒香米 东北大米5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥52.90
@@ -1311,7 +1332,8 @@
             <img src="Images/mimian6cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 薏仁米（薏米仁 小粒薏米 无添加 五谷杂粮  粗粮 真空装 大米 粥米伴侣 红豆薏米） 1kg                            </div>
+              十月稻田 薏仁米（薏米仁 小粒薏米 无添加 五谷杂粮 粗粮 真空装 大米 粥米伴侣 红豆薏米） 1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥25.80
@@ -1321,7 +1343,8 @@
             <img src="Images/mimian7cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月���田 稻花香大米 东北大米 东北香米 5kg                            </div>
+              十月���田 稻花香大米 东北大米 东北香米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥55.00
@@ -1331,7 +1354,8 @@
             <img src="Images/mimian8cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院  内蒙古绿豆（配黄小米，可发豆芽 打豆浆  五谷杂粮 粗粮 真空装 大米伴侣） 1kg                            </div>
+              柴火大院 内蒙古绿豆（配黄小米，可发豆芽 打豆浆 五谷杂粮 粗粮 真空装 大米伴侣） 1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥28.80
@@ -1341,7 +1365,8 @@
             <img src="Images/mimian9cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              福临门 本来长粒香米 东北大米 长粒香 中粮出品 大米 5kg                            </div>
+              福临门 本来长粒香米 东北大米 长粒香 中粮出品 大米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥39.90
@@ -1351,7 +1376,8 @@
             <img src="Images/mimian10cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 寒地之最 长粒王香米 东北大米 5kg                            </div>
+              十月稻田 寒地之最 长粒王香米 东北大米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥58.00
@@ -1362,7 +1388,8 @@
             <img src="Images/mimian11cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院 五常大米 五常稻花香米 东北大米5kg                            </div>
+              柴火大院 五常大米 五常稻花香米 东北大米5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥75.50
@@ -1389,7 +1416,8 @@
             <img src="Images/you2cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 绿豆 （可发豆芽 打豆浆 东北 五谷 杂粮 粗粮 真空装 大米伴侣）1kg                            </div>
+              十月稻田 绿豆 （可发豆芽 打豆浆 东北 五谷 杂粮 粗粮 真空装 大米伴侣）1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥19.80
@@ -1399,7 +1427,8 @@
             <img src="Images/you3cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 五常稻花香 东北大米5kg（绿豆伴侣）                            </div>
+              十月稻田 五常稻花香 东北大米5kg（绿豆伴侣）
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥69.00
@@ -1409,7 +1438,8 @@
             <img src="Images/you4cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 山西黄小米 五谷杂粮 山西特产 小米粥小米黄小米月子米粗粮真空包装家庭袋装2.5kg                            </div>
+              十月稻田 山西黄小米 五谷杂粮 山西特产 小米粥小米黄小米月子米粗粮真空包装家庭袋装2.5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥58.90
@@ -1419,7 +1449,8 @@
             <img src="Images/you5cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院 柴火长粒香米 东北大米5kg                            </div>
+              柴火大院 柴火长粒香米 东北大米5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥52.90
@@ -1429,7 +1460,8 @@
             <img src="Images/you6cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 薏仁米（薏米仁 小粒薏米 无添加 五谷杂粮  粗粮 真空装 大米 粥米伴侣 红豆薏米） 1kg                            </div>
+              十月稻田 薏仁米（薏米仁 小粒薏米 无添加 五谷杂粮 粗粮 真空装 大米 粥米伴侣 红豆薏米） 1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥25.80
@@ -1439,7 +1471,8 @@
             <img src="Images/you7cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 稻花香大米 东北大米 东北香米 5kg                            </div>
+              十月稻田 稻花香大米 东北大米 东北香米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥55.00
@@ -1449,7 +1482,8 @@
             <img src="Images/you8cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院  内蒙古绿豆（配黄小米，可发豆芽 打豆浆  五谷杂粮 粗粮 真空装 大米伴侣） 1kg                            </div>
+              柴火大院 内蒙古绿豆（配黄小米，可发豆芽 打豆浆 五谷杂粮 粗粮 真空装 大米伴侣） 1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥28.80
@@ -1459,7 +1493,8 @@
             <img src="Images/you9cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              福临门 本来长粒香米 东北大米 长粒香 中粮出品 大米 5kg                            </div>
+              福临门 本来长粒香米 东北大米 长粒香 中粮出品 大米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥39.90
@@ -1469,7 +1504,8 @@
             <img src="Images/you10cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 寒地之最 长粒王香米 东北大米 5kg                            </div>
+              十月稻田 寒地之最 长粒王香米 东北大米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥58.00
@@ -1480,7 +1516,8 @@
             <img src="Images/you11cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院 五常大米 五常稻花香米 东北大米5kg                            </div>
+              柴火大院 五常大米 五常稻花香米 东北大米5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥75.50
@@ -1507,7 +1544,8 @@
             <img src="Images/chufang2cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 绿豆 （可发豆芽 打豆浆 东北 五谷 杂粮 粗粮 真空装 大米伴侣）1kg                            </div>
+              十月稻田 绿豆 （可发豆芽 打豆浆 东北 五谷 杂粮 粗粮 真空装 大米伴侣）1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥19.80
@@ -1517,7 +1555,8 @@
             <img src="Images/chufang3cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 五常稻花香 东北大米5kg（绿豆伴侣）                            </div>
+              十月稻田 五常稻花香 东北大米5kg（绿豆伴侣）
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥69.00
@@ -1527,7 +1566,8 @@
             <img src="Images/chufang4cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 山西黄小米 五谷杂粮 山西特产 小米粥小米黄小米月子米粗粮真空包装家庭袋装2.5kg                            </div>
+              十月稻田 山西黄小米 五谷杂粮 山西特产 小米粥小米黄小米月子米粗粮真空包装家庭袋装2.5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥58.90
@@ -1537,7 +1577,8 @@
             <img src="Images/chufang5cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院 柴火长粒香米 东北大米5kg                            </div>
+              柴火大院 柴火长粒香米 东北大米5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥52.90
@@ -1547,7 +1588,8 @@
             <img src="Images/chufang6cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 薏仁米（薏米仁 小粒薏米 无添加 五谷杂粮  粗粮 真空装 大米 粥米伴侣 红豆薏米） 1kg                            </div>
+              十月稻田 薏仁米（薏米仁 小粒薏米 无添加 五谷杂粮 粗粮 真空装 大米 粥米伴侣 红豆薏米） 1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥25.80
@@ -1557,7 +1599,8 @@
             <img src="Images/chufang7cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 稻花香大米 东北大米 东北香米 5kg                            </div>
+              十月稻田 稻花香大米 东北大米 东北香米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥55.00
@@ -1567,7 +1610,8 @@
             <img src="Images/chufang8cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院  内蒙古绿豆（配黄小米，可发豆芽 打豆浆  五谷杂粮 粗粮 真空装 大米伴侣） 1kg                            </div>
+              柴火大院 内蒙古绿豆（配黄小米，可发豆芽 打豆浆 五谷杂粮 粗粮 真空装 大米伴侣） 1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥28.80
@@ -1577,7 +1621,8 @@
             <img src="Images/chufang9cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              福临门 本来长粒香米 东北大米 长粒香 中粮出品 大米 5kg                            </div>
+              福临门 本来长粒香米 东北大米 长粒香 中粮出品 大米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥39.90
@@ -1587,7 +1632,8 @@
             <img src="Images/chufang10cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 寒地之最 长粒王香米 东北大米 5kg                            </div>
+              十月稻田 寒地之最 长粒王香米 东北大米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥58.00
@@ -1598,7 +1644,8 @@
             <img src="Images/chufang11cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院 五常大米 五常稻花香米 东北大米5kg                            </div>
+              柴火大院 五常大米 五常稻花香米 东北大米5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥75.50
@@ -1625,7 +1672,8 @@
             <img src="Images/cha2cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 绿豆 （可发豆芽 打豆浆 东北 五谷 杂粮 粗粮 真空装 大米伴侣）1kg                            </div>
+              十月稻田 绿豆 （可发豆芽 打豆浆 东北 五谷 杂粮 粗粮 真空装 大米伴侣）1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥19.80
@@ -1635,7 +1683,8 @@
             <img src="Images/cha3cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 五常稻花香 东北大米5kg（绿豆伴侣）                            </div>
+              十月稻田 五常稻花香 东北大米5kg（绿豆伴侣）
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥69.00
@@ -1645,7 +1694,8 @@
             <img src="Images/cha4cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 山西黄小米 五谷杂粮 山西特产 小米粥小米黄小米月子米粗粮真空包装家庭袋装2.5kg                            </div>
+              十月稻田 山西黄小米 五谷杂粮 山西特产 小米粥小米黄小米月子米粗粮真空包装家庭袋装2.5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥58.90
@@ -1655,7 +1705,8 @@
             <img src="Images/cha5cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院 柴火长粒香米 东北大米5kg                            </div>
+              柴火大院 柴火长粒香米 东北大米5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥52.90
@@ -1665,7 +1716,8 @@
             <img src="Images/cha6cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 薏仁米（薏米仁 小粒薏米 无添加 五谷杂粮  粗粮 真空装 大米 粥米伴侣 红豆薏米） 1kg                            </div>
+              十月稻田 薏仁米（薏米仁 小粒薏米 无添加 五谷杂粮 粗粮 真空装 大米 粥米伴侣 红豆薏米） 1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥25.80
@@ -1675,7 +1727,8 @@
             <img src="Images/cha7cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 稻花香大米 东北大米 东北香米 5kg                            </div>
+              十月稻田 稻花香大米 东北大米 东北香米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥55.00
@@ -1685,7 +1738,8 @@
             <img src="Images/cha8cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院  内蒙古绿豆（配黄小米，可发豆芽 打豆浆  五谷杂粮 粗粮 真空装 大米伴侣） 1kg                            </div>
+              柴火大院 内蒙古绿豆（配黄小米，可发豆芽 打豆浆 五谷杂粮 粗粮 真空装 大米伴侣） 1kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥28.80
@@ -1695,7 +1749,8 @@
             <img src="Images/cha9cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              福临门 本来长粒香米 东北大米 长粒香 中粮出品 大米 5kg                            </div>
+              福临门 本来长粒香米 东北大米 长粒香 中粮出品 大米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥39.90
@@ -1705,7 +1760,8 @@
             <img src="Images/cha10cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              十月稻田 寒地之最 长粒王香米 东北大米 5kg                            </div>
+              十月稻田 寒地之最 长粒王香米 东北大米 5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥58.00
@@ -1716,7 +1772,8 @@
             <img src="Images/cha11cc_320x320.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              柴火大院 五常大米 五常稻花香米 东北大米5kg                            </div>
+              柴火大院 五常大米 五常稻花香米 东北大米5kg
+            </div>
             <!-- 金钱-->
             <div class="money">
               ￥75.50
@@ -1729,19 +1786,19 @@
   <!--6.页面底部-配送信息-->
   <div id="yinying">
   </div>
-  <footer id = "foot_box">
+  <footer id="foot_box">
     <div>
       <div>
         <img src="Images/gw01.jpg" alt="">
       </div>
       <p><b>购物指南</b></p>
       <ul>
-        <li><a href="#">购物流程</a> </li>
-        <li><a href="#">会员介绍</a> </li>
-        <li><a href="#">团购/机票</a> </li>
-        <li><a href="#">常见问题</a> </li>
-        <li><a href="#">大家电</a> </li>
-        <li><a href="#">联系客服</a> </li>
+        <li><a href="#">购物流程</a></li>
+        <li><a href="#">会员介绍</a></li>
+        <li><a href="#">团购/机票</a></li>
+        <li><a href="#">常见问题</a></li>
+        <li><a href="#">大家电</a></li>
+        <li><a href="#">联系客服</a></li>
       </ul>
     </div>
     <div>
@@ -1750,11 +1807,11 @@
       </div>
       <p><b>配送方式</b></p>
       <ul>
-        <li><a href="#">上门自提</a> </li>
-        <li><a href="#">211限定达</a> </li>
-        <li><a href="#">配送服务查询</a> </li>
-        <li><a href="#">配送费收取标准</a> </li>
-        <li><a href="#">海外配送</a> </li>
+        <li><a href="#">上门自提</a></li>
+        <li><a href="#">211限定达</a></li>
+        <li><a href="#">配送服务查询</a></li>
+        <li><a href="#">配送费收取标准</a></li>
+        <li><a href="#">海外配送</a></li>
       </ul>
     </div>
     <div>
@@ -1763,11 +1820,11 @@
       </div>
       <p><b>支付方式</b></p>
       <ul>
-        <li><a href="#">货到付款</a> </li>
-        <li><a href="#">在线支付</a> </li>
-        <li><a href="#">分期付款</a> </li>
-        <li><a href="#">邮局汇款</a> </li>
-        <li><a href="#">公司转账</a> </li>
+        <li><a href="#">货到付款</a></li>
+        <li><a href="#">在线支付</a></li>
+        <li><a href="#">分期付款</a></li>
+        <li><a href="#">邮局汇款</a></li>
+        <li><a href="#">公司转账</a></li>
       </ul>
     </div>
     <div>
@@ -1776,11 +1833,11 @@
       </div>
       <p><b>售后服务</b></p>
       <ul>
-        <li><a href="#">售后政策</a> </li>
-        <li><a href="#">价格保护</a> </li>
-        <li><a href="#">退款说明</a> </li>
-        <li><a href="#">返修/退换货</a> </li>
-        <li><a href="#">取消订单</a> </li>
+        <li><a href="#">售后政策</a></li>
+        <li><a href="#">价格保护</a></li>
+        <li><a href="#">退款说明</a></li>
+        <li><a href="#">返修/退换货</a></li>
+        <li><a href="#">取消订单</a></li>
       </ul>
     </div>
     <div>
@@ -1789,19 +1846,19 @@
       </div>
       <p><b>特色服务</b></p>
       <ul>
-        <li><a href="#">夺宝岛</a> </li>
-        <li><a href="#">DIY装机</a> </li>
-        <li><a href="#">延保服务</a> </li>
-        <li><a href="#">京东E卡</a> </li>
-        <li><a href="#">节能补贴</a> </li>
-        <li><a href="#">京东通信</a> </li>
+        <li><a href="#">夺宝岛</a></li>
+        <li><a href="#">DIY装机</a></li>
+        <li><a href="#">延保服务</a></li>
+        <li><a href="#">京东E卡</a></li>
+        <li><a href="#">节能补贴</a></li>
+        <li><a href="#">京东通信</a></li>
       </ul>
     </div>
   </footer>
   <div id="yinying2">
   </div>
   <!--7.页面底部-备案号信息-->
-  <footer id = "footer">
+  <footer id="footer">
     <div>
 			<pre>
 				关于我们 | 联系我们 | 人才招聘 | 商家入驻 | 广告服务 | 手机京东 | 友情链接 | 销售联盟 | 京东社区 | 京东公益
@@ -1829,12 +1886,11 @@
   </footer>
 
 
-  </body>
-  </html>
+  </div>
 </template>
 <script>
 export default {
-name: "jd_food"
+  name: "jd_food"
 }
 </script>
 
