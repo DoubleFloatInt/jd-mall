@@ -12,6 +12,7 @@ import Search from '../view/Search/index';
 import PinLeiSecondKill from '../view/PinLeiSecondKill';
 import JDFood from '../view/jd_food/index';
 import Trade from '../view/Trade/index';
+import ShaiDan from '../view/ShaiDan/index';
 
 export default [
     {
@@ -23,6 +24,7 @@ export default [
                 component: Index,
                 meta: {
                     title: '首页',
+                    headNav: true,
                     searchBox: true,
                     nav: true
                 },
@@ -32,6 +34,7 @@ export default [
                 component: OrderList,
                 meta: {
                     title: '我的订单',
+                    headNav: false,
                     searchBox: false,
                     nav: false
                 },
@@ -41,6 +44,7 @@ export default [
                 component: ProductDetail,
                 meta: {
                     title: '商品详情订单',
+                    headNav: true,
                     searchBox: true,
                     nav: true
                 },
@@ -50,6 +54,7 @@ export default [
                 component: Trade,
                 meta: {
                     title: '订单结算',
+                    headNav: true,
                     searchBox: false,
                     nav: false
                 }
@@ -59,6 +64,7 @@ export default [
                 component: Search,
                 meta: {
                     title: '搜索',
+                    headNav: true,
                     searchBox: true,
                     nav: true
                 }
@@ -68,6 +74,7 @@ export default [
                 component: SecondKill,
                 meta: {
                     title: '秒杀',
+                    headNav: true,
                     searchBox: true,
                     nav: false
                 },
@@ -77,6 +84,7 @@ export default [
                 component: TeJia,
                 meta: {
                     title: '每日特价',
+                    headNav: true,
                     searchBox: true,
                     nav: false
                 },
@@ -86,6 +94,7 @@ export default [
                 component: ShanGou,
                 meta: {
                     title: '大牌闪购',
+                    headNav: true,
                     searchBox: true,
                     nav: false
                 },
@@ -95,6 +104,7 @@ export default [
                 component: HaoWu,
                 meta: {
                     title: '发现好物',
+                    headNav: true,
                     searchBox: false,
                     nav: false
                 },
@@ -104,10 +114,33 @@ export default [
                 component: PinLeiSecondKill,
                 meta: {
                     title: '品类团购',
+                    headNav: true,
                     searchBox: true,
                     nav: false
                 }
-            }
+            },
+            {
+                path: '/food',
+                component: JDFood,
+                meta: {
+                    title: '食品',
+                    headNav: true,
+                    searchBox: false,
+                    nav: false
+                }
+            },
+            {
+                path: '/shaidan',
+                component: ShaiDan,
+                meta: {
+                    title: '晒单',
+                    headNav: true,
+                    searchBox: false,
+                    nav: false
+                }
+            },
+
+
 
         ]
     },
@@ -121,9 +154,6 @@ export default [
         component: Register,
         meta: '注册'
     },
-    {
-        path: '/food',
-        component: JDFood,
-        meta: '食品'
-    }
+
+
 ]

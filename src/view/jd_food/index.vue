@@ -1,62 +1,5 @@
 <template>
   <div>
-  <!-- 页面顶部 -->
-  <header id="top">
-    <div id="top_box">
-      <img class="lf" src="Images/star.jpg">
-      <a class="lf" href="#">收藏京东</a><!--添加左浮动效果-->
-      <ul class="rt"><!--添加右浮动效果 -->
-        <li>
-          您好！欢迎来到京东
-          <a href="#">[登录]</a>
-          <a href="#">[免费注册]</a>
-        </li>
-        <li>
-          <b></b><!--边框 -->
-          <a href="#">我的订单</a>
-        </li>
-        <li class="vip">
-          <b></b><!--边框 -->
-          <a href="#">会员俱乐部</a>
-        </li>
-        <li class="dakehu">
-          <b></b><!--边框 -->
-          <a href="#">企业频道</a>
-        </li>
-        <li class="app_jd">
-          <b></b><!--边框 -->
-          <a href="#">手机京东</a>
-        </li>
-        <li class="service">
-          <b></b><!--边框 -->
-          <a href="#">客户服务</a>
-          <!-- 弹出菜单 -->
-          <ul>
-            <li>
-              <a href="#">帮助中心</a>
-            </li>
-            <li>
-              <a href="#">售后服务</a>
-            </li>
-            <li>
-              <a href="#">在线客服</a>
-            </li>
-            <li>
-              <a href="#">投诉中心</a>
-            </li>
-            <li>
-              <a href="#">客服邮箱</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <b></b><!--边框 -->
-          <a href="#">网站导航</a>
-        </li>
-      </ul>
-
-    </div>
-  </header>
   <!-- 广告 -->
   <div id="ad">
     <img src="Images/shipinyinliao.jpg" alt="广告">
@@ -1894,6 +1837,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<!--
+<style scoped src="../../assets/style/jd-food.css">
 
-</style>
+</style>-->
