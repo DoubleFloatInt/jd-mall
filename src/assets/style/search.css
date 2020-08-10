@@ -2,7 +2,8 @@
 #adidas{
 	width:1211px;
 	height:235px;
-	margin: 10px auto 0;
+	margin:10px auto;
+	margin-bottom:0px;
 	/* border:1px solid red; */
 }
 /* 左边阿迪达斯图以及文字部分 */
@@ -60,10 +61,19 @@
 	float:right;
 }
 /* 左侧广告部分 */
+
+.test_1{
+	margin:auto;
+	width:1240px;
+	height:2500px;
+	/* border:1px solid red; */
+}
+
 .adv_left{
 	float:left;
 	width:180px;
 	height:1680px;
+	margin-left:14px;/********************************/
 	border:1px solid #ddd;
 }
 .adv_left dl dt{
@@ -104,7 +114,7 @@
 }
 .table_rt{
 	float:left;
-	width:908px;
+	width:920px;
 	height:230px;
 	border-top:1px solid #ddd;
 	border-bottom:1px solid #ddd;
@@ -128,7 +138,7 @@
 	float:left;
 	margin-left:10px;
 	margin-top:10px;
-	width:1008px;
+	width:1020px;
 	height:40px;
 	border-top:1px solid #ddd;
 	border-bottom:1px solid #ddd;
@@ -169,7 +179,7 @@
 	height:1700px;
 	margin-top:10px;
 	margin-left:10px;
-	/* border:1px solid red; */
+	/* border:1px solid blue; */
 }
 #goods div.adv_mid{
 	float:left;
@@ -245,7 +255,7 @@
 	height:50px;
 	float:left;
 	margin-top:10px;
-	margin-left:165px;
+	margin-left:14px;/*****************************/
 	/* border:1px solid red; */
 }
 .pages ul li{
@@ -274,10 +284,10 @@
 /* 商品精选模块 */
 #goods_sel{
 	float:left;
-	width:1200px;
+	width:1206px;/***********************/
 	height:400px;
 	margin-top:30px;
-	margin-left:165px;
+	margin-left:14px;/**********************/
 	border:1px solid #ddd;
 	border-top:3px solid #DDD;
 }
@@ -318,103 +328,15 @@
 	color:#EA0000;
 }
 
+.test_2{
+	margin:auto;
+	width:1390px;
+	/*height:678px;*/
+	/* border:1px solid red; */
+}
+
 /* 广告图片 */
 #adv_picture a img{
 	float:left;
-	margin:20px 60px;
+	margin:20px 0px;/************************/
 }
-
-/* 底部推广部份 */
-#footer{
-	float:left;
-	width:1390px;
-	height:520px;
-	margin-left:60px;
-	background-color:#f0f0f0;
-	/* border:1px solid red; */
-}
-.floor_a{
-	float:left;
-	width:1390px;
-	height:100px;
-	/* border:1px solid red; */
-}
-.floor_a ul li{
-	float:left;
-	height:50px;
-	text-align:center;
-	margin:30px;
-	margin-left:70px;
-}
-.floor_a b{
-	float:left;
-	width:37px;
-	height:43px;
-	margin-right:15px;
-	background:url(../../assets/images/ico_service.png) no-repeat;
-}
-.floor_a b.a{
-	background-position:0px 0px;
-}
-.floor_a b.b{
-	background-position:0px -43px;
-}
-.floor_a b.c{
-	background-position:0px -86px;
-}
-.floor_a b.d{
-	background-position:0px -129px;
-}
-.floor_a ul li span{
-	line-height:40px;
-	font-size:20px;
-	font-weight:bold;
-	color:black;
-}
-
-.floor_b{
-	float:left;
-	height:230px;
-	width:100%;
-	border-top:1px solid #ddd;
-	border-bottom:1px solid #ddd;
-}
-.floor_b ul{
-	float:left;
-	margin:100px;
-	margin-top:30px;
-}
-.floor_b ul li{
-	line-height:25px;
-	color:#bebebe;
-	font-size:12px;
-}
-.floor_b ul li b{
-	color:#4f4f4f;
-	font-size:14px;
-}
-.floor_b ul li a:hover{
-	color:#EA0000;
-}
-
-.floor_c div{
-	text-align:center;
-	font-size:14px;
-	margin:5px;
-}
-.floor_c div.one{
-	color:#5b5b5b;
-}
-.floor_c div.one a:active{
-	color:#EA0000;
-}
-.floor_c ul{
-	margin-left:420px;;
-}
-.floor_c ul li{
-	float:left;
-	text-align:center;
-	margin:10px;
-}
-
-
