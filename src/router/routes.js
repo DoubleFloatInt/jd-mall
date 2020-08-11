@@ -1,18 +1,18 @@
-import Layout from '../Layout/index';
-import Index from '../view/Index/index';
-import Login from '../view/Login/index';
-import SecondKill from '../view/SecondKill/index';
-import Register from '../view/Register/index';
-import ProductDetail from '../view/ProductDetail/index';
-import TeJia from '../view/TeJia/index';
-import ShanGou from '../view/ShanGou/index';
-import HaoWu from '../view/HaoHuo/index';
-import OrderList from '../view/OrderList/index';
-import Search from '../view/Search/index';
-import PinLeiSecondKill from '../view/PinLeiSecondKill';
-import JDFood from '../view/jd_food/index';
-import Trade from '../view/Trade/index';
-import ShaiDan from '../view/ShaiDan/index';
+import Layout from '@/Layout/index';
+import Index from '@/view/Index/index';
+import Login from '@/view/Login/index';
+import SecondKill from '@/view/SecondKill/index';
+import Register from '@/view/Register/index';
+import ProductDetail from '@/view/ProductDetail/index';
+import TeJia from '@/view/TeJia/index';
+import ShanGou from '@/view/ShanGou/index';
+import HaoWu from '@/view/HaoHuo/index';
+import OrderList from '@/view/OrderList/index';
+import Search from '@/view/Search/index';
+import PinLeiSecondKill from '@/view/PinLeiSecondKill';
+import JDFood from '@/view/jd_food/index';
+import Trade from '@/view/Trade/index';
+import ShaiDan from '@/view/ShaiDan/index';
 
 export default [
     {

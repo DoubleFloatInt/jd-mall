@@ -6,9 +6,11 @@
         <a class="lf" href="#">收藏京东</a>    <!-- lf左浮动 -->
         <ul class="rt">        <!-- rt右浮动 -->
           <li class="login-register-area">
-            玛卡巴卡，你好！欢迎来到京东
-            <router-link to="/login" tag="a">你好，请登录</router-link>
-            <router-link to="/register" tag="a">[免费注册]</router-link>
+            <span v-if="isLogin">
+              {{username}}，你好！欢迎来到京东
+            </span>
+            <router-link v-if="!isLogin" to="/login" tag="a">你好，请登录</router-link>
+            <router-link v-if="!isLogin" to="/register" tag="a">[免费注册]</router-link>
           </li>
           <li>
             <b></b><!--边框-->
@@ -60,7 +62,15 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  computed: {
+    isLogin() {
+      return this.$store.getters.loginStatus;
+    },
+    username() {
+      return this.$store.getters.username;
+    }
+  }
 }
 </script>
 

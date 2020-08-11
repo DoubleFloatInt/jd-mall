@@ -95,7 +95,7 @@
 
 .login-wrap .login-form {
     float: right;
-    top: 10px;
+    top: 35px;
 }
 
 .login-form {
@@ -188,18 +188,6 @@
     display: block;
 }
 
-/* .login-form .login-tab a {
-    width: 99%;
-    height: 18px;
-    position: absolute;
-    left: 0;
-    top: 18px;
-    border-right: 1px solid #f4f4f4;
-    text-decoration: none;
-} */
-
-/* loginbox */
-
 .login-form .mc {
     overflow: visible;
     padding-top: 60px;
@@ -244,13 +232,22 @@
 }
 
 .form .item-fore1 .itxt {
-    width: 297px;
-    height: 33px;
+    width: 266px;
+    height: 38px;
+    margin-left: 38px;
+    box-sizing: border-box;
 }
 
-.form .item-fore2 .pwd {
-    width: 297px;
-    height: 33px;
+.form .item-fore1 img {
+    float: left;
+    width: 111px;
+    height: 38px;
+}
+
+.form .item-fore1 .captcha-input {
+    width: 137px;
+    height: 32px;
+    margin-left: 50px;
 }
 
 .login-form .safe {
@@ -268,7 +265,6 @@
 .login-form .safe .forget-pw-safe {
     position: absolute;
     float: right;
-    position: static;
     right: 0;
     top: 0;
     margin-left: 1px;
@@ -393,14 +389,14 @@
     top: 0;
     width: 100%;
     height: 475px;
-    background: #e93854;
-    background-color: rgb(233, 56, 84);
+    background-color: #2807b3;
 }
 
 .login-wrap .i-inner {
     position: relative;
     z-index: 3;
     height: 475px;
+    background: url(../../assets/images/images_login/banner_01.jpg) no-repeat;
 }
 
 /* 底部信息 */
