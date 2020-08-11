@@ -230,11 +230,13 @@ export default {
     },
     handleLogin() {
       this.$store.dispatch('Login', this.queryParams).then(()=>{
-        if (this.redirect === '') {
+        if (!this.redirect) {
           this.$router.push({path: '/'});
         } else {
           this.$router.push({path: this.redirect});
         }
+      }).catch(()=>{
+        this.getCaptchaImg();
       })
     }
   }
