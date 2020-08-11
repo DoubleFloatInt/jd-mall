@@ -25,16 +25,16 @@
           <span class="arrow right-arrow">&gt;</span>
         </div>
         <div class="others">
-          <span>商品编号:{{productInfo.productId}}</span>
+          <span>商品编号:{{ productInfo.productId }}</span>
         </div>
       </div>
 
       <!-- 商品参数 -->
       <div class="goods-info">
-        <h1 class="goods-title">{{productInfo.productName}}</h1>
+        <h1 class="goods-title">{{ productInfo.productName }}</h1>
         <div class="goods-info-item price-box clearfix">
           <dl>价格</dl>
-          <dt>¥<span class="price-num">{{productInfo.price}}</span></dt>
+          <dt>¥<span class="price-num">{{ productInfo.price }}</span></dt>
         </div>
         <div class="goods-info-item promotion clearfix">
           <dl>促销</dl>
@@ -67,9 +67,9 @@
         </div>
         <div class="add-shopcar clearfix">
           <div class="quantity">
-            <input type="text" value="1">
-            <span class="quantity-operation plus">+</span>
-            <span class="quantity-operation minus">-</span>
+            <input type="text" value="1" v-model="queryParams.quantity">
+            <span class="quantity-operation plus" @click="quantityPlus">+</span>
+            <span class="quantity-operation minus" @click="quantityMinus">-</span>
           </div>
           <div class="btn">
             <button>加入购物车</button>
@@ -171,7 +171,7 @@
         </div>
         <div class="goods-details">
           <p>
-            {{productInfo.productSummary}}
+            {{ productInfo.productSummary }}
           </p>
         </div>
         <div class="goods-images">
@@ -191,7 +191,11 @@ export default {
   data() {
     return {
       id: '',
-      productInfo: {}
+      productInfo: {},
+      queryParams: {
+        productId: '',
+        quantity: 1
+      }
     }
   },
   created() {
@@ -204,6 +208,15 @@ export default {
         this.productInfo = res.data;
         console.log(this.productInfo)
       })
+    },
+    quantityPlus() {
+      this.queryParams.quantity += 1;
+    },
+    quantityMinus() {
+      this.queryParams.quantity -= 1;
+      if (this.queryParams.quantity <= 0) {
+        this.queryParams.quantity = 1;
+      }
     }
   }
 }
