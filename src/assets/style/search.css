@@ -187,6 +187,11 @@
 	margin:1px;
 	border:1px solid transparent;
 }
+
+#goods div.adv_mid .product-img {
+	width: 220px;
+	height: 220px;
+}
 .adv_mid dl dt{
 	text-align:center;
 }
@@ -202,7 +207,9 @@
 	color:#EA0000;
 }
 .adv_mid dl dd.words{
+	height: 48px;
 	line-height:normal;
+	overflow: hidden;
 }
 .adv_mid dl dd span{
 	margin-right:1px;

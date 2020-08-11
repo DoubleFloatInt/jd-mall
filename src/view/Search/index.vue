@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id= "adidas">
+    <div id="adidas">
       <div class="img_adidas">
         <div class="adidasimg">
           <img src="../../assets/images/5678b480N0c241b93.gif">
@@ -18,8 +18,8 @@
             <p>店铺介绍:&nbsp;adidas is all in</p>
           </div>
           <div class="adidas_sub">
-            <a href ="#">
-              <input type="submit" class="enter" value= "进入店铺">
+            <a href="#">
+              <input type="submit" class="enter" value="进入店铺">
             </a>
             <a href="#">
               <input type="submit" class="guanzhu" value="加关注">
@@ -226,352 +226,45 @@
 
       <!-- 商品展示区 -->
       <div id="goods">
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/5e05ca3b65ccb4eb.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥69.00</dd>
-            <dd class="words">
-              Adidas单肩包男女斜挎包休闲小背包运动收纳方包时尚潮牌官网正品
-            </dd>
-            <dd>
-              <span class="pj">1.2万+</span>条评价
-            </dd>
-            <dd>
-              <span class="zy">自营</span>
-              <span class="fxg">放心购</span>
-            </dd>
-            <dd><a href="#">菲跑运动专营店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/d957bb5e0beb06a9.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥449.00</dd>
-            <dd class="words">
-              ADIDAS运动板鞋男女三叶草Superstar金标贝壳头
-            </dd>
-            <dd>
-              <span class="pj">3.2万+</span>条评价
-            </dd>
-            <dd>
-              <span class="quan">券399-100</span>
-            </dd>
-            <dd><a href="#">haha海外专营店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/d2b8cf1934429135.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥398.00</dd>
-            <dd class="words">
-              阿迪达斯官网 adidas alphabounce 3 男鞋跑步运动鞋EG1391
-            </dd>
-            <dd>
-              <span class="pj">12.8万+</span>条评价
-            </dd>
-            <dd>
-              <span class="yfx">运费险</span>
-              <span class="zy">自营</span>
-            </dd>
-            <dd><a href="#">Adidas官方旗舰店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/4c752c0d16a666c0.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥109.00</dd>
-            <dd class="words">
-              阿迪达斯官网SID BRANDED TEE男装运动型格短袖T恤BR4749BK3715
-            </dd>
-            <dd>
-              <span class="pj">6.2万+</span>条评价
-            </dd>
-            <dd>
-              <span class="bdc">本地仓</span>
-            </dd>
-            <dd><a href="#">Adidas官方旗舰店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/7573f3b543215b77.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥559.00</dd>
-            <dd class="words">
-              【滔搏官方】adidas阿迪达斯男鞋米切尔场上篮球鞋实战训练
-            </dd>
-            <dd>
-              <span class="pj">1000+</span>条评价
-            </dd>
-            <dd>
-              <span class="quan">券499-120</span>
-            </dd>
-            <dd><a href="#">滔博运动官方旗舰店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/34815cb0a66c689e.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥89.00</dd>
-            <dd class="words">
-              阿迪达斯（Adidas）2020春夏 阿迪达斯官网短袖男装新款跆拳道系列
-            </dd>
-            <dd>
-              <span class="pj">2.5万+</span>条评价
-            </dd>
-            <dd>
-              <span class="fxg">放心购</span>
-            </dd>
-            <dd><a href="#">西街运动专营店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/4d2feb459ba4aceb.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥289.00</dd>
-            <dd class="words">
-              阿迪达斯官网 adidas RapidaRun 男女跑步运动鞋FY6549 1号黑色
-            </dd>
-            <dd>
-              <span class="pj">1.2万+</span>条评价
-            </dd>
-            <dd>
-              <span class="zy">自营</span>
-              <span class="yfx">运费险</span>
-            </dd>
-            <dd><a href="#">Adidas官方旗舰店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/aae9cf8a3ab99cba.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥509.00</dd>
-            <dd class="words">
-              Adidas阿迪达斯男鞋官方旗舰跑步鞋 2020夏新款运动透气缓震小椰子
-            </dd>
-            <dd>
-              <span class="pj">6200+</span>条评价
-            </dd>
-            <dd>
-              <span class="zy">自营</span>
-              <span class="dz">2件9折</span>
-            </dd>
-            <dd><a href="#">风驰运动专营店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/9fbea3b6539dca48.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥299.00</dd>
-            <dd class="words">
-              Adidas阿迪达斯男鞋 2020夏季透气运动鞋新品休闲鞋经典时尚小白鞋
-            </dd>
-            <dd>
-              <span class="pj">1.7万+</span>条评价
-            </dd>
-            <dd>
-              <span class="quan">券200-30</span>
-            </dd>
-            <dd><a href="#">名鞋库运动旗舰店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/06420b655bf022a6.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥119.00</dd>
-            <dd class="words">
-              adidas阿迪达斯短裤男运动裤 2020夏季新品五分裤 跑步训练健身
-            </dd>
-            <dd>
-              <span class="pj">9万+</span>条评价
-            </dd>
-            <dd>
-              <span class="bdc">本地仓</span>
-            </dd>
-            <dd><a href="#">名鞋库运动旗舰店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/65c8e01bd7291a3f.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥69.00</dd>
-            <dd class="words">
-              adidas阿迪达斯帽子男女运动潮牌时尚棒球帽遮阳防晒太阳帽户外休闲
-            </dd>
-            <dd>
-              <span class="pj">1.8万+</span>条评价
-            </dd>
-            <dd>
-              <span class="zy">自营</span>
-              <span class="dz">3件5折</span>
-            </dd>
-            <dd><a href="#">跑达运动专营店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/a103e3bf36adff0c.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥549.00</dd>
-            <dd class="words">
-              阿迪达斯官网 三叶草 EQT BASK ADV V2男女鞋经典运动鞋FW4258
-            </dd>
-            <dd>
-              <span class="pj">19.3万+</span>条评价
-            </dd>
-            <dd>
-              <span class="zy">自营</span>
-              <span class="yfx">运费险</span>
-            </dd>
-            <dd><a href="#">Adidas官方旗舰店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/c7c5c32a7ae6667c.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥259.00</dd>
-            <dd class="words">
-              adidas/阿迪达斯男鞋 2020春夏季新款情侣neo运动舒适透气休闲鞋
-            </dd>
-            <dd>
-              <span class="pj">3600+</span>条评价
-            </dd>
-            <dd>
-              <span class="fxg">放心购</span>
-              <span class="quan">券200-50</span>
-            </dd>
-            <dd><a href="#">领动运动运动户外专营店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/5a6a9b38Nfb94298c.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥29.90</dd>
-            <dd class="words">
-              阿迪达斯(Adidas)男士洗护二合一运动后舒缓香波沐浴露400ml
-            </dd>
-            <dd>
-              <span class="pj">19万+</span>条评价
-            </dd>
-            <dd>
-              <span class="dz">2件8折</span>
-              <span class="bdc">本地仓</span>
-            </dd>
-            <dd><a href="#">阿迪达斯京东自营店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/1a3803731731b801.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥143.00</dd>
-            <dd class="words">
-              阿迪达斯官网adidas 三叶草 Fun Graphic T2男装运动短袖T恤GT1878
-            </dd>
-            <dd>
-              <span class="pj">300+</span>条评价
-            </dd>
-            <dd>
-              <span class="yfx">运费险</span>
-            </dd>
-            <dd><a href="#">adidas官方旗舰店</a></dd>
-          </dl>
-        </div>
-        <div class="adv_mid">
-          <dl>
-            <dt>
-              <a href="#">
-                <img src="../../assets/images/d49fe37a790a79a7.jpg">
-              </a>
-            </dt>
-            <dd class="price">￥1599.00</dd>
-            <dd class="words">
-              Adidas单肩包男女斜挎包休闲小背包运动收纳方包时尚潮牌官网正品
-            </dd>
-            <dd>
-              <span class="pj">100+</span>条评价
-            </dd>
-            <dd>
-              <span class="zy">自营</span>
-              <span class="fxg">放心购</span>
-            </dd>
-            <dd><a href="#">Adidas官方旗舰店</a></dd>
-          </dl>
+        <div
+            class="adv_mid"
+            v-for="item in productList"
+            :key="item.productId"
+        >
+          <router-link :to="'/productDetail?id=' + item.productId">
+            <dl>
+              <dt>
+                <a href="#">
+                  <img class="product-img" :src="item.image" alt="">
+                </a>
+              </dt>
+              <dd class="price">￥69.00</dd>
+              <dd class="words">
+                {{item.productName}}
+              </dd>
+              <dd>
+                <span class="pj">1.2万+</span>条评价
+              </dd>
+              <dd>
+                <span class="zy">自营</span>
+                <span class="fxg">放心购</span>
+              </dd>
+              <dd><a href="#">菲跑运动专营店</a></dd>
+            </dl>
+          </router-link>
         </div>
       </div>
 
 
       <!-- 页数 -->
       <div class="pages">
-        <ul>
-          <li class="next"><a href="#">下一页&gt;</a></li>
-          <li class="point">. . .</li>
-          <li><a href="#">7</a></li>
-          <li><a href="#">6</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">1</a></li>
-          <li class="last"><a href="#">&lt;上一页</a></li>
-        </ul>
+        <Pagination
+          v-show="total > 0"
+          :total="total"
+          :page.sync="queryParams.pageNum"
+          :limit.sync="queryParams.pageSize"
+          @pagination="getList"
+        ></Pagination>
       </div>
 
       <!-- 商品精选模块 -->
@@ -662,7 +355,6 @@
     </div>
 
 
-
     <div class="test_2">
       <!-- 广告图片 -->
       <div id="adv_picture">
@@ -676,8 +368,38 @@
 </template>
 
 <script>
+import Pagination from '../../components/Pagination/index';
+import {getProductList} from "@/api/product";
+
 export default {
-name: "index"
+  name: "index",
+  components: {
+    Pagination
+  },
+  created() {
+    this.getList();
+  },
+  data() {
+    return {
+      total: 20,
+      productList: [],
+      queryParams: {
+        pageNum: 1,
+        pageSize: 16,
+      },
+    }
+  },
+  methods: {
+    getList() {
+      getProductList(this.queryParams).then(res => {
+        console.log(res.rows)
+        this.productList = res.rows;
+        this.total = res.total;
+      }).then(err => {
+        console.log(err)
+      })
+    }
+  }
 }
 </script>
 

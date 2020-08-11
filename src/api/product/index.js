@@ -5,3 +5,11 @@ export function getProductInfo(id) {
         url: '/product/info/' + id
     });
 }
+
+export function getProductList(params) {
+    return request({
+        url: '/product/list',
+        method: 'get',
+        params: params
+    });
+}
