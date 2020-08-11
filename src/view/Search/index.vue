@@ -240,7 +240,7 @@
               </dt>
               <dd class="price">￥69.00</dd>
               <dd class="words">
-                {{item.productName}}
+                {{ item.productName }}
               </dd>
               <dd>
                 <span class="pj">1.2万+</span>条评价
@@ -259,11 +259,11 @@
       <!-- 页数 -->
       <div class="pages">
         <Pagination
-          v-show="total > 0"
-          :total="total"
-          :page.sync="queryParams.pageNum"
-          :limit.sync="queryParams.pageSize"
-          @pagination="getList"
+            v-show="total > 0"
+            :total="total"
+            :page.sync="queryParams.pageNum"
+            :limit.sync="queryParams.pageSize"
+            @pagination="getList"
         ></Pagination>
       </div>
 
@@ -377,6 +377,12 @@ export default {
     Pagination
   },
   created() {
+    if (this.$route.query.keywords !== '') {
+      this.queryParams.productName = this.$route.query.keywords;
+      this.queryParams.productSummary = this.$route.query.keywords;
+    } else {
+      this.keywords = undefined;
+    }
     this.getList();
   },
   data() {
@@ -386,20 +392,21 @@ export default {
       queryParams: {
         pageNum: 1,
         pageSize: 16,
+        productName: '',
+        productSummary: '',
       },
     }
   },
   methods: {
     getList() {
       getProductList(this.queryParams).then(res => {
-        console.log(res.rows)
         this.productList = res.rows;
         this.total = res.total;
       }).then(err => {
         console.log(err)
       })
     }
-  }
+  },
 }
 </script>
 

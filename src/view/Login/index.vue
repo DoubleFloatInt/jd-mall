@@ -230,7 +230,6 @@ export default {
     },
     handleLogin() {
       this.$store.dispatch('Login', this.queryParams).then(()=>{
-        console.log(this.redirect);
         if (this.redirect === '') {
           this.$router.push({path: '/'});
         } else {

@@ -21,3 +21,10 @@ export function getUserInfo() {
         method: 'post'
     })
 }
+
+export function logout() {
+    return request({
+        url: '/logout',
+        method: 'post'
+    })
+}

@@ -9,7 +9,7 @@
     <div id="search_box">
       <!-- 2.2.1搜索框和按钮 -->
       <div class="search">
-        <input class="txtsearch">
+        <input class="txtsearch" v-model="keywords">
         <button @click="handleSearch">搜索</button>
       </div>
       <!-- 2.2.2热门搜索 -->
@@ -56,9 +56,14 @@
 <script>
 export default {
   name: "SearchBox",
+  data(){
+    return {
+      keywords: ''
+    }
+  },
   methods: {
     handleSearch() {
-      this.$router.push({path: '/search'})
+      this.$router.push({path: '/search?keywords=' + this.keywords})
     }
   }
 }
