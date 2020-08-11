@@ -41,7 +41,12 @@ router.beforeEach((to, from, next) => {
         }
     } else {
         if (whitePath.indexOf(to.path) === -1) {
-            next({path: '/login?redirect=' + to.path});
+            console.log(to.query)
+            let params = '';
+            for (let queryKey in to.query) {
+                params += '?' + queryKey + '=' + to.query[queryKey];
+            }
+            next({path: '/login?redirect=' + to.path + params});
         } else {
             next();
         }

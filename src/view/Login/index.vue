@@ -213,6 +213,11 @@ export default {
       }
     }
   },
+  computed: {
+    redirect() {
+      return this.$route.query.redirect;
+    }
+  },
   created() {
     this.getCaptchaImg();
   },
@@ -225,7 +230,12 @@ export default {
     },
     handleLogin() {
       this.$store.dispatch('Login', this.queryParams).then(()=>{
-        this.$router.push({path: '/'});
+        console.log(this.redirect);
+        if (this.redirect === '') {
+          this.$router.push({path: '/'});
+        } else {
+          this.$router.push({path: this.redirect});
+        }
       })
     }
   }
