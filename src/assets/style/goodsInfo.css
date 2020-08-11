@@ -29,6 +29,11 @@
     box-sizing: border-box;
 }
 
+.goods-image-container .big-image .big-image-item img {
+    width: 380px;
+    height: 380px;
+}
+
 .goods-image-container .small-image {
     width: 300px;
     margin: 44px auto 0;
@@ -38,6 +43,7 @@
     float: left;
     width: 56px;
     height: 56px;
+    margin: 0 1px;
     border: 1px solid transparent;
 }
 
@@ -46,8 +52,8 @@
 }
 
 .small-image-item img {
-    margin: 0 auto;
-    padding: 0 14px;
+    width: 56px;
+    height: 56px;
 }
 
 .small-image .arrow {
