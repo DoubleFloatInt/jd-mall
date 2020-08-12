@@ -52,6 +52,8 @@ const user = {
                     removeToken();
                     resolve();
                 }).catch(error => {
+                    console.log('退出登录错误')
+                    removeToken();
                     reject(error);
                 })
             })

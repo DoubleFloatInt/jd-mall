@@ -16,6 +16,7 @@ const whitePath = [
     '/',
     '/login',
     '/search',
+    '/productDetail',
     '/miaosha',
     '/tejia',
     '/shangou',
@@ -23,7 +24,8 @@ const whitePath = [
 ]
 
 router.beforeEach((to, from, next) => {
-    if (getToken()) {
+    console.log(getToken() === undefined);
+    if (getToken() !== undefined) {
         if (to.path === '/login' || to.path === '/register') {
             Notification.info("你已登录!");
             next({path: '/'});

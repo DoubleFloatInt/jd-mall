@@ -1,8 +1,9 @@
 import axios from 'axios';
 import {getToken} from "@/utils/tokenUtils";
 import errorCode from "@/utils/errorCode";
-import {Message, MessageBox} from "element-ui";
+import {Message} from "element-ui";
 import store from "@/store";
+import router from "@/router";
 
 const service = axios.create({
     baseURL: process.env.VUE_APP_BASE_API,
@@ -22,19 +23,8 @@ service.interceptors.response.use(res => {
         // 获取错误信息
         const message = errorCode[code] || res.data.msg || errorCode['default']
         if (code === 401) {
-            MessageBox.confirm(
-                '登录状态已过期，您可以继续留在该页面，或者重新登录',
-                '系统提示',
-                {
-                    confirmButtonText: '重新登录',
-                    cancelButtonText: '取消',
-                    type: 'warning'
-                }
-            ).then(() => {
-                store.dispatch('Logout').then(() => {
-                    location.reload() // 为了重新实例化vue-router对象 避免bug
-                })
-            })
+            store.dispatch('Logout');
+            router.push({path: '/'})
         } else if (code === 500) {
             Message({
                 message: message,
@@ -51,7 +41,6 @@ service.interceptors.response.use(res => {
         }
     },
     error => {
-        console.log('err' + error)
         Message({
             message: error.message,
             type: 'error',
