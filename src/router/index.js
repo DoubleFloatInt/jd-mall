@@ -17,12 +17,13 @@ const whitePath = [
     '/login',
     '/search',
     '/productDetail',
+    '/shopcar',
     '/miaosha',
     '/tejia',
     '/shangou',
     '/pinlei',
     '/food'
-]
+];
 
 router.beforeEach((to, from, next) => {
     console.log(getToken() === undefined);

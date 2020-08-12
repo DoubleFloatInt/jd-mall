@@ -13,6 +13,7 @@ import PinLeiSecondKill from '@/view/PinLeiSecondKill';
 import JDFood from '@/view/jd_food/index';
 import Trade from '@/view/Trade/index';
 import ShaiDan from '@/view/ShaiDan/index';
+import ShopCar from '@/view/ShopCar/index';
 
 export default [
     {
@@ -67,6 +68,16 @@ export default [
                     headNav: true,
                     searchBox: true,
                     nav: true
+                }
+            },
+            {
+                path: '/shopcar',
+                component: ShopCar,
+                meta: {
+                    title: '购物车',
+                    headNav: true,
+                    searchBox: false,
+                    nav: false
                 }
             },
             {
