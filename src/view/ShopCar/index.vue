@@ -3,9 +3,9 @@
     <!--描述：搜索框开始-->
     <div class="search clearfix">
       <div class="wrap">
-        <!--<router-link to="/" tag="span">-->
+        <router-link to="/" tag="span">
           <img src="../../assets/images/jdgwc.jpg" />
-        <!--</router-link>-->
+        </router-link>
 
         <div class="search_div">
 

@@ -14,7 +14,7 @@
 				<li><a href="#">男鞋 / 运动 / 户外</a></li>
 				<li><a href="#">房产 / 汽车 / 汽车用品</a></li>
 				<li><a href="#">母婴 / 玩具乐器</a></li>
-				<li><a href="#">食品 / 酒类 / 生鲜 / 特产</a></li>
+				<li><router-link tag="a" to="/food">食品 / 酒类 / 生鲜 / 特产</router-link> </li>
 				<li><a href="#">艺术 / 礼品鲜花 / 农资绿植</a></li>
 				<li><a href="#">医药保健 / 计生情趣</a></li>
 				<li><a href="#">图书 / 文娱 / 教育 / 电子书</a></li>
@@ -520,22 +520,26 @@
 					<p>热门晒单</p>
 					<!-- 热门晒单的内容 -->
 					<ul>
-						<li>
-							<!-- 左侧图片 -->
-							<p>
-								<img src="../../assets/images/index/share_01.jpg">
-								<i class="shai"></i>
-							</p>
-							<!-- 右侧文本 -->
-							<div>
-								<h3>
-									<a href="#">咔悠YOYO4.0蓝牙音箱低音炮立体声音响</a>
-								</h3>
-								<p>
-									<a href="#">音质还可以不错很大声很好看</a>
-								</p>
-							</div>
-						</li>
+            <li>
+              <!-- 左侧图片 -->
+              <p>
+                <img src="../../assets/images/index/share_01.jpg">
+                <i class="shai"></i>
+              </p>
+              <!-- 右侧文本 -->
+              <div>
+                <h3>
+                  <router-link to="/shaidan" tag="a">
+                    咔悠YOYO4.0蓝牙音箱低音炮立体声音响
+                  </router-link>
+                </h3>
+                <p>
+                  <router-link to="/shaidan" tag="a">
+                    音质还可以不错很大声很好看
+                  </router-link>
+                </p>
+              </div>
+            </li>
 						<li class="li_one">
 							<!-- 左侧图片 -->
 							<p>
@@ -545,7 +549,9 @@
 							<!-- 右侧文本 -->
 							<div>
 								<h3>
-									<a href="#">[晒单贴]出乎意料的京东，神气的泰富高焖烧壶</a>
+                  <router-link to="/shaidan" tag="a">
+                    [晒单贴]出乎意料的京东，神气的泰富高焖烧壶
+                  </router-link>
 								</h3>
 								<p>
 									<a href="#">昨晚在京东10点下的单，今天中午就送到了，京东的快递小哥实在神速呀！而且态度也好！</a>
@@ -568,10 +574,14 @@
 							<!-- 右侧文本 -->
 							<div>
 								<h3>
-									<a href="#">咔悠YOYO4.0蓝牙音箱低音炮立体声音响</a>
+									<router-link to="/shaidan" tag="a">
+                    咔悠YOYO4.0蓝牙音箱低音炮立体声音响
+                  </router-link>
 								</h3>
 								<p>
-									<a href="#">音质还可以不错很大声很好看</a>
+                  <router-link to="/shaidan" tag="a">
+                    音质还可以不错很大声很好看
+                  </router-link>
 								</p>
 							</div>
 						</li>
@@ -584,7 +594,9 @@
 							<!-- 右侧文本 -->
 							<div>
 								<h3>
-									<a href="#">[晒单贴]出乎意料的京东，神气的泰富高焖烧壶</a>
+                  <router-link to="/shaidan" tag="a">
+                    [晒单贴]出乎意料的京东，神气的泰富高焖烧壶
+                  </router-link>
 								</h3>
 								<p>
 									<a href="#">昨晚在京东10点下的单，今天中午就送到了，京东的快递小哥实在神速呀！而且态度也好！</a>

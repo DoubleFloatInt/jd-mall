@@ -7,7 +7,9 @@
   <!-- logo和搜索框 -->
   <div id="search">
     <div class="logo lf">
-      <img src="../../assets/images/images/logo.png" alt="logo">
+      <router-link to="/" tag="a">
+        <img src="../../assets/images/images/logo.png" alt="logo">
+      </router-link>
     </div>
     <!-- 食品饮料 -->
     <p class="food_drink lf">
