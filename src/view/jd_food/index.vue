@@ -325,66 +325,70 @@
         </div>
       </li>
       <li>
-        <a href="#">进口食品
+        <a href="#">休闲食品
           <i class="rt">
             <img src="../../assets/images/images/jiantou.png" alt="">
           </i>
         </a>
         <nav>
-          <a href="#">进口牛奶</a>
+          <a href="#">月饼</a>
           <i></i>
-          <a href="#">巧克力</a>
+          <a href="#">老字号</a>
           <i></i>
-          <a href="#">橄榄油</a>
-          <a href="#">饼干蛋糕</a>
+          <a href="#">营养零食</a>
+          <a href="#">休闲零食</a>
+          <i></i>
+          <a href="#">坚果炒货</a>
           <i></i>
         </nav>
       </li>
       <li>
-        <a href="#">进口食品
+        <a href="#">饮料冲饮
           <i class="rt">
             <img src="../../assets/images/images/jiantou.png" alt="">
           </i>
         </a>
         <nav>
-          <a href="#">进口牛奶</a>
+          <a href="#">饮料</a>
           <i></i>
-          <a href="#">巧克力</a>
+          <a href="#">牛奶酸奶</a>
           <i></i>
-          <a href="#">橄榄油</a>
-          <a href="#">饼干蛋糕</a>
+          <a href="#">饮用水</a>
+          <a href="#">咖啡奶茶</a>
           <i></i>
         </nav>
       </li>
       <li>
-        <a href="#">进口食品
+        <a href="#">粮油调味
           <i class="rt">
             <img src="../../assets/images/images/jiantou.png" alt="">
           </i>
         </a>
         <nav>
-          <a href="#">进口牛奶</a>
+          <a href="#">大米</a>
           <i></i>
-          <a href="#">巧克力</a>
+          <a href="#">食用油</a>
           <i></i>
-          <a href="#">橄榄油</a>
-          <a href="#">饼干蛋糕</a>
+          <a href="#">面</a>
+          <i></i>
+          <a href="#">杂粮</a>
           <i></i>
         </nav>
       </li>
       <li>
-        <a href="#">进口食品
+        <a href="#">茗茶
           <i class="rt">
             <img src="../../assets/images/images/jiantou.png" alt="">
           </i>
         </a>
         <nav>
-          <a href="#">进口牛奶</a>
+          <a href="#">绿茶</a>
           <i></i>
-          <a href="#">巧克力</a>
+          <a href="#">铁观音</a>
           <i></i>
-          <a href="#">橄榄油</a>
-          <a href="#">饼干蛋糕</a>
+          <a href="#">普洱</a>
+          <i></i>
+          <a href="#">龙井</a>
           <i></i>
         </nav>
       </li>
