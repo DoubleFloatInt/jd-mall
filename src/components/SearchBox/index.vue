@@ -47,7 +47,7 @@
     <!-- 2.4去购物车结算 -->
     <div id="shopcar">
       <b></b>
-      购物车结算
+      <router-link to="/shopcar" tag="a">购物车结算</router-link>
     </div>
     <!--3.页面主导航栏-->
   </div>

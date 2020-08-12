@@ -3,7 +3,9 @@
     <!--描述：搜索框开始-->
     <div class="search clearfix">
       <div class="wrap">
-        <img src="../../assets/images/jdgwc.jpg" />
+        <!--<router-link to="/" tag="span">-->
+          <img src="../../assets/images/jdgwc.jpg" />
+        <!--</router-link>-->
 
         <div class="search_div">
 
@@ -239,5 +241,10 @@ export default {
 <style scoped>
   div {
     text-align: center;
+  }
+
+  .wrap {
+    width: 1000px;
+    margin: 20px auto;
   }
 </style>

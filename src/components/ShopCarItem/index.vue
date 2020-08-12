@@ -1,6 +1,6 @@
 <template>
   <div class="info wrap">
-    <ul>
+    <ul class="clearfix">
       <li class="info_1"><input type="checkbox" value=""/></li>
       <li class="info_2"><img src="../../assets/images/img1.jpg" width="80px"/></li>
       <li class="info_3"><a href="">【京东超市】desha春秋季儿童休闲服</a></li>
@@ -33,6 +33,7 @@ export default {
   background-color: #fff4e8;
   border: 1px solid gray;
   margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 .info li {
