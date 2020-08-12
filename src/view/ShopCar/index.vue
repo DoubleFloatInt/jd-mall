@@ -47,65 +47,10 @@
     <!--描述：显示菜单结束-->
 
     <!--描述：商品详情展示开始-->
-    <div class="info wrap">
-      <ul>
-        <li class="info_1"><input type="checkbox" value=""/></li>
-        <li class="info_2"><img src="../../assets/images/img1.jpg" width="80px"/></li>
-        <li class="info_3"><a href="">【京东超市】desha春秋季儿童休闲服</a></li>
-        <li class="info_4"><a>颜色：灰色+粉红</a></li>
-        <li class="info_5">￥182.5</li>
-        <li class="info_6">
-          <button>-</button>
-          <input value="1"/>
-          <button class="but">+</button>
-        </li>
-        <li class="info_7">￥182.5</li>
-        <li class="info_8">
-          <a href="">删除</a>
-          <dd><a href="">移到我的关注</a></dd>
-        </li>
-      </ul>
-    </div>
-
-    <div class="info wrap">
-      <ul>
-        <li class="info_1"><input type="checkbox" value=""/></li>
-        <li class="info_2"><img src="../../assets/images/gwcl2.jpg" width="80px"/></li>
-        <li class="info_3"><a href="">【京东超市】益达木糖醇无糖口香糖大瓶装混合味约70粒98单瓶装(新旧包装随机发售)</a></li>
-        <li class="info_4"><a>混合味aaaaaa</a></li>
-        <li class="info_5">￥182.5</li>
-        <li class="info_6">
-          <button>-</button>
-          <input value="1"/>
-          <button class="but">+</button>
-        </li>
-        <li class="info_7">￥182.5</li>
-        <li class="info_8">
-          <a href="">删除</a>
-          <dd><a href="">移到我的关注</a></dd>
-        </li>
-      </ul>
-    </div>
-
-    <div class="info wrap">
-      <ul>
-        <li class="info_1"><input type="checkbox" value=""/></li>
-        <li class="info_2"><img src="../../assets/images/gwcl3.jpg" width="80px"/></li>
-        <li class="info_3"><a href="">【京东超市】益达(Extra)木糖醇无糖口香糖冰凉薄荷约40粒56g单瓶装(新旧包装随机发售)</a></li>
-        <li class="info_4"><a>冰凉薄荷味</a></li>
-        <li class="info_5">￥182.5</li>
-        <li class="info_6">
-          <button>-</button>
-          <input value="1"/>
-          <button class="but">+</button>
-        </li>
-        <li class="info_7">￥182.5</li>
-        <li class="info_8">
-          <a href="">删除</a>
-          <dd><a href="">移到我的关注</a></dd>
-        </li>
-      </ul>
-    </div>
+    <ShopCarItem
+      v-for="i in 10"
+      :key="i"
+    ></ShopCarItem>
     <!--描述：商品详情展示结束-->
 
     <!--描述：商品结算开始-->
@@ -282,8 +227,10 @@
 </template>
 
 <script>
+import ShopCarItem from "@/components/ShopCarItem/index";
 export default {
-  name: "index"
+  name: "index",
+  components: {ShopCarItem}
 }
 </script>
 
