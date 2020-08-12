@@ -7,7 +7,7 @@
   <!-- logo和搜索框 -->
   <div id="search">
     <div class="logo lf">
-      <img src="../../assets/logo.png" alt="logo">
+      <img src="../../assets/images/images/logo.png" alt="logo">
     </div>
     <!-- 食品饮料 -->
     <p class="food_drink lf">
@@ -129,7 +129,7 @@
           <img src="../../assets/images/Images_2/rouxiang_1.png" alt="">
         </div>
         <!-- 星星 -->
-        <img  class="xingxing" src="Images_2/wuxing.png" alt="">
+        <img  class="xingxing" src="../../assets/images/Images_2/wuxing.png" alt="">
         <!-- 评论 -->
         <span>不错哦，还很漂亮，空调里穿着正合适.</span>
         <!-- 图片 -->
@@ -143,7 +143,7 @@
           <img src="../../assets/images/Images_2/touxiang_2.png" alt="">
         </div>
         <!-- 星星 -->
-        <img  class="xingxing" src="Images_2/wuxing.png" alt="">
+        <img  class="xingxing" src="../../assets/images/Images_2/wuxing.png" alt="">
         <!-- 评论 -->
         <span>之前媳妇在实体店看到，当时媳妇没舍得买，然后我在网上偷偷给她买了，给她一个小惊喜。??，媳妇说很喜欢这种软软的小毛毛，踩着很舒服.</span>
         <!-- 图片 -->
@@ -157,7 +157,7 @@
           <img src="../../assets/images/Images_2/touxiang_3.png" alt="">
         </div>
         <!-- 星星 -->
-        <img  class="xingxing" src="Images_2/wuxing.png" alt="">
+        <img  class="xingxing" src="../../assets/images/Images_2/wuxing.png" alt="">
         <!-- 评论 -->
         <span>相当不错满意了，618活动买的，不到1000块，实体店都不打折.</span>
         <!-- 图片 -->
@@ -171,7 +171,7 @@
           <img src="../../assets/images/Images_2/touxiang_4.png" alt="">
         </div>
         <!-- 星星 -->
-        <img  class="xingxing" src="Images_2/wuxing.png" alt="">
+        <img  class="xingxing" src="../../assets/images/Images_2/wuxing.png" alt="">
         <!-- 评论 -->
         <span>颜色选了比较好搭配的紫色，大小选了36，平时也是穿36的，因为毛毛的关系所以还是会显得边缘有点大的，喜欢宽松可以选大一码。</span>
         <!-- 图片 -->
