@@ -72,7 +72,7 @@
             <span class="quantity-operation minus" @click="quantityMinus">-</span>
           </div>
           <div class="btn">
-            <button>加入购物车</button>
+            <button @click="handleAddShopCar">加入购物车</button>
           </div>
         </div>
       </div>
@@ -185,12 +185,13 @@
 
 <script>
 import {getProductInfo} from "@/api/product";
+import {addShopCar} from "@/api/shopcar";
+import {getToken} from "@/utils/tokenUtils";
 
 export default {
   name: "index",
   data() {
     return {
-      id: '',
       productInfo: {},
       queryParams: {
         productId: '',
@@ -199,14 +200,13 @@ export default {
     }
   },
   created() {
-    this.id = this.$route.query.id;
+    this.queryParams.productId = this.$route.query.id;
     this.getProductDetail();
   },
   methods: {
     getProductDetail() {
-      getProductInfo(this.id).then(res => {
+      getProductInfo(this.queryParams.productId).then(res => {
         this.productInfo = res.data;
-        console.log(this.productInfo)
       })
     },
     quantityPlus() {
@@ -216,6 +216,17 @@ export default {
       this.queryParams.quantity -= 1;
       if (this.queryParams.quantity <= 0) {
         this.queryParams.quantity = 1;
+      }
+    },
+    handleAddShopCar() {
+      if (getToken()) {
+        addShopCar(this.queryParams).then(() => {
+          this.$router.push("/shopcar");
+        }).catch(err => {
+          this.msgError(err);
+        });
+      } else {
+        this.$router.push({path: '/login?redirect=' + this.$route.path + "?id=" + this.queryParams.productId})
       }
     }
   }
