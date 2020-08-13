@@ -4,7 +4,7 @@
     <div class="search clearfix">
       <div class="wrap">
         <router-link to="/" tag="span">
-          <img src="../../assets/images/jdgwc.jpg" />
+          <img src="../../assets/images/jdgwc.jpg"/>
         </router-link>
 
         <div class="search_div">
@@ -36,7 +36,7 @@
     <div class="tips wrap">
       <ul>
         <li>
-          <input type="checkbox" name="" id="" value=""/>
+          <input type="checkbox" name="" id="" value="" v-model="selectAll" @change="handleSelectAll"/>
           全选
         </li>
         <li>商品</li>
@@ -48,27 +48,38 @@
     </div>
     <!--描述：显示菜单结束-->
 
+    <p v-if="noneProduct" style="text-align: center">
+      暂无商品，快去买买买～～～
+    </p>
+
     <!--描述：商品详情展示开始-->
     <ShopCarItem
-      v-for="i in 10"
-      :key="i"
+        v-for="item in shopCarList"
+        :key="item.id"
+        :productInfo.sync="item"
+        :select.sync="item.selected"
+        @changeSelectedStatus="changeSelectedStatus"
+        @addSelect="handleAddSelect"
+        @removeSelect="handleRemoveSelect"
+        @removeShopCarItem="removeShopCarItem"
     ></ShopCarItem>
     <!--描述：商品详情展示结束-->
 
     <!--描述：商品结算开始-->
     <div class="balance wrap">
       <ul class="balance_ul1">
-        <li><input type="checkbox"/>
+        <li>
+          <input type="checkbox" v-model="selectAll" @change="handleSelectAll"/>
           全选
         </li>
-        <li><a href=""><span>删除选中商品</span></a></li>
+        <li><a @click="handleDeleteItems"><span>删除选中商品</span></a></li>
         <li><a href=""><span>移到关注</span></a></li>
-        <li class="info_10"><a href=""><span>清理购物车</span></a></li>
+        <li class="info_10"><a @click="handleDeleteAll"><span>清理购物车</span></a></li>
       </ul>
 
       <ul class="balance_ul2">
-        <li>已经选择<span>1</span>件商品</li>
-        <li>总价<span>￥12</span></li>
+        <li>已经选择<span>{{ productNum }}</span>件商品</li>
+        <li>总价<span>￥{{ priceTotal }}</span></li>
         <li>
           <button class="butt">去结算</button>
         </li>
@@ -98,11 +109,11 @@
         </dd>
         <br/>
         <dd><i>
-          <e>冰凉薄荷味</e>
+          <span class="e">冰凉薄荷味</span>
         </i></dd>
         <br/>
         <dd><i>
-          <f>￥8.80</f>
+          <span class="f">￥8.80</span>
         </i></dd>
 
       </div>
@@ -119,7 +130,7 @@
           <dd><i><b>￥7.90</b></i></dd>
           <br/>
           <dd><i>
-            <c>24240人已购买</c>
+            <span class="c">24240人已购买</span>
           </i></dd>
         </dl>
       </div>
@@ -135,7 +146,7 @@
           <dd><i><b>￥7.90</b></i></dd>
           <br/>
           <dd><i>
-            <c>24240人已购买</c>
+            <span class="c">24240人已购买</span>
           </i></dd>
         </dl>
       </div>
@@ -151,7 +162,7 @@
           <dd><i><b>￥7.90</b></i></dd>
           <br/>
           <dd><i>
-            <c>24240人已购买</c>
+            <span class="c">24240人已购买</span>
           </i></dd>
         </dl>
       </div>
@@ -167,7 +178,7 @@
           <dd><i><b>￥7.90</b></i></dd>
           <br/>
           <dd><i>
-            <c>24240人已购买</c>
+            <span class="c">24240人已购买</span>
           </i></dd>
         </dl>
       </div>
@@ -230,21 +241,125 @@
 
 <script>
 import ShopCarItem from "@/components/ShopCarItem/index";
+import {deleteAll, deleteShopCarItems, getShopCarList} from "@/api/shopcar";
+
 export default {
   name: "index",
-  components: {ShopCarItem}
+  components: {ShopCarItem},
+  data() {
+    return {
+      shopCarList: [],
+      selected: [],
+      selectAll: false
+    }
+  },
+  computed: {
+    priceTotal() {
+      let total = 0;
+      let newList = this.shopCarList.filter(item => {
+        return this.selected.indexOf(item.productId) !== -1;
+      })
+      for (let i = 0; i < newList.length; i++) {
+        let item = newList[i];
+        total += parseInt(item.productPrice) * parseInt(item.quantity);
+      }
+      return total;
+    },
+    productNum() {
+      return this.selected.length;
+    },
+    noneProduct() {
+      return this.shopCarList.length === 0;
+    }
+  },
+  created() {
+    this.getList();
+  },
+  methods: {
+    getList() {
+      getShopCarList().then(res => {
+        this.shopCarList = [];
+        for (let i = 0; i < res.rows.length; i++) {
+          let item = res.rows[i];
+          let newItem = {
+            ...item,
+            selected: false
+          }
+          this.shopCarList = [...this.shopCarList, newItem];
+        }
+      })
+    },
+    handleSelectAll() {
+      if (this.selectAll) {
+        this.selected = [];
+        for (let i = 0; i < this.shopCarList.length; i++) {
+          let item = this.shopCarList[i];
+          item.selected = true;
+          this.selected = [...this.selected, item.productId];
+        }
+      } else {
+        for (let i = 0; i < this.shopCarList.length; i++) {
+          this.shopCarList[i].selected = false;
+        }
+        this.selected = [];
+      }
+    },
+    handleAddSelect(id) {
+      this.selected = [...this.selected, id];
+      if (this.selected.length === this.shopCarList.length) {
+        this.selectAll = true;
+      }
+    },
+    handleRemoveSelect(id) {
+      this.selectAll = false;
+      this.selected = this.selected.filter(item => {
+        return item !== id;
+      })
+    },
+    changeSelectedStatus(id, val) {
+      this.shopCarList.every(item => {
+        if (item.productId === id) {
+          item.selected = val;
+        }
+      })
+    },
+    removeShopCarItem(id) {
+      this.shopCarList = this.shopCarList.filter(item => {
+        return item.productId !== id;
+      })
+    },
+    handleDeleteItems() {
+      deleteShopCarItems(this.selected).then(res => {
+        this.shopCarList = this.shopCarList.filter(item => {
+          return this.selected.indexOf(item.productId) === -1;
+        })
+        this.selected = [];
+        this.msgSuccess(res.msg);
+      }).catch(err => {
+        this.msgError(err.msg);
+      })
+    },
+    handleDeleteAll() {
+      deleteAll().then(res => {
+        this.shopCarList = [];
+        this.msgSuccess(res.msg);
+      }).catch(err => {
+        this.msgError(err.msg);
+      })
+    }
+  }
 }
 </script>
 
 <style scoped src="../../assets/style/shopcar.css"></style>
 
 <style scoped>
-  div {
-    text-align: center;
-  }
+div {
+  text-align: center;
+}
 
-  .wrap {
-    width: 1000px;
-    margin: 20px auto;
-  }
+.wrap {
+  width: 1000px;
+  margin: 20px auto;
+}
 </style>

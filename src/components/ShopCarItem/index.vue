@@ -1,19 +1,19 @@
 <template>
   <div class="info wrap">
     <ul class="clearfix">
-      <li class="info_1"><input type="checkbox" value=""/></li>
-      <li class="info_2"><img src="../../assets/images/img1.jpg" width="80px"/></li>
-      <li class="info_3"><a href="">【京东超市】desha春秋季儿童休闲服</a></li>
-      <li class="info_4"><a>颜色：灰色+粉红</a></li>
-      <li class="info_5">￥182.5</li>
+      <li class="info_1"><input type="checkbox" v-model="select" @change="changeSelect"/></li>
+      <li class="info_2"><img :src="productInfo.productImage" width="80px"/></li>
+      <li class="info_3"><a href="">{{productInfo.productName}}</a></li>
+      <li class="info_4"><a>颜色：五彩斑斓的黑</a></li>
+      <li class="info_5">￥{{productInfo.productPrice}}</li>
       <li class="info_6">
-        <button>-</button>
-        <input value="1"/>
-        <button class="but">+</button>
+        <button @click="quantityMinus">-</button>
+        <input v-model="productInfo.quantity"/>
+        <button class="but" @click="quantityPlus">+</button>
       </li>
-      <li class="info_7">￥182.5</li>
+      <li class="info_7">￥{{priceTotal}}</li>
       <li class="info_8">
-        <a href="">删除</a>
+        <a @click="handleDeleteItem(productInfo.productId)">删除</a>
         <dd><a href="">移到我的关注</a></dd>
       </li>
     </ul>
@@ -21,8 +21,55 @@
 </template>
 
 <script>
+import {deleteShopCarItem, updateShopCarItem} from "@/api/shopcar";
+
 export default {
-  name: "ShopCarItem"
+  name: "ShopCarItem",
+  props: {
+    productInfo: {
+      required: true
+    },
+    select: {
+      required: true
+    }
+  },
+  data() {
+    return {
+    }
+  },
+  computed: {
+    priceTotal() {
+      return parseInt(this.productInfo.quantity) * parseInt(this.productInfo.productPrice);
+    }
+  },
+  methods: {
+    quantityPlus() {
+      this.productInfo.quantity += 1;
+      updateShopCarItem(this.productInfo);
+    },
+    quantityMinus() {
+      updateShopCarItem(this.productInfo);
+      this.productInfo.quantity -= 1;
+      if (this.productInfo.quantity <= 0) {
+        this.productInfo.quantity = 1;
+      }
+    },
+    changeSelect() {
+      if (this.select) {
+        this.$emit("addSelect", this.productInfo.productId);
+      } else {
+        this.$emit("removeSelect", this.productInfo.productId);
+      }
+    },
+    handleDeleteItem(id) {
+      deleteShopCarItem(id).then(res => {
+        this.$emit("removeShopCarItem", id);
+        this.msgSuccess(res.msg);
+      }).catch(err => {
+        this.msgError(err);
+      })
+    }
+  }
 }
 </script>
 
