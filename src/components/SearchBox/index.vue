@@ -9,7 +9,7 @@
     <div id="search_box">
       <!-- 2.2.1搜索框和按钮 -->
       <div class="search">
-        <input class="txtsearch" v-model="keywords">
+        <input class="txtsearch" v-model="keywords" @keyup.enter="handleSearch">
         <button @click="handleSearch">搜索</button>
       </div>
       <!-- 2.2.2热门搜索 -->

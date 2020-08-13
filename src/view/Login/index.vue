@@ -73,7 +73,7 @@
 
                   <div class="item item-fore1">
                     <img class="captcha-img" :src="captcha_img" alt="" @click="getCaptchaImg">
-                    <input class="captcha-input" type="text" v-model="queryParams.code">
+                    <input class="captcha-input" type="text" v-model="queryParams.code" @keyup.enter="handleLogin">
                   </div>
 
                   <div class="item item-fore4">
@@ -89,7 +89,6 @@
                       <a
                           class="btn-img btn-entry"
                           id="loginsubmit"
-                          @keyup.enter="handleLogin"
                           @click="handleLogin"
                       >
                         登&nbsp;&nbsp;&nbsp;&nbsp;录

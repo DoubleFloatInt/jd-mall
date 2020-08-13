@@ -7,7 +7,7 @@
         <ul class="rt">        <!-- rt右浮动 -->
           <li class="login-register-area">
             <span v-if="isLogin">
-              {{username}}，你好！欢迎来到京东
+              {{username}}，你好！欢迎来到京东 <a @click="handleLogout">退出登录</a>
             </span>
             <router-link v-if="!isLogin" to="/login" tag="a">你好，请登录</router-link>
             <router-link v-if="!isLogin" to="/register" tag="a">[免费注册]</router-link>
@@ -69,6 +69,12 @@ export default {
     },
     username() {
       return this.$store.getters.username;
+    }
+  },
+  methods:{
+    handleLogout() {
+      console.log('logout')
+      this.$store.dispatch("Logout");
     }
   }
 }
