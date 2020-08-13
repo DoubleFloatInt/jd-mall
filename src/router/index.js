@@ -15,6 +15,7 @@ const router = new VueRouter({
 const whitePath = [
     '/',
     '/login',
+    '/register',
     '/search',
     '/productDetail',
     '/shopcar',
