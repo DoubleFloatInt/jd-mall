@@ -15,6 +15,15 @@ export function getShopCarList() {
     })
 }
 
+export function getShopCarListByProductIds(productIds) {
+    return request({
+        url: '/shopcar/listByIds',
+        method: 'post',
+        type: 'json',
+        data: productIds
+    })
+}
+
 export function updateShopCarItem(params) {
     return request({
         url: '/shopcar/update',

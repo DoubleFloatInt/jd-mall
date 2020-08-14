@@ -81,7 +81,7 @@
         <li>已经选择<span>{{ productNum }}</span>件商品</li>
         <li>总价<span>￥{{ priceTotal }}</span></li>
         <li>
-          <button class="butt">去结算</button>
+          <button class="butt" @click="handleTrade">去结算</button>
         </li>
       </ul>
     </div>
@@ -346,6 +346,9 @@ export default {
       }).catch(err => {
         this.msgError(err.msg);
       })
+    },
+    handleTrade() {
+      this.$router.push({path: '/trade', query: {productIds: this.selected}});
     }
   }
 }

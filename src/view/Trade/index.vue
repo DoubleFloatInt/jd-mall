@@ -2,9 +2,9 @@
   <div class="container">
     <div class="trade-header clearfix">
       <div class="logo">
-        <a href="#">
+        <router-link to="/" tag="a">
           <img alt="logo" src="../../assets/images/trade-logo.png">
-        </a>
+        </router-link>
       </div>
       <span>结算页</span>
     </div>
@@ -20,22 +20,34 @@
               暂无收货地址
             </div>
             <div class="default-address address-item clearfix">
-              <div class="selection-btn selected">李广帅</div>
-              <div class="address-detail">李广帅 江苏 徐州市 铜山经济技术开发区 蟠桃花园三期24号楼4单元101 131****8799 <a class="edit"
-                                                                                               href="">编辑</a>
+              <div class="selection-btn selected">{{ selectedAddress.realName }}</div>
+              <div class="address-detail">
+                {{ selectedAddress.realName + ' ' + selectedAddress.province + ' ' + selectedAddress.city + ' ' + selectedAddress.area + ' ' + selectedAddress.street + ' ' + selectedAddress.phonenum }}<a
+                  class="edit"
+                  href="">编辑</a>
               </div>
-              <div class="default-sign">默认地址</div>
+              <div class="default-sign" v-if="selectedAddress.defaultAddress">默认地址</div>
             </div>
-            <div class="address-item clearfix">
-              <div class="selection-btn">李广帅</div>
-              <div class="address-detail">李广帅 江苏 徐州市 铜山经济技术开发区 蟠桃花园三期24号楼4单元101 131****8799 <a class="edit"
-                                                                                               href="">编辑</a>
+            <transition name="el-zoom-in-top">
+              <div
+                  v-show="showMoreAddress"
+                  class="default-address address-item clearfix"
+                  v-for="item in addressList"
+                  :key="item.addressId"
+                  @click="handleChangeAddress(item.addressId)"
+              >
+                <div class="selection-btn selected">{{ item.realName }}</div>
+                <div class="address-detail">
+                  {{ item.realName + ' ' + item.province + ' ' + item.city + ' ' + item.area + ' ' + selectedAddress.street + ' ' + selectedAddress.phonenum }}<a
+                    class="edit"
+                    href="">编辑</a>
+                </div>
+                <div class="default-sign" v-if="item.defaultAddress">默认地址</div>
               </div>
-              <div class="default-sign">默认地址</div>
-            </div>
+            </transition>
           </div>
           <div class="more-address">
-            <a href="">更多地址</a>
+            <a @click="handleShowMoreAddress">更多地址</a>
           </div>
         </div>
         <div class="pay-method clearfix">
@@ -64,95 +76,23 @@
               </div>
             </div>
             <div class="product-list">
-              <div class="product-item clearfix">
+              <div
+                  class="product-item clearfix"
+                  v-for="item in this.order.productList"
+                  :key="item.id"
+              >
                 <div class="product-img">
                   <img alt=""
-                       src="https://img14.360buyimg.com/N4/jfs/t1/62005/29/9429/156933/5d71eab8Edb8057f1/def4a46773dec295.jpg">
+                       :src="item.productImage">
                 </div>
                 <div class="product-name">
-                  <p>罗技（Logitech）MX Keys 键盘 无线蓝牙键盘 适配苹果Mac OS 办公键盘 超</p>
+                  <p>{{ item.productName }}</p>
                 </div>
                 <div class="product-price">
-                  <p>¥859.00</p>
+                  <p>¥{{ item.productPrice }}</p>
                 </div>
                 <div class="product-quantity">
-                  <span>x1</span>
-                </div>
-                <div class="has-remain">
-                  <span>有货</span>
-                </div>
-              </div>
-
-              <div class="product-item clearfix">
-                <div class="product-img">
-                  <img alt=""
-                       src="https://img14.360buyimg.com/N4/jfs/t1/62005/29/9429/156933/5d71eab8Edb8057f1/def4a46773dec295.jpg">
-                </div>
-                <div class="product-name">
-                  <p>罗技（Logitech）MX Keys 键盘 无线蓝牙键盘 适配苹果Mac OS 办公键盘 超</p>
-                </div>
-                <div class="product-price">
-                  <p>¥859.00</p>
-                </div>
-                <div class="product-quantity">
-                  <span>x1</span>
-                </div>
-                <div class="has-remain">
-                  <span>有货</span>
-                </div>
-              </div>
-
-              <div class="product-item clearfix">
-                <div class="product-img">
-                  <img alt=""
-                       src="https://img14.360buyimg.com/N4/jfs/t1/62005/29/9429/156933/5d71eab8Edb8057f1/def4a46773dec295.jpg">
-                </div>
-                <div class="product-name">
-                  <p>罗技（Logitech）MX Keys 键盘 无线蓝牙键盘 适配苹果Mac OS 办公键盘 超</p>
-                </div>
-                <div class="product-price">
-                  <p>¥859.00</p>
-                </div>
-                <div class="product-quantity">
-                  <span>x1</span>
-                </div>
-                <div class="has-remain">
-                  <span>有货</span>
-                </div>
-              </div>
-
-              <div class="product-item clearfix">
-                <div class="product-img">
-                  <img alt=""
-                       src="https://img14.360buyimg.com/N4/jfs/t1/62005/29/9429/156933/5d71eab8Edb8057f1/def4a46773dec295.jpg">
-                </div>
-                <div class="product-name">
-                  <p>罗技（Logitech）MX Keys 键盘 无线蓝牙键盘 适配苹果Mac OS 办公键盘 超</p>
-                </div>
-                <div class="product-price">
-                  <p>¥859.00</p>
-                </div>
-                <div class="product-quantity">
-                  <span>x1</span>
-                </div>
-                <div class="has-remain">
-                  <span>有货</span>
-                </div>
-              </div>
-
-              <div class="product-item clearfix">
-                <div class="product-img">
-                  <img alt=""
-                       src="https://img14.360buyimg.com/N4/jfs/t1/62005/29/9429/156933/5d71eab8Edb8057f1/def4a46773dec295.jpg">
-                </div>
-                <div class="product-name">
-                  <p>罗技（Logitech）MX Keys 键盘 无线蓝牙键盘 适配苹果Mac OS 办公键盘 超</p>
-                </div>
-                <div class="product-price">
-                  <p>¥859.00</p>
-                </div>
-                <div class="product-quantity">
-                  <span>x1</span>
+                  <span>x{{ item.quantity }}</span>
                 </div>
                 <div class="has-remain">
                   <span>有货</span>
@@ -166,8 +106,8 @@
     <div class="order-summary clearfix">
       <div class="rt">
         <dl class="clearfix">
-          <dt><span class="product-nums">2</span>件商品,总商品金额:</dt>
-          <dd>¥3507.00</dd>
+          <dt><span class="product-nums">{{ order.productCount }}</span>件商品,总商品金额:</dt>
+          <dd>¥{{ order.orderAmountTotal }}</dd>
         </dl>
         <dl class="clearfix">
           <dt>运费:</dt>
@@ -180,18 +120,82 @@
       </div>
     </div>
     <div class="order-address">
-      <p class="sales-total">应付总额:<span>¥3487.00</span></p>
-      <p> 寄送至： 江苏 徐州市 铜山经济技术开发区 蟠桃花园三期24号楼4单元101 收货人：李广帅 131****8799 </p>
+      <p class="sales-total">应付总额:<span>¥{{ order.orderAmountTotal }}</span></p>
+      <p> 寄送至：
+        {{ selectedAddress.province + ' ' + selectedAddress.city + ' ' + selectedAddress.area + ' ' + selectedAddress.street }}
+        收货人：{{ selectedAddress.realName + ' ' + selectedAddress.phonenum }} 131****8799 </p>
     </div>
     <div class="submit-order">
-      <button>提交订单</button>
+      <button @click="handleSubmitOrder">提交订单</button>
     </div>
   </div>
 </template>
 
 <script>
+import {deleteShopCarItems, getShopCarListByProductIds} from "@/api/shopcar";
+import {getAddressList} from "@/api/address";
+import {addOrder} from "@/api/order";
+
 export default {
-  name: "Trade"
+  name: "Trade",
+  data() {
+    return {
+      order: {
+        addressId: '',
+        productCount: 0,
+        orderAmountTotal: 0,
+        productList: []
+      },
+      addressList: [],
+      selectedAddress: {},
+      showMoreAddress: false
+    }
+  },
+  created() {
+    getShopCarListByProductIds(this.$route.query.productIds).then(res => {
+      this.order.productList = res.rows;
+      this.order.productCount = res.rows.length;
+      for (let i = 0; i < res.rows.length; i++) {
+        this.order.orderAmountTotal += res.rows[i].productPrice;
+      }
+    })
+    getAddressList().then(res => {
+      this.addressList = res.rows.filter(item => {
+        return !item.defaultAddress;
+      });
+      this.selectedAddress = res.rows.filter(item => {
+        return item.defaultAddress;
+      })[0];
+    })
+  },
+  methods: {
+    handleShowMoreAddress() {
+      this.showMoreAddress = !this.showMoreAddress;
+    },
+    handleChangeAddress(id) {
+      this.addressList = [...this.addressList, this.selectedAddress]
+      for (let i = 0; i < this.addressList.length; i++) {
+        let item = this.addressList[i];
+        if (item.addressId === id) {
+          this.selectedAddress = item;
+          break;
+        }
+      }
+      this.addressList = this.addressList.filter(item => {
+        return item.addressId !== id;
+      })
+    },
+    handleSubmitOrder() {
+      this.order.addressId = this.selectedAddress.addressId;
+      addOrder(this.order).then(() => {
+        deleteShopCarItems(this.$route.query.productIds).then(() => {
+          this.msgSuccess("订单结算成功!!!");
+          this.$router.push({path: '/orderList'})
+        })
+      })
+
+    }
+  }
 }
 </script>
 
