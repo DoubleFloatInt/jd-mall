@@ -14,6 +14,8 @@ import JDFood from '@/view/jd_food/index';
 import Trade from '@/view/Trade/index';
 import ShaiDan from '@/view/ShaiDan/index';
 import ShopCar from '@/view/ShopCar/index';
+import Video from '@/view/Video/index';
+import Clothing from '@/view/Clothing/index';
 
 export default [
     {
@@ -165,6 +167,15 @@ export default [
         component: Register,
         meta: '注册'
     },
-
+    {
+        path: '/video',
+        component: Video,
+        meta: '电影'
+    },
+    {
+        path: '/clothing',
+        component: Clothing,
+        meta: '服装'
+    }
 
 ]
