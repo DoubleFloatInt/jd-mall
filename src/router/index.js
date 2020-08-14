@@ -18,7 +18,6 @@ const whitePath = [
     '/register',
     '/search',
     '/productDetail',
-    '/shopcar',
     '/miaosha',
     '/tejia',
     '/shangou',
@@ -28,14 +27,12 @@ const whitePath = [
 ];
 
 router.beforeEach((to, from, next) => {
-    console.log(getToken() === undefined);
     if (getToken() !== undefined) {
         if (to.path === '/login' || to.path === '/register') {
             Notification.info("你已登录!");
             next({path: '/'});
         } else {
             if (store.getters.username === '') {
-                console.log('获取用户信息');
                 store.dispatch('GetUserInfo').then(() => {
                     next();
                 }).catch(() => {

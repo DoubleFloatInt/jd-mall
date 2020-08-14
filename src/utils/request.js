@@ -26,10 +26,10 @@ service.interceptors.response.use(res => {
             store.dispatch('Logout');
             router.push({path: '/'})
         } else if (code === 500) {
-            Message({
+            /*Message({
                 message: message,
                 type: 'error'
-            })
+            })*/
             return Promise.reject(new Error(message))
         } else if (code !== 200) {
             Notification.error({
