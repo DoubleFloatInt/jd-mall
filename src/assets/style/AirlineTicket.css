@@ -1,0 +1,1141 @@
+/**ҳ��Ĺ�����ʽ**/
+body {
+    /**��߾�  �ڱ߾�  ���壺��С  ����  ��ɫ*/
+    margin: 0px;
+    padding: 0px;
+    font: 12px "microsoft yahei", Arial;
+    color: #666;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    color: #666666;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+a:hover {
+    color: red;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+/**���ԣ����ṹ������ӱ߿�**/
+#main, #foot_box, #footer {
+    /*border:1px solid black;*/
+    background-color: #e7e7e7;
+
+}
+
+/**���岼��**/
+.w {
+    width: 990px;
+    margin: 0 auto;
+}
+
+#top_box, #top_main, #main, #foot_box, #footer {
+    /**��ȣ�ˮƽ���ж���*/
+    width: 100%;
+    margin: 0px auto;
+
+}
+
+#footer pre {
+    margin-left: 155px;
+    margin-top: 0;
+    display: block;
+
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    border-radius: 4px;
+}
+
+#main {
+    width: 100%;
+    margin: 0px auto;
+    /*background-color: #E4393C;*/
+
+}
+
+
+/*****1.ҳ�涥��************/
+#top {
+    /**�߶�   �и�  ������ɫ    �±߿�*/
+    height: 30px;
+    line-height: 30px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #eee;
+}
+
+#top_box > img {
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+#top_box > ul > li {
+    /**�󸡶�   �ұ���߾�*/
+    float: left;
+    margin-right: 5px;
+}
+
+#top_box b {
+    /**��߿�  ����߾�*/
+    border-left: 1px solid #ddd;
+    margin-right: 5px;
+}
+
+/**��Ա���ֲ�*/
+li.vip a {
+    /**���ڱ߾�  ������ͼƬ*/
+    padding-left: 29px;
+    background: url(../../assets/images/vip.jpg) no-repeat left center;
+}
+
+/**�ֻ�����*/
+li.app_jd a {
+    /**��ʾ��ʽ�����ڿ�Ԫ��    �߶�   ���ڱ߾�   ��������*/
+    display: inline-block;
+    height: 22px;
+    padding-left: 18px;
+    background: url(../../assets/images/iconlist_2.png) no-repeat -128px -360px;
+    line-height: 22px;
+}
+
+li.app_jd a:hover {
+    background-position: -128px -399px;
+}
+
+/***�ͻ�����*/
+li.service > a {
+    /**�����ڱ߾�  ������ͼƬ  �����ϱ߿�*/
+    padding: 0px 15px;
+    background: url(../../assets/images/jt_down.jpg) no-repeat 95% center;
+    border: 1px solid transparent;
+    border-bottom: 0px;
+    /**��ʾ��ʽ���߶�  �и�*/
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+}
+
+li.service > a:hover {
+    /**�߿���ɫ ������ɫ   ����ͼƬ*/
+    border-color: #ddd;
+    background-color: #fff;
+    background: url(../../assets/images/jt_up.jpg) no-repeat 95% center;
+
+}
+
+/**�����˵�**/
+li.service ul {
+    width: 78px;
+    border: 1px solid #ddd;
+    border-top: 0px;
+    background-color: #fff;
+    text-align: center;
+    /**���Զ�λ*/
+    position: absolute;
+    top: 28px;
+    left: 6px;
+    /**����ʾ*/
+    display: none;
+
+}
+
+li.service {
+    /**��Զ���*/
+    position: relative;
+}
+
+li.service:hover ul {
+    display: block;
+}
+
+/******2.Logo �� ������****************/
+#top_main {
+    /**overflow :hidden   �����ڱ߾�**/
+    overflow: hidden;
+    padding: 10px 0px;
+}
+
+#search_box {
+    /**���  ������߾�  ����*/
+    width: 500px;
+    margin: 25px 80px 0px 40px;
+    float: left;
+
+}
+
+#search_box div.search {
+    /**���  �߶�   �ڱ߾�  ������ɫ**/
+    width: 500px;
+    height: 30px;
+    padding: 3px;
+    background-color: #E4393C;
+}
+
+#search_box div.search input {
+    /***���  �߶�  �ڱ߾� 0px**/
+    width: 410px;
+    height: 30px;
+    padding: 0px;
+    /**���ڱ߾�  �ı���ɫ**/
+    padding-left: 10px;
+    color: #666;
+}
+
+#search_box div.search button {
+    /**ȥ�߿�  �ı���  �߶�  ���   ���֣���С  ��ɫ  �Ӵ�**/
+    border: 0px;
+    background-color: #E4393C;
+    height: 28px;
+    width: 75px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold; /**����Ӵ�*/
+}
+
+#search_box div.hot_words {
+    margin-top: 3px;
+    height: 16px;
+    overflow: hidden;
+}
+
+div.hot_words span, div.hot_words a {
+    color: #999;
+}
+
+div.hot_words a {
+    margin-right: 5px;
+}
+
+#tongzhi {
+
+}
+
+#tongzhi img {
+    margin: 0px 264.6px 0px 264.6px;
+}
+
+#tongzhi a {
+    display: block;
+    line-height: 0px;
+}
+
+#nav {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    background: #ffae2e;
+}
+
+#nav .nav_top {
+    margin: 0 auto;
+    width: 250px;
+    height: 50px;
+    border: solid #E4393C 1px;
+}
+
+#nav_top .w .trip_logo {
+    /*display:block;*/
+    width: 121px;
+    height: 50px;
+    float: left;
+}
+
+#nav_top .nav_list {
+    float: left;
+    padding: 5px 0 0 13px;
+    height: 45px;
+
+}
+
+#nav_top .nav_list li:hover {
+    float: left;
+    height: 42px;
+    margin: 0 8px;
+    line-height: 35px;
+    border-top: 3px solid rgb(255, 136, 46);
+    width: 66px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+li .a {
+    float: left;
+    height: 42px;
+    margin: 0 8px;
+    line-height: 35px;
+    border-top: 3px solid rgb(255, 136, 46);
+    width: 66px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+#nav_top .nav_list li {
+    float: left;
+    height: 42px;
+    margin: 0 8px;
+    line-height: 35px;
+    border-top: 3px solid #ffae2e;
+    /*border-top: 3px solid transparent;*/
+    width: 66px;
+    text-align: center;
+}
+
+#nav_top .nav_list li a {
+    float: left;
+
+    font-size: 15px;
+    font-family: microsoft yahei;
+    color: white;
+    width: 66px;
+    height: 42px;
+    line-height: 35px
+}
+
+#nav_top .nav_list a:hover {
+    float: left;
+    font-size: 15px;
+    font-family: microsoft yahei;
+    color: rgb(51, 51, 51);
+    width: 66px;
+    height: 42px;
+    line-height: 35px
+}
+
+.nav_show {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 3;
+    height: 38px;
+    width: 100%;
+    border: 1px solid red;
+    padding-left: 500px;
+}
+
+#nav_top .nav_list li .nav_show a {
+    font-size: 13px;
+    position: relative;
+    white-space: nowrap;
+    float: left;
+    width: 120px;
+    color: black;
+}
+
+#nav_top .nav_list li:hover .nav_show {
+    display: block;
+}
+
+#nav_top .nav_list a {
+    float: left;
+    font-size: 15px;
+    font-family: microsoft yahei;
+    color: rgb(51, 51, 51);
+    width: 66px;
+    height: 42px;
+    line-height: 35px;
+}
+
+#nav_bg {
+    /*display: none;*/
+    height: 38px;
+    opacity: .95;
+    filter: alpha(opacity=95);
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+}
+
+.nav_order {
+    float: right;
+    margin-top: 5px;
+    width: 151px;
+    height: 45px;
+
+}
+
+.nav_order #tx {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin: 4px 0 0 5px;
+    position: relative;
+}
+
+.nav_order #tx #trip_photo {
+    float: left;
+    width: 32px;
+    height: 32px;
+
+}
+
+.nav_order #tx img {
+    float: left;
+    width: 32px;
+    height: 32px;
+}
+
+.nav_order #tx #tx_bg {
+    background: url("../../assets/images/Airline/tripnav.png") no-repeat 0 -36px;
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.nav_order h5 {
+    float: left;
+    width: 95px;
+    padding: 7px 0 0 4px;
+    height: 26px;
+    line-height: 26px;
+    font-weight: 400;
+    font-size: 13px;
+    font-family: microsoft yahei;
+    color: #fff;
+    margin-left: 3px;
+}
+
+.nav_order b {
+    background: url("../../assets/images/Airline/tripnav.png") no-repeat -48px -11px;
+    float: left;
+    width: 7px;
+    height: 5px;
+    margin-top: 18px;
+}
+
+.bk {
+    margin-top: 45px;
+    border: 1px solid #ff882e;
+    /*display:none;*/
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.nav_order ul {
+    border: 1px solid #e7e7e7;
+    width: 120px;
+    margin: 0px 0 0 19px;
+    border-left: 1px solid #e7e7e7;
+}
+
+.nav_order ul li {
+    height: 24px;
+    padding-left: 19px;
+    font-size: 12px;
+}
+
+.nav_order ul .oder_info {
+    margin-top: 10px;
+}
+
+.nav_order ul li a {
+    height: 24px;
+}
+
+.bk ul li a i {
+    position: absolute;
+    left: -1px;
+    display: none;
+    width: 5px;
+    height: 15px;
+    margin-left: 1129px;
+    background: url("../../assets/images/Airline/hot_bg.png") no-repeat -34px -8px;
+}
+
+.gg_lb {
+    float: left;
+    width: 10px;
+    height: 10px;
+}
+
+.gg_lb img {
+}
+
+/*����*/
+.nav_order:hover .bk {
+    display: block;
+}
+
+.nav_order ul li a:hover {
+    /*color: #ffae2e;*/
+    /*display:block;*/
+    position: relative;
+    float: right;
+    width: 151px;
+    height: 45px;
+    margin-top: 5px;
+}
+
+.nav_order ul li a:hover i {
+    display: block;
+}
+
+
+/**********���岿��**************/
+.air_search {
+    margin: 10px 0px 10px 0px;
+    height: 360px;
+}
+
+.choose {
+    border: 4px solid #ffc569;
+    width: 369px;
+    height: 360px;
+    left: 0;
+    top: 10px;
+    float: left;
+    margin-right: 18px;
+}
+
+.choose .guonei {
+    float: left;
+    width: 180px;
+
+}
+
+.ic {
+    background: url("../../assets/images/Airline/ic.png") no-repeat;
+}
+
+.choose .ic {
+    background-position: 19px 2px;
+    padding-left: 60px;
+
+}
+
+.choose .guoji {
+    float: left;
+    width: 180px;
+}
+
+.form_area {
+    float: left;
+    margin-left: 50px;
+}
+
+.form_area form {
+    position: relative;
+    padding: 25px 30px 0;
+    background-color: #fff;
+
+}
+
+.search-form .item_c {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+label .search_tit {
+    line-height: 30px;
+    width: 60px;
+}
+
+.item_c .search_area {
+    width: 150px;
+    border: 1px solid #ccc;
+}
+
+.search_butn {
+    display: inline-block;
+    width: 152px;
+    heqight: 35px;
+    color: #fff;
+    background: #ffb02a;
+    border-bottom: 4px solid #ff9600;
+    border-radius: 8px;
+    text-align: center;
+    font: 700 18px/35px 'Microsoft Yahei';
+}
+
+.gg {
+    /*float: left;*/
+    width: 603px;
+    height: 360px;
+}
+
+gg img {
+    float: left;
+}
+
+.num {
+    position: absolute;
+    width: 583px;
+    padding-right: 23px;
+    height: 21px;
+    bottom: 220px;
+    text-align: right;
+    z-index: 2;
+}
+
+.gg .num ul {
+    text-align: right;
+}
+
+.num li {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-color: #bcbcbc;
+    border-radius: 50%;
+    margin-left: 10px;
+    text-indent: -9999em;
+    cursor: pointer;
+}
+
+.num li:hover {
+    background-color: #ff872e;
+}
+
+
+/*����  2*/
+.air_service {
+    width: 990px;
+    height: 80px;
+    background-color: #f8f8f8;
+}
+
+.air_service .service_left {
+    float: left;
+    width: 369px;
+    height: 80px;
+    margin-right: 18px;
+}
+
+.air_service .service_left ul li {
+    float: left;
+    padding-top: 10px;
+}
+
+.air_service .service_left ul li a {
+    background: url("../../assets/images/Airline/air_bg.png") no-repeat;
+    padding-top: 40px;
+    text-align: center;
+    display: block;
+    width: 100px;
+    color: #666666;
+    font-size: 10px;
+    text-decoration: none;
+    margin-right: 21px;
+}
+
+.air_service .service_left ul li a.tw {
+    background-position: -192px 0;
+}
+
+.air_service .service_left ul li a.th {
+    background-position: -185px 0;
+}
+
+.air_service .service_right {
+    float: left;
+    width: 603px;
+    height: 80px;
+}
+
+.air_service .service_right li {
+    float: left;
+    width: 181px;
+    height: 80px;
+    line-height: 80px;
+    margin-left: 15px;
+}
+
+.air_service .service_right h4.ic {
+    line-height: 20px;
+    padding: 28px 0 10px 55px;
+    width: 181px;
+    height: 29px;
+    margin: 0px;
+}
+
+.air_service .service_right .f1 h4.ic {
+    background-position: -2px -124px;
+}
+
+.air_service .service_right .f2 h4.ic {
+    background-position: -198px -124px;
+
+}
+
+.air_service .service_right .f3 h4.ic {
+    background-position: -442px -124px;
+}
+
+/*********��ѡ�ü�**********/
+.tejia {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 15px;
+    width: 992px;
+    height: 446px;
+    border: 1px solid #dedede;
+    background-color: #fff;
+}
+
+.w .tit {
+    font-size: 18px;
+    font-family: microsoft yahei;
+    height: 54px;
+    line-height: 54px;
+    font-weight: 400;
+    margin: 0px 0px;
+}
+
+.tejia .tit i {
+    float: left;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    margin-top: 15px;
+    background: url("../../assets/images/Airline/tejia_bg.png") no-repeat;
+}
+
+.tejia li {
+    float: left;
+    margin: 0 10px 0 0;
+    width: 310px;
+    height: 180px;
+
+}
+
+.tj_list .gray-extra {
+    background: rgba(248, 248, 248, .8);
+    padding: 0 10px;
+    position: absolute;
+    height: 30px;
+    width: 310px;
+    margin-top: -29px;
+}
+
+.sel-land {
+    margin: 10px 0px 0px 0px;
+    width: 950px;
+    float: left;
+
+}
+
+.sel-land .land {
+    float: left;
+    width: 700px;
+    margin-left: 10px;
+}
+
+.sel-land .more {
+    float: right;
+    font-size: 14px;
+    color: #333;
+}
+
+.sel-land .cityinfo {
+    width: 700px;
+}
+
+.sel-land .cityinfo li {
+    width: 275px;
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+    margin: 0;
+    border-left: 1px solid #e9e9e9;
+}
+
+.sel-land a {
+    color: #999;
+
+}
+
+.sel-land .land a:hover {
+    background-color: #ffae2e;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    float: left;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.sel-land .land a, .sel-land .way a {
+    display: block;
+    float: left;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.cityinfo ul {
+    width: 950px;
+}
+
+.sel-land .cityinfo a span {
+    float: left;
+    display: block;
+    line-height: 40px;
+    height: 40px;
+}
+
+/**********����ͬ��ʹ��*****/
+.line {
+    width: 120px;
+    color: #666;
+    font-size: 12px;
+}
+
+.date {
+    width: 40px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.price {
+    width: 80px;
+    font-size: 18px;
+    color: #e4393c;
+    font-family: verdana;
+    line-height: 36px;
+    float: right;
+    text-align: right;
+}
+
+/*******����ƶ��л���Ϣ********8*/
+.cq:hover #info_1 {
+    display: none;
+}
+
+.cq:hover #info_2 {
+    display: block;
+}
+
+
+/*******�����ػ�******8*/
+.single_bg {
+    float: left;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    background: url(../../assets/images/Airline/tejia_bg.png) no-repeat -52px 0;
+
+}
+
+.yh {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    height: 29px;
+    margin-left: 18px;
+    margin-top: -3px;
+    background: url(../../assets/images/Airline/tejia_bg.png) no-repeat 0 -26px;
+
+}
+
+.single_left {
+    float: right;
+}
+
+.l_start {
+    float: left;
+    margin-left: 490px;
+    margin-top: -32px;
+    font-size: 12px;
+
+}
+
+.l_end {
+    float: left;
+    margin-left: 630px;
+    margin-top: -31px;
+    font-size: 12px;
+}
+
+.l_end span {
+    margin-left: 15px;
+
+}
+
+.l_end .curr {
+    border-bottom: #4797a0 2px solid;
+}
+
+.l_end span:hover .curr {
+    border-bottom: 0px;
+}
+
+.l_end spand:hover span {
+    border-bottom: #4797a0 2px solid;
+}
+
+.single_lines {
+
+    border: 1px solid #dedede;
+    display: none;
+    width: 990px;
+    height: 252px;
+}
+
+.single_lines ul {
+    padding: 6px 0;
+    margin-left: -1px;
+    overflow: hidden;
+}
+
+.single_lines ul li {
+    float: left;
+    width: 440px;
+    border-left: 1px solid #dedede;
+    padding: 6px 30px 6px 24px;
+    height: 30px;
+    line-height: 20px;
+
+}
+
+.single_lines ul li a img {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 100%;
+
+}
+
+.single_lines ul li a span {
+    margin-right: 10px;
+    width: 162px;
+    text-align: left;
+}
+
+.line .l-ow {
+    background: url("../../assets/images/Airline/tejia_bg.png") no-repeat -79px 0;
+
+    height: 5px;
+    display: inline-block;
+    margin: 0 15px;
+    width: 9px;
+
+}
+
+.l-ow2 {
+    background: url("../../assets/images/Airline/tejia_bg.png") no-repeat -79px 0;
+    height: 10px;
+    display: inline-block;
+    margin: 0 15px;
+    width: 9px;
+
+}
+
+
+/******�������*********/
+.hzhb {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 15px;
+    width: 990px;
+    height: 375px;
+    border: 1px solid #dedede;
+    background-color: #fff;
+}
+
+.hzhb .tit .hz {
+    background: url("../../assets/images/Airline/hz-tit.png");
+    float: left;
+    width: 24px;
+    height: 26px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.hzhb_m {
+    font-size: 12px;
+}
+
+.hzhb_m ul {
+    padding: 0 40px 20px;
+    overflow: hidden;
+    margin: 0 19px;
+    width: 908px;
+    border-bottom: 1px solid #dedede;
+}
+
+.hzhb_m ul li {
+    width: 160px;
+    height: 24px;
+    float: left;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.hzhb_m ul li span {
+    width: 54px;
+    height: 14.4px;
+    color: #333333;
+    font-size: 12px;
+}
+
+.hzhb_m ul li b {
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+    background: url("../../assets/images/Airline/logos-city.png") no-repeat;
+}
+
+.hzhb_m .fore2 b {
+    background-position: 0 -22px;
+}
+
+.hzhb_m .fore3 b {
+    background-position: 0 -44px;
+}
+
+.hzhb_m .fore4 b {
+    background-position: 0 -66px;
+}
+
+.hzhb_m .fore5 b {
+    background-position: 0 -88px;
+}
+
+.hzhb_m .fore6 b {
+    background-position: 0 -110px;
+}
+
+
+.hzhb_m .fore7 b {
+    background-position: 0 -132px;
+}
+.hzhb_m .fore8 b {
+    background-position: 0 -154px;
+}
+
+.hzhb_m .fore9 b {
+    background-position: 0 -176px;
+}
+
+.hzhb_m .fore10 b {
+    background-position: 0 -198px;
+}
+
+.hzhb_m .fore11 b {
+    background-position: 0 -220px;
+}
+
+.hzhb_m .fore12 b {
+    background-position: 0 -242px;
+}
+
+.hzhb_m .fore13 b {
+    background-position: 0 -264px;
+}
+
+.hzhb_m .fore14 b {
+    background-position: 0 -286px;
+}
+
+
+.hzhb_m .fore15 b{
+background-position: 0 -308px;
+}
+.extra {
+    overflow: hidden;
+    color: #999;
+}
+
+.descirable {
+    padding: 0 20px;
+    line-height: 22px;
+    margin-top: 30px;
+}
+
+
+/****����ָ��*******/
+#foot_box {
+
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    overflow: hidden;
+    background-color: #e7e7e7;
+}
+
+#foot_box p {
+    width: 40px;
+    height: 40px;
+    float: left;
+    background: url(../../assets/images/iconlist_2.png) no-repeat;
+    margin: 0px 10px 0px 100px;
+}
+
+#foot_box p.shopping_guide {
+    background-position: 0px -56px;
+}
+
+#foot_box p.send_type {
+    background-position: -50px -56px;
+}
+
+#foot_box p.pay_type {
+    background-position: 0px -105px;
+}
+
+#foot_box p.after {
+    background-position: -50px -105px
+}
+
+#foot_box p.special {
+    background-position: 0px -153px;
+}
+
+#foot_box ul {
+    float: left;
+    width: 142px;
+}
+
+#foot_box li {
+    line-height: 22px;
+}
+
+#foot_box li b {
+    line-height: 30px;
+}
+
+
+
+

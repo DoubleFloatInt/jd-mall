@@ -16,6 +16,7 @@ import ShaiDan from '@/view/ShaiDan/index';
 import ShopCar from '@/view/ShopCar/index';
 import Video from '@/view/Video/index';
 import Clothing from '@/view/Clothing/index';
+import JiPiao from '@/view/JiPiao/index';
 
 export default [
     {
@@ -152,6 +153,16 @@ export default [
                     nav: false
                 }
             },
+            {
+                path: '/jipiao',
+                component: JiPiao,
+                meta: {
+                    title: '机票',
+                    headNav: true,
+                    searchBox: false,
+                    nav: false
+                }
+            }
 
 
 
