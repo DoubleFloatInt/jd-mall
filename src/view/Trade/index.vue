@@ -14,35 +14,47 @@
       </div>
       <div class="order-detail">
         <div class="address">
-          <div class="title">收货人信息</div>
+          <div class="title">
+            <h3>收货人信息</h3>
+            <a @click="handleAddAddress" class="add-address">添加收货地址</a>
+          </div>
           <div class="address-list">
-            <div class="none-address">
+            <div class="none-address" v-show="!hasAddress">
               暂无收货地址
             </div>
-            <div class="default-address address-item clearfix">
+            <div class="default-address address-item clearfix" v-show="hasAddress">
               <div class="selection-btn selected">{{ selectedAddress.realName }}</div>
               <div class="address-detail">
-                {{ selectedAddress.realName + ' ' + selectedAddress.province + ' ' + selectedAddress.city + ' ' + selectedAddress.area + ' ' + selectedAddress.street + ' ' + selectedAddress.phonenum }}<a
-                  class="edit"
-                  href="">编辑</a>
+                {{
+                  selectedAddress.realName + ' ' + selectedAddress.province + ' ' + selectedAddress.city + ' ' + selectedAddress.area + ' ' + selectedAddress.street + ' ' + selectedAddress.phonenum
+                }}
+                <a
+                    class="edit"
+                    @click="handleEditAddress(selectedAddress.addressId)"
+                >编辑</a>
               </div>
               <div class="default-sign" v-if="selectedAddress.defaultAddress">默认地址</div>
             </div>
             <transition name="el-zoom-in-top">
-              <div
-                  v-show="showMoreAddress"
-                  class="default-address address-item clearfix"
-                  v-for="item in addressList"
-                  :key="item.addressId"
-                  @click="handleChangeAddress(item.addressId)"
-              >
-                <div class="selection-btn selected">{{ item.realName }}</div>
-                <div class="address-detail">
-                  {{ item.realName + ' ' + item.province + ' ' + item.city + ' ' + item.area + ' ' + selectedAddress.street + ' ' + selectedAddress.phonenum }}<a
-                    class="edit"
-                    href="">编辑</a>
+              <div class="">
+                <div
+                    v-show="showMoreAddress"
+                    class="default-address address-item clearfix"
+                    v-for="item in addressList"
+                    :key="item.addressId"
+                    @click="handleChangeAddress(item.addressId)"
+                >
+                  <div class="selection-btn">{{ item.realName }}</div>
+                  <div class="address-detail">
+                    {{
+                      item.realName + ' ' + item.province + ' ' + item.city + ' ' + item.area + ' ' + item.street + ' ' + item.phonenum
+                    }}
+                    <a
+                        class="edit"
+                        @click="handleEditAddress(item.addressId)">编辑</a>
+                  </div>
+                  <div class="default-sign" v-if="item.defaultAddress">默认地址</div>
                 </div>
-                <div class="default-sign" v-if="item.defaultAddress">默认地址</div>
               </div>
             </transition>
           </div>
@@ -122,12 +134,21 @@
     <div class="order-address">
       <p class="sales-total">应付总额:<span>¥{{ order.orderAmountTotal }}</span></p>
       <p> 寄送至：
-        {{ selectedAddress.province + ' ' + selectedAddress.city + ' ' + selectedAddress.area + ' ' + selectedAddress.street }}
+        {{
+          selectedAddress.province + ' ' + selectedAddress.city + ' ' + selectedAddress.area + ' ' + selectedAddress.street
+        }}
         收货人：{{ selectedAddress.realName + ' ' + selectedAddress.phonenum }} 131****8799 </p>
     </div>
     <div class="submit-order">
       <button @click="handleSubmitOrder">提交订单</button>
     </div>
+    <AddressDialog
+        :title.sync="addressDialogTitle"
+        :address-id.sync="editAddressId"
+        v-if="showAddressDialog"
+        @close="handleCloseAddressDialog"
+        @getAddressList="getAddressList"
+    ></AddressDialog>
   </div>
 </template>
 
@@ -135,9 +156,19 @@
 import {deleteShopCarItems, getShopCarListByProductIds} from "@/api/shopcar";
 import {getAddressList} from "@/api/address";
 import {addOrder} from "@/api/order";
+import AddressDialog from "@/components/AddressDialog/index";
 
 export default {
   name: "Trade",
+  components: {AddressDialog},
+  computed: {
+    hasAddress() {
+      for (let key in this.selectedAddress) {
+        return true;
+      }
+      return false;
+    }
+  },
   data() {
     return {
       order: {
@@ -148,7 +179,10 @@ export default {
       },
       addressList: [],
       selectedAddress: {},
-      showMoreAddress: false
+      showMoreAddress: false,
+      showAddressDialog: false,
+      addressDialogTitle: '',
+      editAddressId: ''
     }
   },
   created() {
@@ -159,16 +193,42 @@ export default {
         this.order.orderAmountTotal += res.rows[i].productPrice;
       }
     })
-    getAddressList().then(res => {
-      this.addressList = res.rows.filter(item => {
-        return !item.defaultAddress;
-      });
-      this.selectedAddress = res.rows.filter(item => {
-        return item.defaultAddress;
-      })[0];
-    })
+    this.getAddressList();
   },
   methods: {
+    getAddressList() {
+      getAddressList().then(res => {
+        if (res.rows.length > 0) {
+          if (res.rows.length === 1) {
+            this.selectedAddress = res.rows[0];
+            this.addressList = [];
+          } else {
+            this.selectedAddress = res.rows[0]
+            for (let i = 1; i < res.rows.length; i++) {
+              this.addressList = [...this.addressList, res.rows[i]];
+            }
+          }
+        } else {
+          this.selectedAddress = {};
+          this.addressList = [];
+        }
+      })
+      this.showAddressDialog = false;
+      console.log(this.selectedAddress);
+    },
+    handleAddAddress() {
+      this.addressDialogTitle = '新增收货地址';
+      this.editAddressId = '';
+      this.showAddressDialog = true;
+    },
+    handleEditAddress(addressId) {
+      this.addressDialogTitle = '修改收货地址';
+      this.editAddressId = addressId;
+      this.showAddressDialog = true;
+    },
+    handleCloseAddressDialog() {
+      this.showAddressDialog = false;
+    },
     handleShowMoreAddress() {
       this.showMoreAddress = !this.showMoreAddress;
     },
@@ -187,13 +247,16 @@ export default {
     },
     handleSubmitOrder() {
       this.order.addressId = this.selectedAddress.addressId;
-      addOrder(this.order).then(() => {
-        deleteShopCarItems(this.$route.query.productIds).then(() => {
-          this.msgSuccess("订单结算成功!!!");
-          this.$router.push({path: '/orderList'})
-        })
-      })
-
+      if (this.order.addressId !== '') {
+        addOrder(this.order).then(() => {
+          deleteShopCarItems(this.$route.query.productIds).then(() => {
+            this.msgSuccess("订单结算成功!!!");
+            this.$router.push({path: '/orderList'})
+          })
+        });
+      } else {
+        this.msgError("尚未选择地址!");
+      }
     }
   }
 }

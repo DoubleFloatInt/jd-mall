@@ -1775,13 +1775,11 @@
 </template>
 
 <script>
-import Pagination from '../../components/Pagination/index';
 import {getfoodProductBycateId} from "@/api/jd_food";
 
 export default {
   name: "jd_food",
   components: {
-    Pagination
   },
   created() {
     this.getList();
