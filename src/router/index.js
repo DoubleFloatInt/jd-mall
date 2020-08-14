@@ -25,7 +25,8 @@ const whitePath = [
     '/food',
     '/shaidan',
     '/video',
-    '/clothing'
+    '/clothing',
+    '/haowu'
 ];
 
 router.beforeEach((to, from, next) => {

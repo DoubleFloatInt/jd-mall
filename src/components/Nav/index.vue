@@ -6,19 +6,24 @@
 		</p>
 		<ul class="lf">
 			<li>
-				<router-link to="/" tag="a">首页</router-link>
+				<router-link to="/" tag="a">
+          首页
+        </router-link>
 			</li>
 			<li>
-				<a href="#">服装城</a>
+				<router-link to="/clothing" tag="a">
+          服装城
+        </router-link>
 			</li>
 			<li>
-				<a href="#"><router-link tag="a" to="/food">食品</router-link></a>
+				<router-link tag="a" to="/food">
+          食品
+        </router-link>
 			</li>
 			<li>
-				<a href="#">团购</a>
-			</li>
-			<li>
-				<a href="#">电子商品</a>
+				<router-link to="/video" tag="a">
+          电影
+        </router-link>
 			</li>
 			<li>
 				<router-link to="/miaosha" tag="a">秒杀</router-link>

@@ -118,7 +118,7 @@ export default [
                 meta: {
                     title: '发现好物',
                     headNav: true,
-                    searchBox: false,
+                    searchBox: true,
                     nav: false
                 },
             },
