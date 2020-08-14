@@ -55,6 +55,7 @@
 
 <script>
 export default {
+  inject: ['reload'],
   name: "SearchBox",
   data(){
     return {
@@ -64,6 +65,7 @@ export default {
   methods: {
     handleSearch() {
       this.$router.push({path: '/search?keywords=' + this.keywords})
+      this.reload();
     }
   }
 }

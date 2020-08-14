@@ -8,3 +8,18 @@ export function addOrder(order) {
         data: order,
     })
 }
+
+export function getOrderList(order) {
+    return request({
+        url: '/order/list',
+        method: 'post',
+        params: order
+    })
+}
+
+export function deleteOrder(orderId) {
+    return request({
+        url: '/order/delete/' + orderId,
+        method: 'delete'
+    })
+}

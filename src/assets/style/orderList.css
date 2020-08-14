@@ -156,6 +156,10 @@
     float: left;
 }
 
+.box-content .operation .order-type-link .link.current a{
+    border-bottom: 2px solid #e1251b;
+}
+
 .box-content .operation .order-type-link .link a {
     margin: 0 10px;
     line-height: 25px;

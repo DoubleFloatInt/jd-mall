@@ -59,10 +59,18 @@
             <div class="operation clearfix">
               <div class="order-type-link">
                 <ul class="clearfix">
-                  <li class="link current"><a href="#">全部订单</a></li>
-                  <li class="link"><a href="#">待付款</a></li>
-                  <li class="link"><a href="#">待收获</a></li>
-                  <li class="link"><a href="#">待评价</a></li>
+                  <li @click="changeOrderStatus('')" class="link" :class="{'current':order.status === ''}"><a href="#">全部订单</a>
+                  </li>
+                  <li @click="changeOrderStatus('0')" class="link" :class="{'current':order.status === '0'}"><a
+                      href="#">未付款</a></li>
+                  <li @click="changeOrderStatus('1')" class="link" :class="{'current':order.status === '1'}"><a
+                      href="#">未发货</a></li>
+                  <li @click="changeOrderStatus('2')" class="link" :class="{'current':order.status === '2'}"><a
+                      href="#">已发货</a></li>
+                  <li @click="changeOrderStatus('3')" class="link" :class="{'current':order.status === '3'}"><a
+                      href="#">待评价</a></li>
+                  <li @click="changeOrderStatus('4')" class="link" :class="{'current':order.status === '4'}"><a
+                      href="#">已完成</a></li>
                 </ul>
               </div>
               <div class="search-box">
@@ -121,237 +129,62 @@
                   <th>操作</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr class="sep-row"></tr>
-                <tr class="tr-th">
-                  <td colspan="5">
-								<span class="deal-time">
-								2020-07-26 15:12:12
-							</span>
-                    <span class="order-no">
-								订单号:
-								<a href="#">12345678910</a>
-							</span>
-                  </td>
-                </tr>
-                <tr class="tr-bd">
-                  <td class="product-item clearfix">
-                    <div class="product-img">
-                      <img src="../../assets/goods-image/monitor.jpg" alt="">
-                    </div>
-                    <div class="product-name">
-                      <p>明基（BenQ）23.8英寸IPS 低蓝光降频闪 智慧爱眼 窄边框内置音箱可竖屏 个人/商务电</p>
-                    </div>
-                    <span class="product-quantity">x1</span>
-                  </td>
-                  <td rowspan="1">
-                    李广帅
-                  </td>
-                  <td rowspan="1">
-                    ¥1018.98
-                  </td>
-                  <td rowspan="1">
-                    已完成
-                  </td>
-                  <td rowspan="1">
-                    <ul>
-                      <li><a href="">查看发票</a></li>
-                      <li><a href="">追评</a></li>
-                      <li><a href="">立即购买</a></li>
-                      <li><a href="">删除订单</a></li>
-                    </ul>
+                <tbody v-if="noneOrder">
+                <tr>
+                  <td colspan="9">
+                    <p class="noneOrder">
+                      暂无相关订单
+                    </p>
                   </td>
                 </tr>
                 </tbody>
-                <tbody>
+                <tbody
+                    v-for="item in orderList"
+                    :key="item.id"
+                >
                 <tr class="sep-row"></tr>
                 <tr class="tr-th">
                   <td colspan="5">
-								<span class="deal-time">
-								2020-07-26 15:12:12
-							</span>
+                    <span class="deal-time">{{ item.createTime }}</span>
                     <span class="order-no">
 								订单号:
-								<a href="#">12345678910</a>
+								<a href="#">{{ item.orderNo }}</a>
 							</span>
                   </td>
                 </tr>
-                <tr class="tr-bd">
+                <tr class="tr-bd"
+                    v-for="(productItem, index) in item.productList"
+                    :key="productItem.productId"
+                >
                   <td class="product-item clearfix">
                     <div class="product-img">
-                      <img src="../../assets/goods-image/monitor.jpg" alt="">
+                      <img :src="productItem.productImage" alt="">
                     </div>
                     <div class="product-name">
-                      <p>明基（BenQ）23.8英寸IPS 低蓝光降频闪 智慧爱眼 窄边框内置音箱可竖屏 个人/商务电</p>
+                      <p>{{ productItem.productName }}</p>
                     </div>
                     <span class="product-quantity">x1</span>
                   </td>
-                  <td rowspan="2">
-                    李广帅
+                  <td :rowspan="item.productCount" v-if="index === 0">
+                    {{ item.realName }}
                   </td>
-                  <td rowspan="2">
-                    ¥1018.98
+                  <td :rowspan="item.productCount" v-if="index === 0">
+                    ¥{{ item.orderAmountTotal }}
                   </td>
-                  <td rowspan="2">
-                    已完成
+                  <td :rowspan="item.productCount" v-if="index === 0">
+                    <span v-if="item.status === '0'">未付款</span>
+                    <span v-if="item.status === '1'">未发货</span>
+                    <span v-if="item.status === '2'">已发货</span>
+                    <span v-if="item.status === '3'">待评价</span>
+                    <span v-if="item.status === '4'">已完成</span>
                   </td>
-                  <td rowspan="2">
+                  <td :rowspan="item.productCount" v-if="index === 0">
                     <ul>
                       <li><a href="">查看发票</a></li>
-                      <li><a href="">追评</a></li>
+                      <li v-if="item.status === '4'"><a href="">追评</a></li>
                       <li><a href="">立即购买</a></li>
-                      <li><a href="">删除订单</a></li>
+                      <li><a @click="handleDeleteOrder(item.orderId)">删除订单</a></li>
                     </ul>
-                  </td>
-                </tr>
-                <tr class="tr-bd">
-                  <td class="product-item clearfix">
-                    <div class="product-img">
-                      <img src="../../assets/goods-image/monitor.jpg" alt="">
-                    </div>
-                    <div class="product-name">
-                      <p>明基（BenQ）23.8英寸IPS 低蓝光降频闪 智慧爱眼 窄边框内置音箱可竖屏 个人/商务电</p>
-                    </div>
-                    <span class="product-quantity">x1</span>
-                  </td>
-                </tr>
-                </tbody>
-                <tbody>
-                <tr class="sep-row"></tr>
-                <tr class="tr-th">
-                  <td colspan="5">
-								<span class="deal-time">
-								2020-07-26 15:12:12
-							</span>
-                    <span class="order-no">
-								订单号:
-								<a href="#">12345678910</a>
-							</span>
-                  </td>
-                </tr>
-                <tr class="tr-bd">
-                  <td class="product-item clearfix">
-                    <div class="product-img">
-                      <img src="../../assets/goods-image/monitor.jpg" alt="">
-                    </div>
-                    <div class="product-name">
-                      <p>明基（BenQ）23.8英寸IPS 低蓝光降频闪 智慧爱眼 窄边框内置音箱可竖屏 个人/商务电</p>
-                    </div>
-                    <span class="product-quantity">x1</span>
-                  </td>
-                  <td rowspan="3">
-                    李广帅
-                  </td>
-                  <td rowspan="3">
-                    ¥1018.98
-                  </td>
-                  <td rowspan="3">
-                    已完成
-                  </td>
-                  <td rowspan="3">
-                    <ul>
-                      <li><a href="">查看发票</a></li>
-                      <li><a href="">追评</a></li>
-                      <li><a href="">立即购买</a></li>
-                      <li><a href="">删除订单</a></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr class="tr-bd">
-                  <td class="product-item clearfix">
-                    <div class="product-img">
-                      <img src="../../assets/goods-image/monitor.jpg" alt="">
-                    </div>
-                    <div class="product-name">
-                      <p>明基（BenQ）23.8英寸IPS 低蓝光降频闪 智慧爱眼 窄边框内置音箱可竖屏 个人/商务电</p>
-                    </div>
-                    <span class="product-quantity">x1</span>
-                  </td>
-                </tr>
-                <tr class="tr-bd">
-                  <td class="product-item clearfix">
-                    <div class="product-img">
-                      <img src="../../assets/goods-image/monitor.jpg" alt="">
-                    </div>
-                    <div class="product-name">
-                      <p>明基（BenQ）23.8英寸IPS 低蓝光降频闪 智慧爱眼 窄边框内置音箱可竖屏 个人/商务电</p>
-                    </div>
-                    <span class="product-quantity">x1</span>
-                  </td>
-                </tr>
-                </tbody>
-                <tbody>
-                <tr class="sep-row"></tr>
-                <tr class="tr-th">
-                  <td colspan="5">
-								<span class="deal-time">
-								2020-07-26 15:12:12
-							</span>
-                    <span class="order-no">
-								订单号:
-								<a href="#">12345678910</a>
-							</span>
-                  </td>
-                </tr>
-                <tr class="tr-bd">
-                  <td class="product-item clearfix">
-                    <div class="product-img">
-                      <img src="../../assets/goods-image/monitor.jpg" alt="">
-                    </div>
-                    <div class="product-name">
-                      <p>明基（BenQ）23.8英寸IPS 低蓝光降频闪 智慧爱眼 窄边框内置音箱可竖屏 个人/商务电</p>
-                    </div>
-                    <span class="product-quantity">x1</span>
-                  </td>
-                  <td rowspan="4">
-                    李广帅
-                  </td>
-                  <td rowspan="4">
-                    ¥1018.98
-                  </td>
-                  <td rowspan="4">
-                    已完成
-                  </td>
-                  <td rowspan="4">
-                    <ul>
-                      <li><a href="">查看发票</a></li>
-                      <li><a href="">追评</a></li>
-                      <li><a href="">立即购买</a></li>
-                      <li><a href="">删除订单</a></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr class="tr-bd">
-                  <td class="product-item clearfix">
-                    <div class="product-img">
-                      <img src="../../assets/goods-image/monitor.jpg" alt="">
-                    </div>
-                    <div class="product-name">
-                      <p>明基（BenQ）23.8英寸IPS 低蓝光降频闪 智慧爱眼 窄边框内置音箱可竖屏 个人/商务电</p>
-                    </div>
-                    <span class="product-quantity">x1</span>
-                  </td>
-                </tr>
-                <tr class="tr-bd">
-                  <td class="product-item clearfix">
-                    <div class="product-img">
-                      <img src="../../assets/goods-image/monitor.jpg" alt="">
-                    </div>
-                    <div class="product-name">
-                      <p>明基（BenQ）23.8英寸IPS 低蓝光降频闪 智慧爱眼 窄边框内置音箱可竖屏 个人/商务电</p>
-                    </div>
-                    <span class="product-quantity">x1</span>
-                  </td>
-                </tr>
-                <tr class="tr-bd">
-                  <td class="product-item clearfix">
-                    <div class="product-img">
-                      <img src="../../assets/goods-image/monitor.jpg" alt="">
-                    </div>
-                    <div class="product-name">
-                      <p>明基（BenQ）23.8英寸IPS 低蓝光降频闪 智慧爱眼 窄边框内置音箱可竖屏 个人/商务电</p>
-                    </div>
-                    <span class="product-quantity">x1</span>
                   </td>
                 </tr>
                 </tbody>
@@ -365,11 +198,64 @@
 </template>
 
 <script>
+import {deleteOrder, getOrderList} from "@/api/order";
+
 export default {
-  name: "OrderList"
+  name: "OrderList",
+  inject: ['reload'],
+  computed: {
+    noneOrder() {
+      return this.orderList.length === 0;
+    }
+  },
+  data() {
+    return {
+      order: {
+        status: ''
+      },
+      orderList: []
+    }
+  },
+  created() {
+    this.getList();
+  },
+  methods: {
+    getList() {
+      getOrderList(this.order).then(res => {
+        this.orderList = res.rows;
+      })
+    },
+    changeOrderStatus(status) {
+      this.order.status = status;
+      this.getList();
+    },
+    handleDeleteOrder(id) {
+      this.$confirm('是否永久删除此订单?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: "warning"
+      }).then(() => {
+        deleteOrder(id).then(() => {
+          this.msgSuccess("删除成功!")
+          this.reload();
+        }).catch(err => {
+          this.msgError(err);
+        })
+      })
+    }
+  }
 }
 </script>
 
 <style scoped src="../../assets/style/orderList.css">
 
+</style>
+
+<style scoped>
+.noneOrder {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px
+}
 </style>
