@@ -433,35 +433,39 @@
         <li>
           <img src="../../assets/images/images/goods_01.webp" alt="">
           <div>
-            <div class="sanzhi">三只松鼠坚果大礼包9袋 网红零食每日坚果干果中秋礼盒碧根果节日送礼团购火红A版1720g（新老包装混发）</div>
+            <div class="sanzhi">
+              <a href="#">
+                三只松鼠坚果大礼包9袋 网红零食每日坚果干果中秋礼盒碧根果节日送礼团购火红A版1720g（新老包装混发）
+              </a>
+            </div>
             <div class="yiyijiu">￥119.00</div>
           </div>
         </li>
         <li>
           <img src="../../assets/images/images/goods_02.webp" alt="">
           <div>
-            <div class="sanzhi">佰薇集红豆薏米茶 薏仁茶花草茶养生茶花茶组合袋泡茶冬瓜荷叶茶蒲公英茶芡实茶包5g*30小包</div>
+            <div class="sanzhi"><a href="#">佰薇集红豆薏米茶 薏仁茶花草茶养生茶花茶组合袋泡茶冬瓜荷叶茶蒲公英茶芡实茶包5g*30小包</a></div>
             <div class="yiyijiu">￥39.90</div>
           </div>
         </li>
         <li>
           <img src="../../assets/images/images/goods_03.webp" alt="">
           <div>
-            <div class="sanzhi">蒙牛 特仑苏 有机纯牛奶3.8g蛋白质含量升级 250ml*24 梦幻盖礼盒装（新老包装随机发货）</div>
+            <div class="sanzhi"><a href="#">蒙牛 特仑苏 有机纯牛奶3.8g蛋白质含量升级 250ml*24 梦幻盖礼盒装（新老包装随机发货）</a></div>
             <div class="yiyijiu">￥187.20</div>
           </div>
         </li>
         <li>
           <img src="../../assets/images/images/goods_04.webp" alt="">
           <div>
-            <div class="sanzhi">乐品乐茶2020新茶信阳毛尖茶叶绿茶雨前嫩芽春茶散装浓香型250g(125g*2罐)</div>
+            <div class="sanzhi"><a href="#">乐品乐茶2020新茶信阳毛尖茶叶绿茶雨前嫩芽春茶散装浓香型250g(125g*2罐)</a></div>
             <div class="yiyijiu">￥99.00</div>
           </div>
         </li>
         <li>
           <img src="../../assets/images/images/goods_05.webp" alt="">
           <div>
-            <div class="sanzhi">鲁花 食用油 5S物理压榨 压榨一级 花生油 6.18L（京东定制）</div>
+            <div class="sanzhi"><a href="#">鲁花 食用油 5S物理压榨 压榨一级 花生油 6.18L（京东定制）</a></div>
             <div class="yiyijiu">￥179.90</div>
           </div>
         </li>
@@ -469,7 +473,7 @@
         <li>
           <img src="../../assets/images/images/goods_06.webp" alt="">
           <div>
-            <div class="sanzhi">金龙鱼 东北大米 乳玉皇妃稻香贡米 5kg</div>
+            <div class="sanzhi"><a href="#">金龙鱼 东北大米 乳玉皇妃稻香贡米 5kg</a></div>
             <div class="yiyijiu">￥99.00</div>
           </div>
         </li>
@@ -489,12 +493,45 @@
           <img src="../../assets/images/images/binggan.jpg.webp" alt="">
         </div>
         <!-- 右侧多个图片 -->
+<!--        <ul>-->
+<!--          <div-->
+<!--              class="adv_mid"-->
+<!--              v-for="item in productList"-->
+<!--              :key="item.productId"-->
+<!--          >-->
+<!--            <router-link :to="'/productDetail?id=' + item.productId">-->
+<!--              <dl>-->
+<!--                <dt>-->
+<!--                  <a href="#">-->
+<!--                    <img class="product-img" :src="item.image" alt="">-->
+<!--                  </a>-->
+<!--                </dt>-->
+<!--                <dd class="price">￥69.00</dd>-->
+<!--                <dd class="words">-->
+<!--                  {{ item.productName }}-->
+<!--                </dd>-->
+<!--                <dd>-->
+<!--                  <span class="pj">1.2万+</span>条评价-->
+<!--                </dd>-->
+<!--                <dd>-->
+<!--                  <span class="zy">自营</span>-->
+<!--                  <span class="fxg">放心购</span>-->
+<!--                </dd>-->
+<!--                <dd><a href="#">菲跑运动专营店</a></dd>-->
+<!--              </dl>-->
+<!--            </router-link>-->
+<!--          </div>-->
+<!--        </ul>-->
+
+
         <ul>
           <li>
             <img src="../../assets/images/images/weilong.webp" alt="">
             <!-- 描述文字-->
             <div class="wenzi">
-              卫龙 辣条 网红办公室怀旧小吃 儿时豆干豆皮辣片休闲零食 经典香辣味大面筋68g/袋（凑单零食商品）
+              <a href="#">
+                卫龙 辣条 网红办公室怀旧小吃 儿时豆干豆皮辣片休闲零食 经典香辣味大面筋68g/袋（凑单零食商品）
+              </a>
             </div>
             <!-- 金钱-->
             <div class="money">
@@ -1736,9 +1773,41 @@
 
   </div>
 </template>
+
 <script>
+import Pagination from '../../components/Pagination/index';
+import {getfoodProductBycateId} from "@/api/jd_food";
+
 export default {
-  name: "jd_food"
+  name: "jd_food",
+  components: {
+    Pagination
+  },
+  created() {
+    this.getList();
+  },
+  data() {
+    return {
+      total: 10,
+      productList: [],
+      cateId: {
+        pageNum: 1,
+        pageSize: 10,
+        productName: '',
+        productSummary: '',
+      },
+    }
+  },
+  methods: {
+    getList() {
+      getfoodProductBycateId(this.cateId).then(res => {
+        this.productList = res.rows;
+        this.total = res.total;
+      }).then(err => {
+        console.log(err)
+      })
+    }
+  },
 }
 </script>
 
