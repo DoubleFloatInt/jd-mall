@@ -509,7 +509,7 @@ div.hot_good>ul>li{
 
 
 }
-div.hot_good>ul>li>img{
+div.hot_good>ul>li img{
     width: 75%;
     margin-left: 10px;
 }
@@ -532,7 +532,7 @@ div.content_img{
     width: 1211px;
     height: 600px;
 }
-div.content_img div.binggan>img{
+div.content_img div.binggan img{
     width: 180px;
     float: left;
 }
@@ -547,7 +547,7 @@ div.content_img>ul>li{
     float: left;
     margin-top: 20px;
 }
-div.content_img>ul>li>img{
+div.content_img>ul>li img{
     width: 80%;
     margin-left: 30px;
 }
