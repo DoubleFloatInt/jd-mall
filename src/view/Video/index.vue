@@ -1,8 +1,12 @@
 <template>
   <div class="wrapper">
     <header class="inner">
-      <a data-v-28b18b24="" href="#" clstag="pageclick|keycount|pcmovie_home_movietab|2" class="logo"><img
-          data-v-28b18b24="" src="../../assets/images/index.png" alt=""></a>
+      <a data-v-28b18b24="" href="#" clstag="pageclick|keycount|pcmovie_home_movietab|2" class="logo">
+        <router-link tag="a" to="/">
+          <img
+              data-v-28b18b24="" src="../../assets/images/index.png" alt="">
+        </router-link>
+      </a>
       <a data-v-28b18b24="" href="javascript:;" clstag="pageclick|keycount|pcmovie_home_city|1" class="city fold">
         北京</a>
       <nav data-v-28b18b24="">
