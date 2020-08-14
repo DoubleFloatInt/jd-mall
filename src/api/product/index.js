@@ -13,3 +13,9 @@ export function getProductList(params) {
         params: params
     });
 }
+
+export function getFoodProductInfo(id) {
+    return request({
+        url: '/foodProduct/info/' + id
+    });
+}

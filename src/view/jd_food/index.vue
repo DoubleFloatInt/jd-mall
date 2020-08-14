@@ -532,7 +532,7 @@
               v-for="item in binggan"
               :key="item.productId"
           >
-          <router-link tag="a" :to="'/productDetail?id=' + item.productId">
+          <router-link tag="a" :to="'/productDetail?productId=' + item.productId">
 
               <img :src="item.image" alt="">
               <!-- 描述文字-->
@@ -600,7 +600,7 @@
               v-for="item in niunai"
               :key="item.productId"
           >
-            <router-link tag="a" :to="'/productDetail?id=' + item.productId">
+            <router-link tag="a" :to="'/productDetail?productId=' + item.productId">
 
               <img :src="item.image" alt="">
               <!-- 描述文字-->
@@ -634,7 +634,7 @@
               v-for="item in chongyin"
               :key="item.productId"
           >
-            <router-link tag="a" :to="'/productDetail?id=' + item.productId">
+            <router-link tag="a" :to="'/productDetail?productId=' + item.productId">
 
               <img :src="item.image" alt="">
               <!-- 描述文字-->
@@ -668,7 +668,7 @@
               v-for="item in binfen"
               :key="item.productId"
           >
-            <router-link tag="a" :to="'/productDetail?id=' + item.productId">
+            <router-link tag="a" :to="'/productDetail?productId=' + item.productId">
 
               <img :src="item.image" alt="">
               <!-- 描述文字-->
@@ -702,7 +702,7 @@
               v-for="item in mimian"
               :key="item.productId"
           >
-            <router-link tag="a" :to="'/productDetail?id=' + item.productId">
+            <router-link tag="a" :to="'/productDetail?productId=' + item.productId">
 
               <img :src="item.image" alt="">
               <!-- 描述文字-->
@@ -736,7 +736,7 @@
               v-for="item in shiyongyou"
               :key="item.productId"
           >
-            <router-link tag="a" :to="'/productDetail?id=' + item.productId">
+            <router-link tag="a" :to="'/productDetail?productId=' + item.productId">
 
               <img :src="item.image" alt="">
               <!-- 描述文字-->
@@ -770,7 +770,7 @@
               v-for="item in chufang"
               :key="item.productId"
           >
-            <router-link tag="a" :to="'/productDetail?id=' + item.productId">
+            <router-link tag="a" :to="'/productDetail?productId=' + item.productId">
 
               <img :src="item.image" alt="">
               <!-- 描述文字-->
@@ -804,7 +804,7 @@
               v-for="item in mingcha"
               :key="item.productId"
           >
-            <router-link tag="a" :to="'/productDetail?id=' + item.productId">
+            <router-link tag="a" :to="'/productDetail?productId=' + item.productId">
 
               <img :src="item.image" alt="">
               <!-- 描述文字-->
