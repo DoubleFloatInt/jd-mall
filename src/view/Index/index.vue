@@ -129,7 +129,9 @@
 						<li class="jipiao">
 							<a href="#">
 								<s></s>
-								机票
+								<router-link to="/jipiao" tag="a">
+                  机票
+                </router-link>
 								<i></i>
 							</a>
 						</li>

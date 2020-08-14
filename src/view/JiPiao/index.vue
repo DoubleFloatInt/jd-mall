@@ -15,7 +15,9 @@
           </a>
           <ul class="nav_list">
             <li>
-              <a href="#" class="list_a">首页</a>
+              <router-link tag="a" to="/" class="list_a">
+                首页
+              </router-link>
             </li>
             <li class="on">
               <a href="#" class="list_b">机票</a>
