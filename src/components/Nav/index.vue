@@ -12,7 +12,7 @@
 				<a href="#">服装城</a>
 			</li>
 			<li>
-				<a href="#">食品</a>
+				<a href="#"><router-link tag="a" to="/food">食品</router-link></a>
 			</li>
 			<li>
 				<a href="#">团购</a>
